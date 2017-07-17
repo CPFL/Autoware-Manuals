@@ -1,175 +1,162 @@
-> Version
->
-> 1.1
->
-> Nagoya university
->
-> Autoware User’s Manual
->
-> Autoware *ver.2016.Sep.12*
->
-> Table of contents
+## Version 1.1
 
-[*1. About This Document* 4](#about-this-document)
+# Nagoya university
 
-[*2. ROS and Autoware* 5](#ros-and-autoware)
+# Autoware User’s Manual
 
-[*Robot middleware - ROS* 5](#robot-middleware---ros)
+Autoware *ver.2016.Sep.12*
 
-> [*ROS Features* 6](#ros-features)
+## Table of contents
 
-[*Autoware* 7](#autoware)
+[*1. About This Document*](#about-this-document)
 
-> [*3-D Map Generation and Sharing* 8](#d-map-generation-and-sharing)
->
-> [*Localization(NDT：Normal Distributions Transform)*
-> 8](#localization-ndtnormal-distributions-transform)
->
-> [*Object Detection* 8](#object-detection)
->
-> [*Route Generation* 8](#path-generation)
->
-> [*Autonomous Driving* 9](#autonomous-driving)
->
-> [*User Interface* 9](#user-interface)
+[*2. ROS and Autoware*](#ros-and-autoware)
 
-[*Platform structure for Autoware* 10](#platform-structure-for-autoware)
+[*Robot middleware - ROS*](#robot-middleware---ros)
 
-> [*Perception/Recognition* 11](#perceptionrecognition)
->
-> [*Judgement/Operation/Localization*
-> 12](#judgementoperationlocalization)
->
-> [*Path Planning* 13](#path-planning)
->
-> [*Data Loading (3-D Map, Database, Files)*
-> 14](#data-loading-3-d-map-database-files)
->
-> [*Device Drivers and Sensor Fusion*
-> 15](#device-drivers-and-sensor-fusion)
->
-> [*Interface for Smart Phone Applications*
-> 16](#interface-for-smart-phone-applications)
->
-> [*Utilities and Others* 16](#utilities-and-others)
+[*ROS Features*](#ros-features)
 
-[*3.* *Operating Autoware* 17](#_Toc464046951)
+[*Autoware*](#autoware)
 
-[*Preparations* 17](#preparations)
+[*3-D Map Generation and Sharing*](#d-map-generation-and-sharing)
 
-> [*Demo Data* 17](#demo-data)
->
-> [*Runtime Manager Launching* 18](#runtime-manager-launching)
->
-> [*RViz Configuration* 19](#rviz-configuration)
+[*Localization(NDT：Normal Distributions Transform)*](#localization-ndtnormal-distributions-transform)
 
-[*Operating Quick Start* 19](#operating-quick-start)
+[*Object Detection*](#object-detection)
 
-> [*Load map(Quick Start)* 19](#load-map-quick-start)
->
-> [*Load driver(Quick Start)* 19](#load-driver-quick-start)
+[*Route Generation*](#path-generation)
 
-[*Autoware Main Functions* 20](#autoware-main-functions)
+[*Autonomous Driving*](#autonomous-driving)
 
-> [*Localization(NDT：Normal Distributions Transform)*
-> 20](#localization-ndtnormal-distributions-transform-1)
->
-> [*Object Detection* 22](#object-detection-1)
->
-> [*Path Planning* 23](#path-planning-1)
->
-> [*Path Following* 23](#path-following)
->
-> [*Dynamic Map* 24](#dynamic-map)
+[*User Interface*](#user-interface)
 
-[*AutowareRider* 27](#autowarerider)
+[*Platform structure for Autoware*](#platform-structure-for-autoware)
 
-> [*AutowareRoute* 27](#autowareroute)
->
-> [*Features* 27](#features)
->
-> [*AutowareRider Launching* 27](#autowarerider-launching)
->
-> [*Path Planning Application Usage*
-> 30](#path-planning-application-usage)
->
-> [*Send Path data to ROS PC* 30](#send-path-data-to-ros-pc)
->
-> [*CAN Collection Application Usage Data*
-> 30](#can-collection-application-usage-data)
->
-> [*Send CAN Data to a ROS PC* 31](#send-can-data-to-a-ros-pc)
->
-> [*Start Launch File* 32](#start-launch-file)
+[*Perception/Recognition*](#perceptionrecognition)
 
-[*4.* *Autoware User Interface Details* 33](#_Toc464046974)
+[*Judgement/Operation/Localization*](#judgementoperationlocalization)
 
-[*Runtime Manager* 33](#runtime-manager)
+[*Path Planning*](#path-planning)
 
-[*Runtime Manager – Quick Start Tab*
-34](#runtime-manager-quick-start-tab)
+[*Data Loading (3-D Map, Database, Files)*](#data-loading-3-d-map-database-files)
 
-[*Runtime Manager – Setup Tab* 36](#runtime-manager-setup-tab)
+[*Device Drivers and Sensor Fusion*](#device-drivers-and-sensor-fusion)
 
-[*Runtime Manager – Map Tab* 38](#runtime-manager-map-tab)
+[*Interface for Smart Phone Applications*](#interface-for-smart-phone-applications)
 
-[*Runtime Manager – Sensing Tab* 40](#runtime-manager-sensing-tab)
+[*Utilities and Others*](#utilities-and-others)
 
-[*Runtime Manager – Computing Tab* 43](#runtime-manager-computing-tab)
+[*3.* *Operating Autoware*](#_Toc464046951)
 
-[*Runtime Manager – Interface Tab* 48](#runtime-manager-interface-tab)
+[*Preparations*](#preparations)
 
-[*Runtime Manager – Database Tab* 50](#runtime-manager-database-tab)
+[*Demo Data*](#demo-data)
 
-[*Runtime Manager – Simulation Tab* 52](#runtime-manager-simulation-tab)
+[*Runtime Manager Launching*](#runtime-manager-launching)
 
-[*Runtime Manager – Status Tab* 54](#runtime-manager-status-tab)
+[*RViz Configuration*](#rviz-configuration)
 
-[*Runtime Manager - Topics Tab* 55](#runtime-manager---topics-tab)
+[*Operating Quick Start*](#operating-quick-start)
 
-[*ROSBAG Record Dialog* 56](#rosbag-record-dialog)
+[*Load map(Quick Start)*](#load-map-quick-start)
+
+[*Load driver(Quick Start)*](#load-driver-quick-start)
+
+[*Autoware Main Functions*](#autoware-main-functions)
+
+[*Localization(NDT：Normal Distributions Transform)*](#localization-ndtnormal-distributions-transform-1)
+
+[*Object Detection*](#object-detection-1)
+
+[*Path Planning*](#path-planning-1)
+
+[*Path Following*](#path-following)
+
+[*Dynamic Map*](#dynamic-map)
+
+[*AutowareRider*](#autowarerider)
+
+[*AutowareRoute*](#autowareroute)
+
+[*Features*](#features)
+
+[*AutowareRider Launching*](#autowarerider-launching)
+
+[*Path Planning Application Usage*](#path-planning-application-usage)
+
+[*Send Path data to ROS PC*](#send-path-data-to-ros-pc)
+
+[*CAN Collection Application Usage Data*](#can-collection-application-usage-data)
+
+[*Send CAN Data to a ROS PC*](#send-can-data-to-a-ros-pc)
+
+[*Start Launch File*](#start-launch-file)
+
+[*4.* *Autoware User Interface Details*](#_Toc464046974)
+
+[*Runtime Manager*](#runtime-manager)
+
+[*Runtime Manager – Quick Start Tab*](#runtime-manager-quick-start-tab)
+
+[*Runtime Manager – Setup Tab*](#runtime-manager-setup-tab)
+
+[*Runtime Manager – Map Tab*](#runtime-manager-map-tab)
+
+[*Runtime Manager – Sensing Tab*](#runtime-manager-sensing-tab)
+
+[*Runtime Manager – Computing Tab*](#runtime-manager-computing-tab)
+
+[*Runtime Manager – Interface Tab*](#runtime-manager-interface-tab)
+
+[*Runtime Manager – Database Tab*](#runtime-manager-database-tab)
+
+[*Runtime Manager – Simulation Tab*](#runtime-manager-simulation-tab)
+
+[*Runtime Manager – Status Tab*](#runtime-manager-status-tab)
+
+[*Runtime Manager - Topics Tab*](#runtime-manager---topics-tab)
+
+[*ROSBAG Record Dialog*](#rosbag-record-dialog)
 
 [*RViz* **エラー! ブックマークが定義されていません。**](#_Toc464046987)
 
-[*AutowareRider* 59](#autowarerider-1)
+[*AutowareRider*](#autowarerider-1)
 
-[*AutowareRoute* 64](#autowareroute-1)
+[*AutowareRoute*](#autowareroute-1)
 
-[*5.* *System Setup* 66](#_Toc464046990)
+[*5.* *System Setup*](#_Toc464046990)
 
-[*Installation* 66](#installation)
+[*Installation*](#installation)
 
-> [*OS* 66](#os)
->
-> [*ROS* 67](#ros)
->
-> [*OpenCV* 68](#opencv)
->
-> [*CUDA(if necessary)* 69](#cudaif-necessary)
->
-> [*FlyCapture(if necessary)* 69](#flycaptureif-necessary)
->
-> [*Autoware* 70](#autoware-1)
->
-> [*AutowareRider(if necessary)* 71](#autowarerider-if-necessary)
->
-> [*canlib(if necessary)* 72](#canlibif-necessary)
->
-> [*SSH Public Key Generation(if necessary)*
-> 72](#ssh-public-key-generationif-necessary)
+[*OS*](#os)
 
-[*6.* *Terminology* 73](#_Toc464047001)
+[*ROS*](#ros)
 
-[*7.* *Related Documents* 76](#_Toc464047002)
+[*OpenCV*](#opencv)
 
-> Chapter
->
-> 1
+[*CUDA(if necessary)*](#cudaif-necessary)
+
+[*FlyCapture(if necessary)*](#flycaptureif-necessary)
+
+[*Autoware*](#autoware-1)
+
+[*AutowareRider(if necessary)*](#autowarerider-if-necessary)
+
+[*canlib(if necessary)*](#canlibif-necessary)
+
+[*SSH Public Key Generation(if necessary)*](#ssh-public-key-generationif-necessary)
+
+[*6.* *Terminology*](#_Toc464047001)
+
+[*7.* *Related Documents*](#_Toc464047002)
+
+
+# Chapter 1
 
 About This Document
 ===================
 
-> This chapter describes the purpose of this document.
+*This chapter describes the purpose of this document.*
 
 There are following two documents provided by Nagoya University.
 
@@ -177,15 +164,12 @@ There are following two documents provided by Nagoya University.
 
 -   Autoware Developer’s Manual
 
-> Chapter
->
-> 2
+# Chapter 2
 
 ROS and Autoware
 ================
 
-> Before operating Autoware, ROS and Autoware are described in this
-> chapter.
+Before operating Autoware, ROS and Autoware are described in this chapter.
 
 Robot middleware - ROS
 ----------------------
@@ -222,164 +206,83 @@ or Linux. It is a middleware that runs on UNIX based OS.
 
 1.  Library and tools
 
-> ROS provides library and tools for robotic software development. The
-> primary libraries and tools are listed as follows:
+ROS provides library and tools for robotic software development. The primary libraries and tools are listed as follows:
 
-####### Original build system (Catkin)
+- Original build system (Catkin)
 
-####### Image processing library (OpenCV)
+- Image processing library (OpenCV)
 
-####### Data logging tool (ROSBAG)
+- Data logging tool (ROSBAG)
 
-####### Visualization tools for data and software state (RViz)
+- Visualization tools for data and software state (RViz)
 
-####### Coordinate transformation library (TF)
+- Coordinate transformation library (TF)
 
-####### Qt based GUI development tool (RQT)
+- Qt based GUI development tool (RQT)
 
 1.  Inter-process communication
 
-> ROS uses *message passing* with topics of publish/subscribe form for
-> inter-module connection/cooperation frameworks. Here, message passing
-> is an inter-process communication mechanism in which a sender can send
-> data to one or more receivers. This feature enables us to design
-> distribution systems. In ROS, processes called *node* are launched and
-> each node is run independently. In communication between nodes, by
-> following the publish/subscribe scheme, a node writes messages
-> (publish) into a topic and another node reads the messages (subscribe)
-> of the topic.
+ROS uses *message passing* with topics of publish/subscribe form for inter-module connection/cooperation frameworks. Here, message passing is an inter-process communication mechanism in which a sender can send data to one or more receivers. This feature enables us to design distribution systems. In ROS, processes called *node* are launched and each node is run independently. In communication between nodes, by following the publish/subscribe scheme, a node writes messages (publish) into a topic and another node reads the messages (subscribe) of the topic.
 
 1.  File components
 
-> ・bag file (ROSBAG)
->
-> In ROS, all the messages of topics are recorded and time-stamped into
-> a .bag file called *ROSBAG*. This file can be used for replaying the
-> messages on RViz as same timing as recording. In robotic development,
-> it is difficult to synchronize and analyze the interactions with
-> multiple sensors at the same time, but ROS enables efficient analysis
-> and debugging robotic systems. In addition, since the recorded
-> messages can be replayed repeatedly, this feature allows developers to
-> debug their systems without actual sensors.
->
-> ・Launch file
->
-> A “Launch” file is used to start multiple nodes at the same time. The
-> launch file contains the nodes to be started and their parameters
-> written in XML format.
+- bag file (ROSBAG)
+
+ In ROS, all the messages of topics are recorded and time-stamped into a .bag file called *ROSBAG*. This file can be used for replaying the messages on RViz as same timing as recording. In robotic development, it is difficult to synchronize and analyze the interactions with multiple sensors at the same time, but ROS enables efficient analysis and debugging robotic systems. In addition, since the recorded messages can be replayed repeatedly, this feature allows developers to debug their systems without actual sensors.
+
+- Launch file
+
+A “Launch” file is used to start multiple nodes at the same time. The launch file contains the nodes to be started and their parameters written in XML format.
 
 Autoware 
 ---------
 
-> A![](media/image1.png){width="5.427083333333333in"
-> height="3.7708333333333335in"}utoware is open source software based on
-> ROS. Autoware is pushed on Github for autonomous driving research and
-> development. Most of autonomous driving system consist of
-> *recognition*, *judgment*, and *operation*. Autoware provides
-> necessary functions, such as 3-D map generation, localization, object
-> recognition, and vehicle control, for autonomous driving.
->
-> Autoware uses LIDAR (Light Detection and Ranging) and on-vehicle
-> cameras to localize the ego-car position. In addition, Autoware can
-> detect surrounding objects, such as pedestrians, vehicles, traffic
-> lights etc., by using LIDAR and GNSS (Global Navigation Satellite
-> System).
->
-> The making judgments of driving/stopping at lanes or intersections are
-> performed with an embedded multi-core CPU. Operations of controlling
-> vehicle behaviors utilize conventional on-vehicle control mechanism,
-> while support systems such as driving assistance and safety diagnosis
-> support, use multi-core CPU.
+A![](media/image1.png){width="5.427083333333333in" height="3.7708333333333335in"}utoware is open source software based on ROS. Autoware is pushed on Github for autonomous driving research and development. Most of autonomous driving system consist of *recognition*, *judgment*, and *operation*. Autoware provides necessary functions, such as 3-D map generation, localization, object recognition, and vehicle control, for autonomous driving.
+
+Autoware uses LIDAR (Light Detection and Ranging) and on-vehicle cameras to localize the ego-car position. In addition, Autoware can detect surrounding objects, such as pedestrians, vehicles, traffic lights etc., by using LIDAR and GNSS (Global Navigation Satellite System).
+
+The making judgments of driving/stopping at lanes or intersections are performed with an embedded multi-core CPU. Operations of controlling vehicle behaviors utilize conventional on-vehicle control mechanism, while support systems such as driving assistance and safety diagnosis support, use multi-core CPU.
 
 ### 3-D Map Generation and Sharing
 
-The most notable feature of Autoware is the fact that the autonomous
-driving of Autoware uses a 3-D map. The 3-D map, unlike 2-D maps used in
-car navigation system, is a map including various information, such as
-roads and all the still objects around the roads. The 3-D map will play
-a critical role in deploying autonomous driving into the real world.
-Autoware localizes the position of the ego-vehicle by matching the 3-D
-map loaded into the PC with the surrounding information captured by the
-LIDAR on the roof. The precision of localization is approximately 10cm,
-which number indicates far higher precision than GPS.
+The most notable feature of Autoware is the fact that the autonomous driving of Autoware uses a 3-D map. The 3-D map, unlike 2-D maps used in car navigation system, is a map including various information, such as roads and all the still objects around the roads. The 3-D map will play a critical role in deploying autonomous driving into the real world.
+Autoware localizes the position of the ego-vehicle by matching the 3-D map loaded into the PC with the surrounding information captured by the LIDAR on the roof. The precision of localization is approximately 10cm, which number indicates far higher precision than GPS.
 
-As of Sep. 2015, the 3-D map covers the only limited area. If the
-ego-vehicle with Autoware enters into the area without the 3-D map,
-Autoware can generate a 3-D map in real-time from the information
-captured by LIDAR.The generated 3-D map in this way not only can be
-utilized for the developers using Autoware, but also it can be uploaded
-and shared on the Nagoya University servers. The feature enables online
-updating of the 3-D map. This mechanism allows for creating the 3-D map
-including every nook and corner of the city, such as tiny alleys that
-the specialized vehicles for 3-D mapping can not enter. In addition, the
-geographic data from the 3-D map can generate a 3-D map of vector
-format.
+As of Sep. 2015, the 3-D map covers the only limited area. If the ego-vehicle with Autoware enters into the area without the 3-D map, Autoware can generate a 3-D map in real-time from the information captured by LIDAR.The generated 3-D map in this way not only can be utilized for the developers using Autoware, but also it can be uploaded and shared on the Nagoya University servers. The feature enables online updating of the 3-D map. This mechanism allows for creating the 3-D map including every nook and corner of the city, such as tiny alleys that the specialized vehicles for 3-D mapping can not enter. In addition, the geographic data from the 3-D map can generate a 3-D map of vector format.
 
 ### Localization (NDT：Normal Distributions Transform)
 
-The position of the ego-vehicle can be located by scan matching based on
-the NDT algorithm with the 3-D map of PCD (Point Cloud Data) format and
-LIDAR data. The position error of localization is around 10cm.
+The position of the ego-vehicle can be located by scan matching based on the NDT algorithm with the 3-D map of PCD (Point Cloud Data) format and LIDAR data. The position error of localization is around 10cm.
 
 ### Object Detection
 
-DPM (Deformable Part Models) algorithms can detect cars, pedestrians and
-traffic lights from camera images. Tracking using Kalman filter can be
-implemented and it improves detection accuracy. Fusing 3-D LIDAR data
-can obtain the distances of the detected objects. Traffic lights
-detection is conducted as following steps. First, the 3-D positions of
-traffic lights are calculated by using the localization result and the
-high-definition 3-D map. Next, the 3-D positions of traffic lights are
-projected on camera images by sensor fusion. Then, traffic light colors
-are recognized by image processing.
+DPM (Deformable Part Models) algorithms can detect cars, pedestrians and traffic lights from camera images. Tracking using Kalman filter can be implemented and it improves detection accuracy. Fusing 3-D LIDAR data can obtain the distances of the detected objects. Traffic lights detection is conducted as following steps. First, the 3-D positions of
+traffic lights are calculated by using the localization result and the high-definition 3-D map. Next, the 3-D positions of traffic lights are projected on camera images by sensor fusion. Then, traffic light colors are recognized by image processing.
 
 ### Path Generation
 
-AutowareRoute (a route data generation application using MapFan)
-generates a path to the selected destination. Then, autonomous driving
-system determines the lanes on the path. The path data generation
-application is provided as a car navigation of smartphone. The
-trajectories in the lanes are calculated kinematically.
+AutowareRoute (a route data generation application using MapFan) generates a path to the selected destination. Then, autonomous driving system determines the lanes on the path. The path data generation application is provided as a car navigation of smartphone. The trajectories in the lanes are calculated kinematically.
 
 ### Autonomous Driving
 
-The generated path includes appropriate speed information. Autonomous
-driving system uses it as the target speed. In addition, the route
-includes landmarks, “way point”, set at 1m intervals. The autonomous
-driving system operates “path following” by following the way points.
-Referring near way points on curves and distant way points on straights
-stabilizes autonomous driving. If ego-vehicle deviates from the route,
-the system aims to the vicinity point and back to the target route. Note
-that the safest path is selected by the driving system.
+The generated path includes appropriate speed information. Autonomous driving system uses it as the target speed. In addition, the route includes landmarks, “way point”, set at 1m intervals. The autonomous driving system operates “path following” by following the way points. Referring near way points on curves and distant way points on straights stabilizes autonomous driving. If ego-vehicle deviates from the route, the system aims to the vicinity point and back to the target route. Note that the safest path is selected by the driving system.
 
 ### User Interface
 
-> ![](media/image2.png)A user interface called “Runtime Manager” of
-> Autoware enables developers to operate functions, such as
-> localization, object detection, and path following, easily. In
-> addition, RViz can integrate and visualize localization on 3-D map,
-> object detection, path planning, and path following. Furthermore, a
-> tablet user interface, “AutowareRider”, of Autoware enables
-> navigation, path planning, transition to autonomous driving mode and
-> etc., on tables, easily. Moreover, Autoware can visualize 3-D map used
-> in autonomous driving system and project it on on-vehicle displays and
-> Oculus devices.
+![](media/image2.png)A user interface called “Runtime Manager” of Autoware enables developers to operate functions, such as localization, object detection, and path following, easily. In addition, RViz can integrate and visualize localization on 3-D map, object detection, path planning, and path following. Furthermore, a tablet user interface, “AutowareRider”, of Autoware enables navigation, path planning, transition to autonomous driving mode and etc., on tables, easily. Moreover, Autoware can visualize 3-D map used in autonomous driving system and project it on on-vehicle displays and Oculus devices.
 
 Platform structure for Autoware 
 --------------------------------
 
-A![](media/image3.png)utoware is an application using ROS and ROS only
-works on Unix-based platforms. Figure 3 illustrates the overall system
-structure for Autoware.
+A![](media/image3.png)utoware is an application using ROS and ROS only works on Unix-based platforms. Figure 3 illustrates the overall system structure for Autoware.
 
 ### Perception/Recognition
 
-> ros/src/computing/perception/detection
->
-> The figure to be updated (tmp)
->
-> ![](media/image4.png){width="6.264583333333333in"
-> height="4.6930555555555555in"}
+ros/src/computing/perception/detection
+
+The figure to be updated (tmp)
+
+![](media/image4.png){width="6.264583333333333in" height="4.6930555555555555in"}
 
 ### Judgement/Operation/Localization
 
@@ -431,9 +334,7 @@ vehicle/
 
 Vehicle control, vehicle data acquisition
 
-> Chapter
->
-> 3
+# Chapter 3
 
 3.  []{#_Toc464046951 .anchor}Operating Autoware
 
@@ -444,10 +345,7 @@ Chapter 4 for user inter face details.
 Preparations
 ------------
 
-> Main functions of Autoware can easily be operated by Quick Start tab
-> in Runtime Manager. Nagoya University has provided sample demo data
-> for Quick Start. Preparation for the demo is described in the
-> following sections.
+Main functions of Autoware can easily be operated by Quick Start tab in Runtime Manager. Nagoya University has provided sample demo data for Quick Start. Preparation for the demo is described in the following sections.
 
 ### Demo Data
 
@@ -458,10 +356,9 @@ Here, it is assumed that the required data is put in \~/.autoware/data.
 
 1.  Download
 
-Download the demo data from the following sites, and put them in
-\~/.autoware/data
+Download the demo data from the following sites, and put them in \~/.autoware/data
 
--   Script for generating launch files
+-  Script for generating launch files
 
 [*http://db3.ertl.jp/autoware/sample\_data/my\_launch.sh*](http://db3.ertl.jp/autoware/sample_data/my_launch.sh)
 
@@ -483,9 +380,8 @@ Extract the downloaded data to \~/.autoware/ by the following command:
 
 1.  Launch script
 
-Run the following script to generate lacunh files for playing demo by
-Qutick Start tab.\
-\
+Run the following script to generate lacunh files for playing demo by Qutick Start tab.
+
 \$ sh my\_launch.sh
 
 1.  Launch files to be generated
@@ -504,61 +400,47 @@ my\_motion\_planning.launch \# Path following
 
 1.  If you want to generate launch files to other directories
 
-If you want to generate launch files in other directories, specify the
-path as an argument for launching the script.
+If you want to generate launch files in other directories, specify the path as an argument for launching the script.
 
-Example:　if you put the data in
-\~/.autoware/data/quick\_start/ROSBAG\_sample/
+Example:　if you put the data in \~/.autoware/data/quick\_start/ROSBAG\_sample/
 
 ### Runtime Manager Launching
 
-1.  Runtime Manager can be launched by double-clicking Autoware/ros/run
-    in ROS PC. Alternatively, it can be launched by “./run” on a
-    terminal.
+1.  Runtime Manager can be launched by double-clicking Autoware/ros/run in ROS PC. Alternatively, it can be launched by “./run” on a terminal.
 
-> The run file contains shell scripts.
->
-> Starting run, two terminals are launched.
->
-> The one is for roscore, the other is for the output of runtime
-> manager.
+The run file contains shell scripts.
 
-1.  Enter login password and press \[OK\] on the displayed password
-    dialog.
+Starting run, two terminals are launched.
+
+The one is for roscore, the other is for the output of runtime manager.
+
+1.  Enter login password and press \[OK\] on the displayed password dialog.
 
 ![](media/image10.png){width="3.0833333333333335in"
 height="1.303264435695538in"}
 
 ### RViz Configuration
 
-1.  Launch RViz by pressing \[RViz\] on the right-bottom in Runtime
-    Manager.
+1.  Launch RViz by pressing \[RViz\] on the right-bottom in Runtime Manager.
 
 Select \[File\] - \[Open Config\] in the \[RViz\] menu.
 
-Select the following Config file and press \[Open\] on the dialog
-displayed by pressing \[Choose a file to open\].\
+Select the following Config file and press \[Open\] on the dialog displayed by pressing \[Choose a file to open\].\
 \
 Autoware/ros/src/.config/RViz/default.RViz
 
 Operating Quick Start
 ---------------------
 
-> Steps of main function operations of Autoware by Quick Start in
-> Runtime Manager are described in the following sections.
+ Steps of main function operations of Autoware by Quick Start in Runtime Manager are described in the following sections.
 
 ### Load map (Quick Start)
 
-1.  Load 3-D map (Point Cloud) and Vector map (Vector Map)\
-    Specify the my\_map.launch generated in the *Demo Data* section to
-    the file selection dialog of \[Map\] in the \[Quick Start\] tab and
-    press Map.
+1.  Load 3-D map (Point Cloud) and Vector map (Vector Map)\ Specify the my\_map.launch generated in the *Demo Data* section to the file selection dialog of \[Map\] in the \[Quick Start\] tab and press Map.
 
 ### Load driver (Quick Start)
 
-1.  Specify the my\_sensing.launch generated in the *Demo Data* section
-    to the file selection dialog of \[Sensing\] in the \[Quick Start\]
-    tab and press Sensing.
+1.  Specify the my\_sensing.launch generated in the *Demo Data* section to the file selection dialog of \[Sensing\] in the \[Quick Start\] tab and press Sensing.
 
 Autoware Main Functions
 -----------------------
@@ -567,50 +449,32 @@ Autoware Main Functions
 
 How to use a ROSBAG is described in this section.
 
-1.  Specify the following ROSBAG by the file selection dialog in
-    \[Simulation\] tab, and press \[Play\]. Press \[Pause\] to suspend
-    ROSBAG immediately.\
-    \
+1.  Specify the following ROSBAG by the file selection dialog in \[Simulation\] tab, and press \[Play\]. Press \[Pause\] to suspend ROSBAG immediately.\
+
     \~/.autoware/sample\_moriyama\_150324.bag
 
-2.  Specify the my\_map.launch generated in the Demo Data section to the
-    file selection dialog of \[Map\] in the \[Quick Start\] tab, and
-    press Map.
+2.  Specify the my\_map.launch generated in the Demo Data section to the file selection dialog of \[Map\] in the \[Quick Start\] tab, and press Map.
 
-3.  Specify the my\_localization.launch generated in the Demo Data
-    section to the file selection dialog of \[Localization\] in the
-    \[Quick Start\] tab, and press \[Localization\].
+3.  Specify the my\_localization.launch generated in the Demo Data section to the file selection dialog of \[Localization\] in the \[Quick Start\] tab, and press \[Localization\].
 
-4.  Pressing \[Pause\] in the \[Simulation\] tab to resume the ROSBAG, a
-    map is displayed. If NDT is run, the results are also displayed. If
-    nothing is displayed, press \[Reset\] in the RViz, or remove and set
-    checks of \[Points Map\] and \[Vector Map\] in the Display. Figure
-    12 shows the loaded map and the localized vehicle on RViz.
+4.  Pressing \[Pause\] in the \[Simulation\] tab to resume the ROSBAG, a map is displayed. If NDT is run, the results are also displayed. If nothing is displayed, press \[Reset\] in the RViz, or remove and set checks of \[Points Map\] and \[Vector Map\] in the Display. Figure 12 shows the loaded map and the localized vehicle on RViz.
 
 ![](media/image11.png){width="5.96875in"
 height="3.3666666666666667in"}Note: Localization is not stable until 23%
-(110/479 second) of the progress bar displayed in the Simulation tab,
-because the demo ROSBAG does not include maps.
+(110/479 second) of the progress bar displayed in the Simulation tab, because the demo ROSBAG does not include maps.
 
-1.  If the results of localization do not follow the GNSS arrow, press
-    \[2D Pose Estimate\] in the top of RViz, move the mouse cursor and
-    click the GNSS arrow.
+1.  If the results of localization do not follow the GNSS arrow, press \[2D Pose Estimate\] in the top of RViz, move the mouse cursor and click the GNSS arrow.
 
-2.  Selecting \[ThirdPersonFollower(RViz)\] in the
-    \[TopDownOrtho(RViz)\] on the right pane in RViz, Figure 12 view can
-    be obtained.
+2.  Selecting \[ThirdPersonFollower(RViz)\] in the \[TopDownOrtho(RViz)\] on the right pane in RViz, Figure 12 view can be obtained.
 
-> ![](media/image12.png){width="2.4166666666666665in"
-> height="1.8611111111111112in"}
+![](media/image12.png){width="2.4166666666666665in"
+height="1.8611111111111112in"}
 
 ### Object Detection
 
-1.  Specify the my\_detection.launch generated in the Demo Data section
-    to the file selection dialog of \[Detection\] in the \[Qutick
-    Start\] tab, and press \[Detection\].
+1.  Specify the my\_detection.launch generated in the Demo Data section to the file selection dialog of \[Detection\] in the \[Qutick Start\] tab, and press \[Detection\].
 
-2.  If object detection succeeds in running NDT, vehicles will be
-    displayed as blue spheres, and pedestrians will be green spheres.
+2.  If object detection succeeds in running NDT, vehicles will be displayed as blue spheres, and pedestrians will be green spheres.
 
 ![](media/image13.png){width="3.8854166666666665in"
 height="3.96875in"}NOTE: the demo ROSBAG data does not contain video
@@ -618,32 +482,23 @@ data for object detection.
 
 ### ![](media/image14.png){width="3.5694444444444446in" height="1.885498687664042in"}Path Planning
 
-1.  Specify the my\_mission\_planning.lauch generated in the Demo Data
-    section to the file selection dialog of \[Mission Planning\] in the
-    \[Quick Start\] tab and press \[Mission Planning\].
+1.  Specify the my\_mission\_planning.lauch generated in the Demo Data section to the file selection dialog of \[Mission Planning\] in the \[Quick Start\] tab and press \[Mission Planning\].
 
 2.  The path and the target speed are displayed in blue line.
 
 ### ![](media/image15.png){width="3.0in" height="2.359722222222222in"}Path Following
 
-1.  Specify the “my\_motion\_planning.launch” generated in the Demo data
-    section to the file selection dialog of Motion Planning in the Quick
-    Start tab, and press \[Motion Planning\].
+1.  Specify the “my\_motion\_planning.launch” generated in the Demo data section to the file selection dialog of Motion Planning in the Quick Start tab, and press \[Motion Planning\].
 
-2.  If the specified path by path planning is coming in the displaying
-    window, blue spheres on the path, and red circles calculated by Pure
-    Pursuit are displayed.
+2.  If the specified path by path planning is coming in the displaying window, blue spheres on the path, and red circles calculated by Pure Pursuit are displayed.
 
 ### Dynamic Map
 
-> Dynamic map is a method of sharing car and pedestrian information,
-> which is recognized by the ego vehicle or other vehicles, through
-> Nagoya University database server.
+Dynamic map is a method of sharing car and pedestrian information, which is recognized by the ego vehicle or other vehicles, through Nagoya University database server.
 
 1.  Ensure the following topics are in Publish
 
-All are not necessary. If the following topics are published, register
-their information to the database.
+All are not necessary. If the following topics are published, register their information to the database.
 
 /current\_pose (ego vehicle, /vel\_pose\_mux in Publish)
 
@@ -652,34 +507,21 @@ their information to the database.
 /obj\_person\_pose (pedestrains, /obj\_fusion in Publish)
 
 1.  ![](media/image16.png){width="4.895833333333333in"
-    height="3.4166666666666665in"}Click \[Position\] -&gt;
-    \[pos\_uploader\] -&gt; \[app\] in the \[Database\] tab on the
-    providing information side, enter information to access database
-    server by SSH, and press \[OK\].\
-    \
-    (Generating SSH key is described in the generating SSH public key
+    height="3.4166666666666665in"}Click \[Position\] -&gt; \[pos\_uploader\] -&gt; \[app\] in the \[Database\] tab on the providing information side, enter information to access database server by SSH, and press \[OK\]. (Generating SSH key is described in the generating SSH public key
     section)
 
-2.  Check \[Position\] -&gt; \[pos\_uploader\] (launch nodes) in the
-    \[Database\] tab on the sending information side.
+2.  Check \[Position\] -&gt; \[pos\_uploader\] (launch nodes) in the \[Database\] tab on the sending information side.
 
-3.  Click \[Position\] -&gt; \[pos\_uploader\] -&gt; \[app\] in the
-    \[Databse\] tab on the reviewing information side, enter information
-    to access database server by SSH, and press \[OK\]. Checking \[show
-    my pose\], the ego vehicle position is published.
+3.  Click \[Position\] -&gt; \[pos\_uploader\] -&gt; \[app\] in the \[Databse\] tab on the reviewing information side, enter information to access database server by SSH, and press \[OK\]. Checking \[show my pose\], the ego vehicle position is published.
 
-> ![](media/image16.png){width="4.895833333333333in"
-> height="3.4166666666666665in"}
+![](media/image16.png){width="4.895833333333333in"
+height="3.4166666666666665in"}
 
-1.  Check \[Position\] -&gt; \[pos\_downloader\] in the \[Database\] tab
-    on “RViz” in the reviewing information side.
+1.  Check \[Position\] -&gt; \[pos\_downloader\] in the \[Database\] tab on “RViz” in the reviewing information side.
 
-2.  Adding a topic of “Marker” of “/mo marker” on the reviewing
-    information side, the recognized ego vehicle and other vehicles are
-    displayed.
+2.  Adding a topic of “Marker” of “/mo marker” on the reviewing information side, the recognized ego vehicle and other vehicles are displayed.
 
-3.  The table, “*can”,* of the Nagoya university database (“VoltDB”) is
-    defined as follows:
+3.  The table, “*can”,* of the Nagoya university database (“VoltDB”) is defined as follows:
 
 Table 1 Can
 
@@ -706,14 +548,11 @@ Table 1 Can
 AutowareRider
 -------------
 
-> AutowareRider is an Android application to operate Autoware, which
-> runs on ROS PCs, from tablet terminals. The UI is similar to Night
-> Rider, which is a TV series.
+AutowareRider is an Android application to operate Autoware, which runs on ROS PCs, from tablet terminals. The UI is similar to Night Rider, which is a TV series.
 
 ### AutowareRoute
 
-AutowareRoute is another Android application implemented with MapFan SDK
-for planning route data from a departure point to a destination point.
+AutowareRoute is another Android application implemented with MapFan SDK for planning route data from a departure point to a destination point.
 
 ### Features
 
@@ -731,86 +570,75 @@ AutowareRider provides the following functions.
 
 1.  Launch Runtime Manager on an ROS PC.
 
-2.  Press \[Active\] in \[Network Connection\] -&gt; \[Tablet UI\] on
-    the Main Tab to launch the following nodes:\
-    \
-    　 tablet\_receiver
+2.  Press \[Active\] in \[Network Connection\] -&gt; \[Tablet UI\] on the Main Tab to launch the following nodes: tablet\_receiver tablet\_sender
 
-> tablet\_sender
+1.  Specify the following parameters in each \[app\] of \[Planning\] -&gt; \[Path\] in the \[Computing\] tab.
 
-1.  Specify the following parameters in each \[app\] of \[Planning\]
-    -&gt; \[Path\] in the \[Computing\] tab.
+\[lane\_navi\]
 
-> \[lane\_navi\]
->
-> vector\_map\_directory
->
-> A directory path of a high definition map
->
-> \[lane\_rule\]
->
-> vector\_map\_directory
->
-> A directory path of a high definition map
->
-> ruled\_waypoint\_csv
->
-> A path of a file saved waypoints
->
-> Velocity
->
-> Speed (unit: km/h, default: 40, range: 0\~200)
->
-> Difference around Signal
->
-> Acceleration around traffic lights (unit: km/h, default: 2, range:
-> 0\~20)
->
-> \[lane\_stop\]
->
-> Red Light
->
-> Change to the velocity of red light
->
-> Blue Light
->
-> Change to the velocity of blue light
+vector\_map\_directory
 
-1.  Launch the followings by turning on the checkbox of \[Planning\]
-    -&gt; \[Path\] on the \[Computing\] tab.
+A directory path of a high definition map
 
-> \[lane\_navi\]
->
-> \[lane\_rule\]
->
-> \[lane\_stop\]
+\[lane\_rule\]
+
+vector\_map\_directory
+
+A directory path of a high definition map
+
+ruled\_waypoint\_csv
+
+A path of a file saved waypoints
+
+Velocity
+
+Speed (unit: km/h, default: 40, range: 0\~200)
+
+Difference around Signal
+
+Acceleration around traffic lights (unit: km/h, default: 2, range: 0\~20)
+
+ \[lane\_stop\]
+
+ Red Light
+
+ Change to the velocity of red light
+
+ Blue Light
+
+ Change to the velocity of blue light
+
+1.  Launch the followings by turning on the checkbox of \[Planning\] -&gt; \[Path\] on the \[Computing\] tab.
+
+ \[lane\_navi\]
+
+ \[lane\_rule\]
+
+ \[lane\_stop\]
 
 1.  Launch AutowareRider from the list of Android tablet applications.
 
-2.  Specify the following parameters in the \[右上メニュー\] (left-top
-    menu) -&gt; \[設定\] (setting).
+2.  Specify the following parameters in the \[右上メニュー\] (left-top menu) -&gt; \[設定\] (setting).
 
-> ROS PC
->
-> IP address
->
-> ROS PC IPv4 address
->
-> Receiver port number
->
-> tablet\_receiver port number (default: 5666)
->
-> Sender port number
->
-> tablet\_sender port number (default: 5777)
+ROS PC
+
+IP address
+
+ROS PC IPv4 address
+
+Receiver port number
+
+tablet\_receiver port number (default: 5666)
+
+Sender port number
+
+tablet\_sender port number (default: 5777)
 
 1.  Press \[OK\] to access to the ROS PC.
 
-> Here, the configuration is saved into a file automatically, and the
-> file is used from next connection as default setting.
+Here, the configuration is saved into a file automatically, and the file is used from next connection as default setting.
 
-1.  If the central bar on the window is light red, the connection is
-    success.
+1.  If the central bar on the window is light red, the connection is success.
 
 **\
 **
@@ -837,9 +665,7 @@ Table 2 Bar color and connection status
 
     c.  ルート探索実行 (run route planning)
 
-3.  *Path planning* after *route planning* is done, path data is sent to
-    an ROS PC. The path data is saved automatically, and route planning
-    is omitted from the next time.
+3.  *Path planning* after *route planning* is done, path data is sent to an ROS PC. The path data is saved automatically, and route planning is omitted from the next time.
 
 4.  AutowareRider window is displayed after sending the path data.
 
@@ -895,8 +721,7 @@ Refer the step ③ above for path planning application usage.
 > Note: SSH password is not saved in the configuration file. The
 > password is saved on the memory during running AutowareRider.
 
-1.  Launch any one of the followings in \[右上メニュー\] (right top
-    menu) -&gt; \[データ収集\] (data collection)
+1.  Launch any one of the followings in \[右上メニュー\] (right top menu) -&gt; \[データ収集\] (data collection)
 
 > CanGather
 >
@@ -904,8 +729,7 @@ Refer the step ③ above for path planning application usage.
 >
 > CarLink (USB)
 
-1.  The usages after launching applications are same as launching
-    applications individually. Refer the below URL.
+1.  The usages after launching applications are same as launching applications individually. Refer the below URL.
 
 > *<https://github.com/CPFL/Autoware/blob/master/vehicle/general/android/README>.md*
 
@@ -915,15 +739,13 @@ Refer the step ④ in CAN Data Collection Usage (tmp).
 
 ### Start Launch File
 
-1.  \[S1\] and \[S2\] of AutowareRider starts the following launch
-    files, respectively (tmp).
+1.  \[S1\] and \[S2\] of AutowareRider starts the following launch files, respectively (tmp).
 
 > check.launch
 >
 > set.launch
 
-Pressing each button, the corresponding launch file is started on an ROS
-PC.
+Pressing each button, the corresponding launch file is started on an ROS PC.
 
 Table 2 Buttons and launch file status
 
@@ -944,18 +766,11 @@ Runtime Manager
 
 R
 
-untime Manager is a Python script (scripts/runtime\_manager\_dalog.py)
-included in the runtime\_manager package. It can be launched by the
-following command:
+untime Manager is a Python script (scripts/runtime\_manager\_dalog.py) included in the runtime\_manager package. It can be launched by the following command:
 
 > **\$ rosrun runtime\_manager runtime\_manager\_dialog.py**
 
-Runtime Manager dialog composes of multiple tabs. Operating Runtime
-Manager dialog enables processes of starting/ending ROS nodes used in
-Autoware, and publishing topics for parameters of the launched ROS. The
-buttons to start/end ROS nodes are classified into functionalities and
-placed in different tabs. Each Tab window can be switched by pressing
-each Tab on the top of the Runtime Manager dialog.
+Runtime Manager dialog composes of multiple tabs. Operating Runtime Manager dialog enables processes of starting/ending ROS nodes used in Autoware, and publishing topics for parameters of the launched ROS. The buttons to start/end ROS nodes are classified into functionalities and placed in different tabs. Each Tab window can be switched by pressing each Tab on the top of the Runtime Manager dialog.
 
 ![](media/image17.png){width="6.552083333333333in" height="4.615277777777778in"}Runtime Manager – Quick Start Tab
 -----------------------------------------------------------------------------------------------------------------
@@ -1034,12 +849,7 @@ Figure Runtime Manager - Setup Tab
 > \[Vehicle Model\]
 
 **\[Vehicle Model\]** … Start/end a script
-*model\_publisher/vehicle\_model.launch* with the argument, which is the
-full path of URDF(Unified Robot Description Format)file(a vehicle model
-displayed on RViz)specified in the text box. Alternatively, a URDF file
-can be selected from a file selection dialog displayed by pressing
-\[Ref\]. If a URDF file is not specified in the \[Vehicle Model\] text
-box, *Autoware/ros/src/.config/model/default.urdf* is used.
+*model\_publisher/vehicle\_model.launch* with the argument, which is the full path of URDF(Unified Robot Description Format)file(a vehicle model displayed on RViz)specified in the text box. Alternatively, a URDF file can be selected from a file selection dialog displayed by pressing \[Ref\]. If a URDF file is not specified in the \[Vehicle Model\] text box, *Autoware/ros/src/.config/model/default.urdf* is used.
 
 -   **\[ROSBAG\]** … Display a ROSBAG Record dialog.
 
@@ -1833,13 +1643,11 @@ Figure AutowareRoute window
 Installation
 ------------
 
-Install OS (Linux), ROS, Autoware, etc., into PC as the following
-procedural steps.
+Install OS (Linux), ROS, Autoware, etc., into PC as the following procedural steps.
 
 ### OS
 
-The Linux distributions supported by Autoware at Sep. 2016 are as
-follows:
+The Linux distributions supported by Autoware at Sep. 2016 are as follows:
 
 Ubuntu 14.04 LTS x86\_64 (Recommended)
 
@@ -1857,8 +1665,7 @@ Ubuntu
 
 ### ROS
 
-If you use Ubuntu14.04, install ROS and the required packages by the
-following steps:
+If you use Ubuntu14.04, install ROS and the required packages by the following steps:
 
 \$ sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu trusty main"
 &gt; \\
@@ -1968,8 +1775,7 @@ unzip opencv-2.4.11.zip
 
 ### CUDA(if necessary)
 
-If you use GPU on NVIDIA graphic board for conducting calculations, CUDA
-is required. Refer the website
+If you use GPU on NVIDIA graphic board for conducting calculations, CUDA is required. Refer the website
 [*http://docs.nvidia.com/cuda/cuda-getting-started-guide-for-linux/*](http://docs.nvidia.com/cuda/cuda-getting-started-guide-for-linux/)
 and install as follows:
 
@@ -1991,8 +1797,7 @@ Install CUDA
 
 Download CUDA from *<http://developer.nvidia.com/cuda-downloads>.*
 
-(hereinafter, installing cuda-repo-ubuntu1404\_7.0-28\_amd64.deb is
-assumed)
+(hereinafter, installing cuda-repo-ubuntu1404\_7.0-28\_amd64.deb is assumed)
 
 \$ sudo dpkg -i cuda-repo-ubuntu1404\_7.0-28\_amd64.deb
 
@@ -2030,9 +1835,7 @@ export LD\_LIBRARY\_PATH=”/usr/local/cuda/lib:\$LD\_LIBRARY\_PATH”
 
 If you use PointGray cameras, install FlyCapture SDK as follows:
 
-1.  Download FlyCapture SDK from PointGrey website
-    ([*http://www.ptgrey.com/*](http://www.ptgrey.com/)).\
-    User registration is required before download.
+1.  Download FlyCapture SDK from PointGrey website ([*http://www.ptgrey.com/*](http://www.ptgrey.com/)). User registration is required before download.
 
 2.  Install packages
 
@@ -2069,11 +1872,9 @@ updatorgui (2.6.3.4) を設定しています ...
 
 Processing triggers for man-db (2.6.7.1-1ubuntu1) ...
 
-Would you like to add a udev entry to allow access to IEEE-1394 and USB
-hardware?
+Would you like to add a udev entry to allow access to IEEE-1394 and USB hardware?
 
-If this is not ran then your cameras may be only accessible by running
-flycap as sudo.
+If this is not ran then your cameras may be only accessible by running flycap as sudo.
 
 (y/n)\$ y
 
@@ -2112,8 +1913,7 @@ If you use archives\
 
 ### AutowareRider (if necessary)
 
-AutowareRider is an Android application, which has similar UI as Knight
-Rider, for operating Autoware running on ROS PC from tablet devices.
+AutowareRider is an Android application, which has similar UI as Knight Rider, for operating Autoware running on ROS PC from tablet devices.
 
 Get APK from below URLs and install them.
 
@@ -2138,10 +1938,7 @@ CAN data collection application
 
 ### canlib(if necessary)
 
-Get linuxcan.tar.gz from *Kvaser LINUX Driver and SDK* in the kvaser
-website
-([*http://www.kvaser.com/downloads/*](http://www.kvaser.com/downloads/))
-and install it as the following steps:
+Get linuxcan.tar.gz from *Kvaser LINUX Driver and SDK* in the kvaser website ([*http://www.kvaser.com/downloads/*](http://www.kvaser.com/downloads/)) and install it as the following steps:
 
 \$ tar xzf linuxcan.tar.gz
 
@@ -2153,11 +1950,9 @@ and install it as the following steps:
 
 ### SSH Public Key Generation(if necessary)
 
-When pos\_db access database via SSH, it uses SSH key without pass
-phrase.
+When pos\_db access database via SSH, it uses SSH key without pass phrase.
 
-Therefore, generating the SSH key of the database server and registering
-it to the server are required.
+Therefore, generating the SSH key of the database server and registering it to the server are required.
 
 1.  Generating SSH Key
 
@@ -2175,8 +1970,7 @@ Copy the generated SSH key to the server as follows:
 
 \$ ssh-copy-id -i \~/.ssh/id\_rsa.pub posup@db3.ertl.jp
 
-(”posup” indicates user name and ”db3.ertl.jp” denotes database server
-name.)
+(”posup” indicates user name and ”db3.ertl.jp” denotes database server name.)
 
 Enter passwords if necessary.
 
