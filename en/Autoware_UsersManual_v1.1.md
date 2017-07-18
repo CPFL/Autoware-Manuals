@@ -526,7 +526,8 @@ Refer the step ③ above for path planning application usage.
 
 1.  Specify the following parameters in \[右上メニュー\] (right top menu) -&gt; \[設定\] (setting) on the AutowareRider (tmp).
 
-	```データ収集 (data collection)
+```
+	データ収集 (data collection)
 		Table name
 			Destination table name
 
@@ -546,7 +547,8 @@ Refer the step ③ above for path planning application usage.
 		Remote host name
 			Remote machine host name (default: 127.0.0.1)
 		Remote port number
-			Port number of a remote machine (default: 5555)```
+			Port number of a remote machine (default: 5555)
+```
 
 2.  The configuration is saved by pressing \[OK\].
 
@@ -570,8 +572,8 @@ Refer the step ④ in CAN Data Collection Usage (tmp).
 
 1.  \[S1\] and \[S2\] of AutowareRider starts the following launch files, respectively (tmp).
 
-`check.launch`
-`set.launch`
+	```check.launch
+	set.launch```
 
 	Pressing each button, the corresponding launch file is started on an ROS PC.
 
