@@ -8,147 +8,77 @@ Autoware *ver.2016.Sep.12*
 
 ## Table of contents
 
-[*1. About This Document*](#about-this-document)
-
-[*2. ROS and Autoware*](#ros-and-autoware)
-
-[*Robot middleware - ROS*](#robot-middleware---ros)
-
-[*ROS Features*](#ros-features)
-
-[*Autoware*](#autoware)
-
-[*3-D Map Generation and Sharing*](#d-map-generation-and-sharing)
-
-[*Localization(NDT：Normal Distributions Transform)*](#localization-ndtnormal-distributions-transform)
-
-[*Object Detection*](#object-detection)
-
-[*Route Generation*](#path-generation)
-
-[*Autonomous Driving*](#autonomous-driving)
-
-[*User Interface*](#user-interface)
-
-[*Platform structure for Autoware*](#platform-structure-for-autoware)
-
-[*Perception/Recognition*](#perceptionrecognition)
-
-[*Judgement/Operation/Localization*](#judgementoperationlocalization)
-
-[*Path Planning*](#path-planning)
-
-[*Data Loading (3-D Map, Database, Files)*](#data-loading-3-d-map-database-files)
-
-[*Device Drivers and Sensor Fusion*](#device-drivers-and-sensor-fusion)
-
-[*Interface for Smart Phone Applications*](#interface-for-smart-phone-applications)
-
-[*Utilities and Others*](#utilities-and-others)
-
-[*3.* *Operating Autoware*](#_Toc464046951)
-
-[*Preparations*](#preparations)
-
-[*Demo Data*](#demo-data)
-
-[*Runtime Manager Launching*](#runtime-manager-launching)
-
-[*RViz Configuration*](#rviz-configuration)
-
-[*Operating Quick Start*](#operating-quick-start)
-
-[*Load map(Quick Start)*](#load-map-quick-start)
-
-[*Load driver(Quick Start)*](#load-driver-quick-start)
-
-[*Autoware Main Functions*](#autoware-main-functions)
-
-[*Localization(NDT：Normal Distributions Transform)*](#localization-ndtnormal-distributions-transform-1)
-
-[*Object Detection*](#object-detection-1)
-
-[*Path Planning*](#path-planning-1)
-
-[*Path Following*](#path-following)
-
-[*Dynamic Map*](#dynamic-map)
-
-[*AutowareRider*](#autowarerider)
-
-[*AutowareRoute*](#autowareroute)
-
-[*Features*](#features)
-
-[*AutowareRider Launching*](#autowarerider-launching)
-
-[*Path Planning Application Usage*](#path-planning-application-usage)
-
-[*Send Path data to ROS PC*](#send-path-data-to-ros-pc)
-
-[*CAN Collection Application Usage Data*](#can-collection-application-usage-data)
-
-[*Send CAN Data to a ROS PC*](#send-can-data-to-a-ros-pc)
-
-[*Start Launch File*](#start-launch-file)
-
-[*4.* *Autoware User Interface Details*](#_Toc464046974)
-
-[*Runtime Manager*](#runtime-manager)
-
-[*Runtime Manager – Quick Start Tab*](#runtime-manager-quick-start-tab)
-
-[*Runtime Manager – Setup Tab*](#runtime-manager-setup-tab)
-
-[*Runtime Manager – Map Tab*](#runtime-manager-map-tab)
-
-[*Runtime Manager – Sensing Tab*](#runtime-manager-sensing-tab)
-
-[*Runtime Manager – Computing Tab*](#runtime-manager-computing-tab)
-
-[*Runtime Manager – Interface Tab*](#runtime-manager-interface-tab)
-
-[*Runtime Manager – Database Tab*](#runtime-manager-database-tab)
-
-[*Runtime Manager – Simulation Tab*](#runtime-manager-simulation-tab)
-
-[*Runtime Manager – Status Tab*](#runtime-manager-status-tab)
-
-[*Runtime Manager - Topics Tab*](#runtime-manager---topics-tab)
-
-[*ROSBAG Record Dialog*](#rosbag-record-dialog)
-
-[*RViz* **エラー! ブックマークが定義されていません。**](#_Toc464046987)
-
-[*AutowareRider*](#autowarerider-1)
-
-[*AutowareRoute*](#autowareroute-1)
-
-[*5.* *System Setup*](#_Toc464046990)
-
-[*Installation*](#installation)
-
-[*OS*](#os)
-
-[*ROS*](#ros)
-
-[*OpenCV*](#opencv)
-
-[*CUDA(if necessary)*](#cudaif-necessary)
-
-[*FlyCapture(if necessary)*](#flycaptureif-necessary)
-
-[*Autoware*](#autoware-1)
-
-[*AutowareRider(if necessary)*](#autowarerider-if-necessary)
-
-[*canlib(if necessary)*](#canlibif-necessary)
-
-[*SSH Public Key Generation(if necessary)*](#ssh-public-key-generationif-necessary)
-
-[*6.* *Terminology*](#_Toc464047001)
-
-[*7.* *Related Documents*](#_Toc464047002)
+1. [*About This Document*](#about-this-document)
+2. [*ROS and Autoware*](#ros-and-autoware)
+  - [*Robot middleware - ROS*](#robot-middleware---ros)
+  - [*ROS Features*](#ros-features)
+  - [*Autoware*](#autoware)
+  - [*3-D Map Generation and Sharing*](#d-map-generation-and-sharing)
+  - [*Localization(NDT：Normal Distributions Transform)*](#localization-ndtnormal-distributions-transform)
+  - [*Object Detection*](#object-detection)
+  - [*Route Generation*](#path-generation)
+  - [*Autonomous Driving*](#autonomous-driving)
+  - [*User Interface*](#user-interface)
+  - [*Platform structure for Autoware*](#platform-structure-for-autoware)
+  - [*Perception/Recognition*](#perceptionrecognition)
+  - [*Judgement/Operation/Localization*](#judgementoperationlocalization)
+  - [*Path Planning*](#path-planning)
+  - [*Data Loading (3-D Map, Database, Files)*](#data-loading-3-d-map-database-files)
+  - [*Device Drivers and Sensor Fusion*](#device-drivers-and-sensor-fusion)
+  - [*Interface for Smart Phone Applications*](#interface-for-smart-phone-applications)
+  - [*Utilities and Others*](#utilities-and-others)
+3. [*Operating Autoware*](#_Toc464046951)
+  - [*Preparations*](#preparations)
+  - [*Demo Data*](#demo-data)
+  - [*Runtime Manager Launching*](#runtime-manager-launching)
+  - [*RViz Configuration*](#rviz-configuration)
+  - [*Operating Quick Start*](#operating-quick-start)
+  - [*Load map(Quick Start)*](#load-map-quick-start)
+  - [*Load driver(Quick Start)*](#load-driver-quick-start)
+  - [*Autoware Main Functions*](#autoware-main-functions)
+  - [*Localization(NDT：Normal Distributions Transform)*](#localization-ndtnormal-distributions-transform-1)
+  - [*Object Detection*](#object-detection-1)
+  - [*Path Planning*](#path-planning-1)
+  - [*Path Following*](#path-following)
+  - [*Dynamic Map*](#dynamic-map)
+  - [*AutowareRider*](#autowarerider)
+  - [*AutowareRoute*](#autowareroute)
+  - [*Features*](#features)
+  - [*AutowareRider Launching*](#autowarerider-launching)
+  - [*Path Planning Application Usage*](#path-planning-application-usage)
+  - [*Send Path data to ROS PC*](#send-path-data-to-ros-pc)
+  - [*CAN Collection Application Usage Data*](#can-collection-application-usage-data)
+  - [*Send CAN Data to a ROS PC*](#send-can-data-to-a-ros-pc)
+  - [*Start Launch File*](#start-launch-file)
+4. [*Autoware User Interface Details*](#_Toc464046974)
+  - [*Runtime Manager*](#runtime-manager)
+  - [*Runtime Manager – Quick Start Tab*](#runtime-manager-quick-start-tab)
+  - [*Runtime Manager – Setup Tab*](#runtime-manager-setup-tab)
+  - [*Runtime Manager – Map Tab*](#runtime-manager-map-tab)
+  - [*Runtime Manager – Sensing Tab*](#runtime-manager-sensing-tab)
+  - [*Runtime Manager – Computing Tab*](#runtime-manager-computing-tab)
+  - [*Runtime Manager – Interface Tab*](#runtime-manager-interface-tab)
+  - [*Runtime Manager – Database Tab*](#runtime-manager-database-tab)
+  - [*Runtime Manager – Simulation Tab*](#runtime-manager-simulation-tab)
+  - [*Runtime Manager – Status Tab*](#runtime-manager-status-tab)
+  - [*Runtime Manager - Topics Tab*](#runtime-manager---topics-tab)
+  - [*ROSBAG Record Dialog*](#rosbag-record-dialog)
+  - [*RViz* **エラー! ブックマークが定義されていません。**](#_Toc464046987)
+  - [*AutowareRider*](#autowarerider-1)
+  - [*AutowareRoute*](#autowareroute-1)
+5. [*System Setup*](#_Toc464046990)
+  - [*Installation*](#installation)
+  - [*OS*](#os)
+  - [*ROS*](#ros)
+  - [*OpenCV*](#opencv)
+  - [*CUDA(if necessary)*](#cudaif-necessary)
+  - [*FlyCapture(if necessary)*](#flycaptureif-necessary)
+  - [*Autoware*](#autoware-1)
+  - [*AutowareRider(if necessary)*](#autowarerider-if-necessary)
+  - [*canlib(if necessary)*](#canlibif-necessary)
+  - [*SSH Public Key Generation(if necessary)*](#ssh-public-key-generationif-necessary)
+6. [*Terminology*](#_Toc464047001)
+7. [*Related Documents*](#_Toc464047002)
 
 
 # Chapter 1
