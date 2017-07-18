@@ -265,32 +265,32 @@ Download the demo data from the following sites, and put them in \~/.autoware/da
 2. Extraction
 
 Extract the downloaded data to \~/.autoware/ by the following command:
-`tar xfz sample\_moriyama\_data.tar.gz -C \~/.autoware/`
+`tar xfz sample\_moriyama\_data.tar.gz -C ~/.autoware/`
 
 3. Launch script
 
 Run the following script to generate lacunh files for playing demo by Qutick Start tab.
-`sh my\_launch.sh`
+`sh my_launch.sh`
 
 4. Launch files to be generated
 
-	`my\_map.launch` \# Load maps
+	`my_map.launch` \# Load maps
 
-	`my\_sensing.launch` \# Load drivers
+	`my_sensing.launch` \# Load drivers
 
-	`my\_localization.launch` \# Localization
+	`my_localization.launch` \# Localization
 
-	`my\_detection.launch` \# Object detection
+	`my_detection.launch` \# Object detection
 
-	`my\_mission\_planning.launch` \# Path planning
+	`my_mission_planning.launch` \# Path planning
 
-	`my\_motion\_planning.launch` \# Path following
+	`my_motion_planning.launch` \# Path following
 
 5. If you want to generate launch files to other directories
 
 	If you want to generate launch files in other directories, specify the path as an argument for launching the script.
 
-	Example:　if you put the data in `~/.autoware/data/quick\start/ROSBAG\sample/`
+	Example:　if you put the data in `~/.autoware/data/quick_start/ROSBAG_sample/`
 
 ### Runtime Manager Launching
 
@@ -447,55 +447,54 @@ AutowareRider provides the following functions.
 
 1.  Launch Runtime Manager on an ROS PC.
 2.  Press \[Active\] in \[Network Connection\] -&gt; \[Tablet UI\] on the Main Tab to launch the following nodes: 
-	`tablet_receiver` 
-	`tablet_sender`
+`tablet_receiver`
+`tablet_sender`
 3.  Specify the following parameters in each \[app\] of \[Planning\] -&gt; \[Path\] in the \[Computing\] tab.
 
-	\[lane\_navi\]
-	vector\_map\_directory
-	A directory path of a high definition map
+\[lane\_navi\]
+vector\_map\_directory
+A directory path of a high definition map
 
-	\[lane\_rule\]
-	vector\_map\_directory
-	A directory path of a high definition map
+\[lane\_rule\]
+vector\_map\_directory
+A directory path of a high definition map
 
-	ruled\_waypoint\_csv
-	A path of a file saved waypoints
-	Velocity
-	Speed (unit: km/h, default: 40, range: 0\~200)
+ruled\_waypoint\_csv
+A path of a file saved waypoints
+Velocity
+Speed (unit: km/h, default: 40, range: 0\~200)
 
-	Difference around Signal
-	Acceleration around traffic lights (unit: km/h, default: 2, range: 0\~20)
+Difference around Signal
+Acceleration around traffic lights (unit: km/h, default: 2, range: 0\~20)
 
- 	\[lane\_stop\]
-	Red Light
-	Change to the velocity of red light
+\[lane\_stop\]
+Red Light
+Change to the velocity of red light
 
-	Blue Light
-	Change to the velocity of blue light
+Blue Light
+Change to the velocity of blue light
 
 4. Launch the followings by turning on the checkbox of \[Planning\] -&gt; \[Path\] on the \[Computing\] tab.
 
-	\[lane\_navi\]
- 	\[lane\_rule\]
-	\[lane\_stop\]
+\[lane\_navi\]
+\[lane\_rule\]
+\[lane\_stop\]
 
 5.  Launch AutowareRider from the list of Android tablet applications.
 6.  Specify the following parameters in the \[右上メニュー\] (left-top menu) -&gt; \[設定\] (setting).
 
-	ROS PC
-	IP address
-	ROS PC IPv4 address
+ROS PC
+IP address
+ROS PC IPv4 address
 
-	Receiver port number
-	tablet\_receiver port number (default: 5666)
+Receiver port number
+tablet\_receiver port number (default: 5666)
 
-	Sender port number
-	tablet\_sender port number (default: 5777)
+Sender port number
+tablet\_sender port number (default: 5777)
 
 7. Press \[OK\] to access to the ROS PC.
-
-	Here, the configuration is saved into a file automatically, and the file is used from next connection as default setting.
+Here, the configuration is saved into a file automatically, and the file is used from next connection as default setting.
 
 8. If the central bar on the window is light red, the connection is success.
 
@@ -512,10 +511,9 @@ Light yellow | Error (error\_info: 1)
 
 1.  Press \[NAVI\] on “AutowareRider” to launch *path planning*.
 2.  Press and hold a point on the map in order of the followings:
-
-    a.  出発地に設定 (set departure point)
-    b.  目的地に設定 (set destination point)
-    c.  ルート探索実行 (run route planning)
+  a.  出発地に設定 (set departure point)
+  b.  目的地に設定 (set destination point)
+  c.  ルート探索実行 (run route planning)
 
 3.  *Path planning* after *route planning* is done, path data is sent to an ROS PC. The path data is saved automatically, and route planning is omitted from the next time.
 4.  AutowareRider window is displayed after sending the path data.
@@ -528,7 +526,7 @@ Refer the step ③ above for path planning application usage.
 
 1.  Specify the following parameters in \[右上メニュー\] (right top menu) -&gt; \[設定\] (setting) on the AutowareRider (tmp).
 
-	データ収集 (data collection)
+	```データ収集 (data collection)
 		Table name
 			Destination table name
 
@@ -548,7 +546,7 @@ Refer the step ③ above for path planning application usage.
 		Remote host name
 			Remote machine host name (default: 127.0.0.1)
 		Remote port number
-			Port number of a remote machine (default: 5555)
+			Port number of a remote machine (default: 5555)```
 
 2.  The configuration is saved by pressing \[OK\].
 
@@ -556,9 +554,9 @@ Refer the step ③ above for path planning application usage.
 
 3.  Launch any one of the followings in \[右上メニュー\] (right top menu) -&gt; \[データ収集\] (data collection)
 
-	CanGather
-	CarLink (Bluetooth)
-	CarLink (USB)
+CanGather
+CarLink (Bluetooth)
+CarLink (USB)
 
 4.  The usages after launching applications are same as launching applications individually. Refer the below URL.
 
@@ -572,8 +570,8 @@ Refer the step ④ in CAN Data Collection Usage (tmp).
 
 1.  \[S1\] and \[S2\] of AutowareRider starts the following launch files, respectively (tmp).
 
-	`check.launch`
-	`set.launch`
+`check.launch`
+`set.launch`
 
 	Pressing each button, the corresponding launch file is started on an ROS PC.
 
