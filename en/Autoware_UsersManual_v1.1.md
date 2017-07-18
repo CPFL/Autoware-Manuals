@@ -81,56 +81,28 @@ Autoware *ver.2016.Sep.12*
 7. [*Related Documents*](#_Toc464047002)
 
 
-# Chapter 1
-
-About This Document
-===================
+# Chapter 1 - About This Document
 
 *This chapter describes the purpose of this document.*
 
-There are following two documents provided by Nagoya University.
+There are two documents provided by Nagoya University:
 
--   Autoware User’s Manual
+- Autoware User’s Manual
+- Autoware Developer’s Manual
 
--   Autoware Developer’s Manual
+# Chapter 2 - ROS and Autoware
 
-# Chapter 2
+*Before operating Autoware, ROS and Autoware are described in this chapter.*
 
-ROS and Autoware
-================
+## Robot middleware - ROS
 
-Before operating Autoware, ROS and Autoware are described in this chapter.
+Recently, the wide range potential of robotics has been focused by not only robotics experts but also non-robotics experts to join robot development. It is believed that this trend leads robotics to advancement and developments to other domains. However, robot development is getting harder because the advancement and the complexity of robot functions have been increased. Unlike PCs and smartphones, robotic development has considered various hardware, OS, programming languages. Hence, the differences have mainly been obstructed for robotic developers as well as robotics experts to join robot development.
 
-Robot middleware - ROS
-----------------------
+To solve the problem, the demand of making common platforms has been increased, and some platforms have been published. Within a common platform, developers can combine various software published by other developers, and speed up development by reusing them. Therefore, it is expected that developers can more focus on fields of interest.
 
-Recently, the wide range potential of robotics has been focused by not
-only robotics experts but also non-robotics experts to join robot
-development. It is believed that this trend leads robotics to
-advancement and developments to other domains. However, robot
-development is getting harder because the advancement and the complexity
-of robot functions have been increased. Unlike PCs and smartphones,
-robotic development has considered various hardware, OS, programming
-languages. Hence, the differences have mainly been obstructed for
-robotic developers as well as robotics experts to join robot
-development.
+ROS (Robot Operating System) is a framework^1^ for robotic software development. It was developed by [Willow Garage](https://en.wikipedia.org/wiki/Willow_Garage) in U.S. OSFR (Open Source Robotics Foundation) has currently maintained it. The open sourced ROS has mainly been used by communities in U.S. and Europe as well as communities in Japan.
 
-To solve the problem, the demand of making common platforms has been
-increased, and some platforms have been published. Within a common
-platform, developers can combine various software published by other
-developers, and speed up development by reusing them. Therefore, it is
-expected that developers can more focus on fields of interest.
-
-ROS (Robot Operating System) is a framework^1^ for robotic software
-development. It was developed by Willow Garage in U.S. OSFR (Open Source
-Robotics Foundation) has currently maintained it. The open sourced ROS
-has mainly been used by communities in U.S. and Europe as well as
-communities in Japan.
-
-Note that ROS has “OS” in its name, however, it is not “OS” like Windows
-or Linux. It is a middleware that runs on UNIX based OS.
-
-[*https://en.wikipedia.org/wiki/Willow\_Garage*](https://en.wikipedia.org/wiki/Willow_Garage)
+Note that ROS has “OS” in its name, however, it is not “OS” like Windows or Linux. It is a middleware that runs on UNIX based OS.
 
 ### ROS Features
 
@@ -138,40 +110,39 @@ or Linux. It is a middleware that runs on UNIX based OS.
 
 ROS provides library and tools for robotic software development. The primary libraries and tools are listed as follows:
 
-- Original build system (Catkin)
+  - Original build system (Catkin)
 
-- Image processing library (OpenCV)
+  - Image processing library (OpenCV)
 
-- Data logging tool (ROSBAG)
+  - Data logging tool (ROSBAG)
 
-- Visualization tools for data and software state (RViz)
+  - Visualization tools for data and software state (RViz)
 
-- Coordinate transformation library (TF)
+  - Coordinate transformation library (TF)
 
-- Qt based GUI development tool (RQT)
+  - Qt based GUI development tool (RQT)
 
-1.  Inter-process communication
+2.  Inter-process communication
 
 ROS uses *message passing* with topics of publish/subscribe form for inter-module connection/cooperation frameworks. Here, message passing is an inter-process communication mechanism in which a sender can send data to one or more receivers. This feature enables us to design distribution systems. In ROS, processes called *node* are launched and each node is run independently. In communication between nodes, by following the publish/subscribe scheme, a node writes messages (publish) into a topic and another node reads the messages (subscribe) of the topic.
 
-1.  File components
+3.  File components
 
-- bag file (ROSBAG)
+  - bag file (ROSBAG)
 
  In ROS, all the messages of topics are recorded and time-stamped into a .bag file called *ROSBAG*. This file can be used for replaying the messages on RViz as same timing as recording. In robotic development, it is difficult to synchronize and analyze the interactions with multiple sensors at the same time, but ROS enables efficient analysis and debugging robotic systems. In addition, since the recorded messages can be replayed repeatedly, this feature allows developers to debug their systems without actual sensors.
 
-- Launch file
+  - Launch file
 
 A “Launch” file is used to start multiple nodes at the same time. The launch file contains the nodes to be started and their parameters written in XML format.
 
-Autoware 
----------
+## Autoware
 
-A![](media/image1.png){width="5.427083333333333in" height="3.7708333333333335in"}utoware is open source software based on ROS. Autoware is pushed on Github for autonomous driving research and development. Most of autonomous driving system consist of *recognition*, *judgment*, and *operation*. Autoware provides necessary functions, such as 3-D map generation, localization, object recognition, and vehicle control, for autonomous driving.
+Autoware is open source software based on ROS. Autoware is pushed on Github for autonomous driving research and development. Most of autonomous driving system consist of *recognition*, *judgment*, and *operation*. Autoware provides necessary functions, such as 3-D map generation, localization, object recognition, and vehicle control, for autonomous driving.
 
-Autoware uses LIDAR (Light Detection and Ranging) and on-vehicle cameras to localize the ego-car position. In addition, Autoware can detect surrounding objects, such as pedestrians, vehicles, traffic lights etc., by using LIDAR and GNSS (Global Navigation Satellite System).
+IMAGE PLACEHOLDER
 
-The making judgments of driving/stopping at lanes or intersections are performed with an embedded multi-core CPU. Operations of controlling vehicle behaviors utilize conventional on-vehicle control mechanism, while support systems such as driving assistance and safety diagnosis support, use multi-core CPU.
+Autoware uses LIDAR (Light Detection and Ranging) and on-vehicle cameras to localize the ego-car position. In addition, Autoware can detect surrounding objects, such as pedestrians, vehicles, traffic lights etc., by using LIDAR and GNSS (Global Navigation Satellite System).  The making judgments of driving/stopping at lanes or intersections are performed with an embedded multi-core CPU. Operations of controlling vehicle behaviors utilize conventional on-vehicle control mechanism, while support systems such as driving assistance and safety diagnosis support, use multi-core CPU.
 
 ### 3-D Map Generation and Sharing
 
@@ -199,12 +170,15 @@ The generated path includes appropriate speed information. Autonomous driving sy
 
 ### User Interface
 
-![](media/image2.png)A user interface called “Runtime Manager” of Autoware enables developers to operate functions, such as localization, object detection, and path following, easily. In addition, RViz can integrate and visualize localization on 3-D map, object detection, path planning, and path following. Furthermore, a tablet user interface, “AutowareRider”, of Autoware enables navigation, path planning, transition to autonomous driving mode and etc., on tables, easily. Moreover, Autoware can visualize 3-D map used in autonomous driving system and project it on on-vehicle displays and Oculus devices.
+A user interface called “Runtime Manager” of Autoware enables developers to operate functions, such as localization, object detection, and path following, easily. In addition, RViz can integrate and visualize localization on 3-D map, object detection, path planning, and path following. Furthermore, a tablet user interface, “AutowareRider”, of Autoware enables navigation, path planning, transition to autonomous driving mode and etc., on tables, easily. Moreover, Autoware can visualize 3-D map used in autonomous driving system and project it on on-vehicle displays and Oculus devices.
 
-Platform structure for Autoware 
---------------------------------
+IMAGE PLACEHOLDER
 
-A![](media/image3.png)utoware is an application using ROS and ROS only works on Unix-based platforms. Figure 3 illustrates the overall system structure for Autoware.
+## Platform structure for Autoware 
+
+Autoware is an application using ROS and ROS only works on Unix-based platforms. Figure 3 illustrates the overall system structure for Autoware.
+
+IMAGE PLACEHOLDER
 
 ### Perception/Recognition
 
@@ -212,14 +186,13 @@ ros/src/computing/perception/detection
 
 The figure to be updated (tmp)
 
-![](media/image4.png){width="6.264583333333333in" height="4.6930555555555555in"}
+IMAGE PLACEHOLDER
 
 ### Judgement/Operation/Localization
 
 ros/src/computing/perception/localization
 
-![](media/image5.png){width="6.294444444444444in"
-height="4.720833333333333in"}
+IMAGE PLACEHOLDER
 
 ### Path Planning
 
@@ -227,42 +200,39 @@ ros/src/computing/planning
 
 The figure to be updated (tmp)
 
-![](media/image6.png){width="6.300694444444445in"
-height="4.720138888888889in"}
+IMAGE PLACEHOLDER
 
 ### Data Loading (3-D Map, Database, Files)
 
-ros/src/data\
-![](media/image7.png){width="6.322916666666667in"
-height="4.764583333333333in"}The figure to be updated (tmp)
+ros/src/data
+
+IMAGE PLACEHOLDER
 
 ### Device Drivers and Sensor Fusion
 
 ros/src/sensing/drivers & ros/src/sensing/fusion
+The figure to be updated (tmp)
 
-![](media/image8.png){width="6.264583333333333in"
-height="4.6930555555555555in"}The figure to be updated (tmp)
+IMAGE PLACEHOLDER
 
 ### Interface for Smart Phone Applications
 
-> ros/src/socket
+ros/src/socket
 
-![](media/image9.png){width="6.398611111111111in" height="4.79375in"}The
-figure to be updated (tmp)
+The figure to be updated (tmp)
+
+IMAGE PLACEHOLDER
 
 ### Utilities and Others
 
 ros/src/util/
-
-Runtime Manager, sample data, pseudo-drivers
+	Runtime Manager, sample data, pseudo-drivers
 
 ui/tablet/
-
-Smart phone applications
+	Smart phone applications
 
 vehicle/
-
-Vehicle control, vehicle data acquisition
+	Vehicle control, vehicle data acquisition
 
 # Chapter 3
 
