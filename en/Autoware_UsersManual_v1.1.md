@@ -641,7 +641,7 @@ IMAGE PLACEHOLDER
 
 -   **\[x\], \[y\], \[z\], \[yaw\], \[pitch\], \[roll\]** … Enter the relative position of velodyne to base\_link.
 
-> \[Vehicle Model\]
+\[Vehicle Model\]
 
 **\[Vehicle Model\]** … Start/end a script
 *model\_publisher/vehicle\_model.launch* with the argument, which is the full path of URDF(Unified Robot Description Format)file(a vehicle model displayed on RViz)specified in the text box. Alternatively, a URDF file can be selected from a file selection dialog displayed by pressing \[Ref\]. If a URDF file is not specified in the \[Vehicle Model\] text box, *Autoware/ros/src/.config/model/default.urdf* is used.
@@ -666,7 +666,7 @@ Figure Runtime Manager - Map Tab
 
 -   **\[TF\]** … Start/end the launch file specified in full path in the text box. If launch file is not specified, the launch file *\~/.autoware/data/tf/tf.launch* is started/ended. Alternatively, a launch file can be selected by file selection dialog displayed by pressing *Ref*.
 
-> \[Map Tools\]
+\[Map Tools\]
 
 -   **\[PCD Filter\]** …Start/end map\_tools/pcd\_filter nodes with an argument, which is the full path of 3-D map (PCD files) specified in the text box. Alternatively, a 3-D map can be selected by file selection dialog displayed by pressing *Ref*.
 
@@ -695,7 +695,7 @@ IMAGE PLACEHOLDER
 
 -   **\[can\_listener\]-\[config\]** … Display a *can\_listener* dialog. Specify channels to be selected at launching nodes.
 
-> -\[Cameras\]
+-  \[Cameras\]
 
 -   **\[PointGrey Grasshoper 3 (USB1)\] check box** … Start/end a *pointgrey/grasshopper3.launch* script.
 
@@ -711,7 +711,7 @@ IMAGE PLACEHOLDER
 
 -   **\[Baumer VLG-22\] check box** … Start/end a *vlg22c\_cam/baumer.launch* script.
 
-> -\[GNSS\]
+-  \[GNSS\]
 
 -   **\[Javad Delta 3(TTY1)\] check box** … Start/end a *javad\_navsat\_driver/gnss.sh* script.
 
@@ -1096,7 +1096,7 @@ The following items can be selected on the right-top menu.
 
 IMAGE PLACEHOLDER
 
-> \[ROS PC\]
+\[ROS PC\]
 
 -   **IPアドレス** … ROS PC IPv4 address
 
@@ -1120,13 +1120,11 @@ IMAGE PLACEHOLDER
 
 \[ポートフォワーディング\] (port forwarding)
 
--   **ローカルポート番号** … port number of local machine source
-    > (default: 5558)
+-   **ローカルポート番号** … port number of local machine source (default: 5558)
 
 -   **リモートホスト名** … remote machine host name (default: 127.0.0.1)
 
--   **リモートポート番号** … remote machine destination port number
-    > (default: 5555)
+-   **リモートポート番号** … remote machine destination port number (default: 5555)
 
 IMAGE PLACEHOLDER
 
