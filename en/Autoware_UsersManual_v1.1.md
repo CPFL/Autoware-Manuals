@@ -687,67 +687,67 @@ IMAGE PLACEHOLDER
 
 - **\[CAN\]**
 
-  -   **\[can\_converter\] check box** … Start/end *kvaser/can\_converter* nodes.
+  -  **\[can\_converter\] check box** … Start/end *kvaser/can\_converter* nodes.
 
-  -   **\[can\_draw\] check box** … Start/end *kvaser/can\_draw* nodes.
+  -  **\[can\_draw\] check box** … Start/end *kvaser/can\_draw* nodes.
 
-  -   **\[can\_listener\] check box** … Start/end *kvaser/can\_listener* nodes.
+  -  **\[can\_listener\] check box** … Start/end *kvaser/can\_listener* nodes.
 
-  -   **\[can\_listener\]-\[config\]** … Display a *can\_listener* dialog. Specify channels to be selected at launching nodes.
+  -  **\[can\_listener\]-\[config\]** … Display a *can\_listener* dialog. Specify channels to be selected at launching nodes.
 
 -  **\[Cameras\]**
 
-  -   **\[PointGrey Grasshoper 3 (USB1)\] check box** … Start/end a *pointgrey/grasshopper3.launch* script.
+  -  **\[PointGrey Grasshoper 3 (USB1)\] check box** … Start/end a *pointgrey/grasshopper3.launch* script.
 
-  -   **\[PointGrey Grasshoper 3 (USB1)\] - \[config\]** … Display a *calibration\_path\_grasshopper3* dialog. Specify a CalibrationFile path to be selected at launching scripts.
+  -  **\[PointGrey Grasshoper 3 (USB1)\] - \[config\]** … Display a *calibration\_path\_grasshopper3* dialog. Specify a CalibrationFile path to be selected at launching scripts.
 
-  -   **\[PointGrey Generic\] check box** … Start/end a *pointgrey\_camera\_driver/camera.launch* script.  **\[PointGrey PointGray LadyBug 5\]** **check box**… Start/end a *pointgrey/ladybug.launch* script.
+  -  **\[PointGrey Generic\] check box** … Start/end a *pointgrey\_camera\_driver/camera.launch* script.  **\[PointGrey PointGray LadyBug 5\]** **check box**… Start/end a *pointgrey/ladybug.launch* script.
 
-  -   **\[PointGrey PointGray LadyBug 5\] -\[config\]** … Display a *calibration\_path\_ladybug* dialog. Specify a CalibrationFile path to be selected at launching scripts.
+  -  **\[PointGrey PointGray LadyBug 5\] -\[config\]** … Display a *calibration\_path\_ladybug* dialog. Specify a CalibrationFile path to be selected at launching scripts.
 
-  -   **\[USB Generic\] check box** … Start/end *runtime\_manager/uvc\_camera\_node* nodes.
+  -  **\[USB Generic\] check box** … Start/end *runtime\_manager/uvc\_camera\_node* nodes.
 
-  -   **\[IEEE1394\] check box** … &lt;Unimplemented&gt;
+  -  **\[IEEE1394\] check box** … &lt;Unimplemented&gt;
 
-  -   **\[Baumer VLG-22\] check box** … Start/end a *vlg22c\_cam/baumer.launch* script.
+  -  **\[Baumer VLG-22\] check box** … Start/end a *vlg22c\_cam/baumer.launch* script.
 
 -  **\[GNSS\]**
 
-  -   **\[Javad Delta 3(TTY1)\] check box** … Start/end a *javad\_navsat\_driver/gnss.sh* script.
+  -  **\[Javad Delta 3(TTY1)\] check box** … Start/end a *javad\_navsat\_driver/gnss.sh* script.
 
-  -   **\[Javad Delta 3(TTY1)\]-\[config\]** … Display a serial dialog. Specify parameters related to RS232C.
+  -  **\[Javad Delta 3(TTY1)\]-\[config\]** … Display a serial dialog. Specify parameters related to RS232C.
 
-  -   **\[Serial GNSS\] check box** … Start/end a *nmea\_navsat/nmea\_navsat.launch* script.  **\[Serial GNSS\]-\[config\]** … Display a serial dialog. Specify parameters related to RS232C.
+  -  **\[Serial GNSS\] check box** … Start/end a *nmea\_navsat/nmea\_navsat.launch* script.  **\[Serial GNSS\]-\[config\]** … Display a serial dialog. Specify parameters related to RS232C.
 
 - **\[IMU\]**
 
-  -   **\[Crossbow vg440\] check box** … &lt;Unimplemented&gt;
+  -  **\[Crossbow vg440\] check box** … &lt;Unimplemented&gt;
 
 -  **\[LIDARs\]**
 
-  -   **\[Velodyne HDL-64e-S2\] check box** … Start/end a *velodyne\_pointcloud/velodyne\_hdl64e\_s2.launch* script.
+  -  **\[Velodyne HDL-64e-S2\] check box** … Start/end a *velodyne\_pointcloud/velodyne\_hdl64e\_s2.launch* script.
 
-  -   **\[Velodyne HDL-64e-S2\]-\[config\]** … Display a calibration\_path dialog. Specifya CalibrationFile path to be selected at launching scripts.
+  -  **\[Velodyne HDL-64e-S2\]-\[config\]** … Display a calibration\_path dialog. Specifya CalibrationFile path to be selected at launching scripts.
 
-  -   **\[Velodyne HDL-64e-S3\] check box** … Start/end a *velodyne\_pointcloud/velodyne\_hdl64e\_s3.launch* script.
+  -  **\[Velodyne HDL-64e-S3\] check box** … Start/end a *velodyne\_pointcloud/velodyne\_hdl64e\_s3.launch* script.
 
-  -   **\[Velodyne HDL-64e-S3\]-\[config\]** … Display a calibration\_path dialog. Specify a CalibrationFile path to be selected at launching scripts.
+  -  **\[Velodyne HDL-64e-S3\]-\[config\]** … Display a calibration\_path dialog. Specify a CalibrationFile path to be selected at launching scripts.
 
-  -   **\[Velodyne HDL-32e\] check box** … Start/end a *velodyne\_pointcloud/velodyne\_hdl32e.launch* script.
+  -  **\[Velodyne HDL-32e\] check box** … Start/end a *velodyne\_pointcloud/velodyne\_hdl32e.launch* script.
 
-  -   **\[Velodyne HDL-32e\]-\[config\]** … Display a calibration\_path dialog. Specify a CalibrationFile path to be selected at launching scripts.
+  -  **\[Velodyne HDL-32e\]-\[config\]** … Display a calibration\_path dialog. Specify a CalibrationFile path to be selected at launching scripts.
 
-  -   **\[Velodyne VLP-16\] check box** … Start/end a *velodyne\_pointcloud/velodyne\_vlp16.launch* scripts.
+  -  **\[Velodyne VLP-16\] check box** … Start/end a *velodyne\_pointcloud/velodyne\_vlp16.launch* scripts.
 
-  -   **\[Velodyne VLP-16\]-\[config\]** … Display a calibration\_path dislog. Specify a CalibrationFile path to be selected at launching script.
+  -  **\[Velodyne VLP-16\]-\[config\]** … Display a calibration\_path dislog. Specify a CalibrationFile path to be selected at launching script.
 
-  -   **\[Hokuyo TOP-URG\] check box** … Start/end a *hokuyo/top\_urg.launch* script.
+  -  **\[Hokuyo TOP-URG\] check box** … Start/end a *hokuyo/top\_urg.launch* script.
 
-  -   **\[Hokuyo 3D-URG\] check box** … Start/end a *hokuyo/hokuyo\_3d\_urg.launch* script.
+  -  **\[Hokuyo 3D-URG\] check box** … Start/end a *hokuyo/hokuyo\_3d\_urg.launch* script.
 
-  -   **\[SICK LMS511\] check box** … &lt;Unimplemented&gt;
+  -  **\[SICK LMS511\] check box** … &lt;Unimplemented&gt;
 
-  -   **\[IBEO 8L Single\] check box** … &lt;Unimplemented&gt;
+  -  **\[IBEO 8L Single\] check box** … &lt;Unimplemented&gt;
 
 -  **\[Points Filter\]**
 
