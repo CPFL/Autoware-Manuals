@@ -635,13 +635,13 @@ Figure Runtime Manager - Quick Start Tab
 IMAGE PLACEHOLDER
 
 
- **\[Baselink to Localizer\]**
+### \[Baselink to Localizer\]
 
 -   **\[TF\]** … Pressing \[TF\], a topic of Vehicle control position (base\_link → Velodyne position(velodyne)is published.
 
 -   **\[x\], \[y\], \[z\], \[yaw\], \[pitch\], \[roll\]** … Enter the relative position of velodyne to base\_link.
 
-**\[Vehicle Model\]**
+###  \[Vehicle Model\]
 
 -  **\[Vehicle Model\]** … Start/end a script
 *model\_publisher/vehicle\_model.launch* with the argument, which is the full path of URDF(Unified Robot Description Format)file(a vehicle model displayed on RViz)specified in the text box. Alternatively, a URDF file can be selected from a file selection dialog displayed by pressing \[Ref\]. If a URDF file is not specified in the \[Vehicle Model\] text box, *Autoware/ros/src/.config/model/default.urdf* is used.
@@ -666,7 +666,7 @@ Figure Runtime Manager - Map Tab
 
 -   **\[TF\]** … Start/end the launch file specified in full path in the text box. If launch file is not specified, the launch file *\~/.autoware/data/tf/tf.launch* is started/ended. Alternatively, a launch file can be selected by file selection dialog displayed by pressing *Ref*.
 
-**\[Map Tools\]**
+### \[Map Tools\]
 
 -   **\[PCD Filter\]** …Start/end map\_tools/pcd\_filter nodes with an argument, which is the full path of 3-D map (PCD files) specified in the text box. Alternatively, a 3-D map can be selected by file selection dialog displayed by pressing *Ref*.
 
@@ -683,59 +683,59 @@ Figure Runtime Manager - Map Tab
 IMAGE PLACEHOLDER
 
 
-**\[Drivers\]**
+### \[Drivers\]
 
-- **\[CAN\]**
-  -  **\[can\_converter\] check box** … Start/end *kvaser/can\_converter* nodes.
-  -  **\[can\_draw\] check box** … Start/end *kvaser/can\_draw* nodes.
-  -  **\[can\_listener\] check box** … Start/end *kvaser/can\_listener* nodes.
-  -  **\[can\_listener\]-\[config\]** … Display a *can\_listener* dialog. Specify channels to be selected at launching nodes.
--  **\[Cameras\]**
-  -  **\[PointGrey Grasshoper 3 (USB1)\] check box** … Start/end a *pointgrey/grasshopper3.launch* script.
-  -  **\[PointGrey Grasshoper 3 (USB1)\] - \[config\]** … Display a *calibration\_path\_grasshopper3* dialog. Specify a CalibrationFile path to be selected at launching scripts.
-  -  **\[PointGrey Generic\] check box** … Start/end a *pointgrey\_camera\_driver/camera.launch* script.  **\[PointGrey PointGray LadyBug 5\]** **check box**… Start/end a *pointgrey/ladybug.launch* script.
-  -  **\[PointGrey PointGray LadyBug 5\] -\[config\]** … Display a *calibration\_path\_ladybug* dialog. Specify a CalibrationFile path to be selected at launching scripts.
-  -  **\[USB Generic\] check box** … Start/end *runtime\_manager/uvc\_camera\_node* nodes.
-  -  **\[IEEE1394\] check box** … &lt;Unimplemented&gt;
-  -  **\[Baumer VLG-22\] check box** … Start/end a *vlg22c\_cam/baumer.launch* script.
--  **\[GNSS\]**
-  -  **\[Javad Delta 3(TTY1)\] check box** … Start/end a *javad\_navsat\_driver/gnss.sh* script.
-  -  **\[Javad Delta 3(TTY1)\]-\[config\]** … Display a serial dialog. Specify parameters related to RS232C.
-  -  **\[Serial GNSS\] check box** … Start/end a *nmea\_navsat/nmea\_navsat.launch* script.  **\[Serial GNSS\]-\[config\]** … Display a serial dialog. Specify parameters related to RS232C.
-- **\[IMU\]**
-  -  **\[Crossbow vg440\] check box** … &lt;Unimplemented&gt;
--  **\[LIDARs\]**
-  -  **\[Velodyne HDL-64e-S2\] check box** … Start/end a *velodyne\_pointcloud/velodyne\_hdl64e\_s2.launch* script.
-  -  **\[Velodyne HDL-64e-S2\]-\[config\]** … Display a calibration\_path dialog. Specifya CalibrationFile path to be selected at launching scripts.
-  -  **\[Velodyne HDL-64e-S3\] check box** … Start/end a *velodyne\_pointcloud/velodyne\_hdl64e\_s3.launch* script.
-  -  **\[Velodyne HDL-64e-S3\]-\[config\]** … Display a calibration\_path dialog. Specify a CalibrationFile path to be selected at launching scripts.
-  -  **\[Velodyne HDL-32e\] check box** … Start/end a *velodyne\_pointcloud/velodyne\_hdl32e.launch* script.
-  -  **\[Velodyne HDL-32e\]-\[config\]** … Display a calibration\_path dialog. Specify a CalibrationFile path to be selected at launching scripts.
-  -  **\[Velodyne VLP-16\] check box** … Start/end a *velodyne\_pointcloud/velodyne\_vlp16.launch* scripts.
-  -  **\[Velodyne VLP-16\]-\[config\]** … Display a calibration\_path dislog. Specify a CalibrationFile path to be selected at launching script.
-  -  **\[Hokuyo TOP-URG\] check box** … Start/end a *hokuyo/top\_urg.launch* script.
-  -  **\[Hokuyo 3D-URG\] check box** … Start/end a *hokuyo/hokuyo\_3d\_urg.launch* script.
-  -  **\[SICK LMS511\] check box** … &lt;Unimplemented&gt;
-  -  **\[IBEO 8L Single\] check box** … &lt;Unimplemented&gt;
--  **\[Points Filter\]**
+#### \[CAN\]
+-  **\[can\_converter\] check box** … Start/end *kvaser/can\_converter* nodes.
+-  **\[can\_draw\] check box** … Start/end *kvaser/can\_draw* nodes.
+-  **\[can\_listener\] check box** … Start/end *kvaser/can\_listener* nodes.
+-  **\[can\_listener\]-\[config\]** … Display a *can\_listener* dialog. Specify channels to be selected at launching nodes.
+#### \[Cameras\]
+-  **\[PointGrey Grasshoper 3 (USB1)\] check box** … Start/end a *pointgrey/grasshopper3.launch* script.
+-  **\[PointGrey Grasshoper 3 (USB1)\] - \[config\]** … Display a *calibration\_path\_grasshopper3* dialog. Specify a CalibrationFile path to be selected at launching scripts.
+-  **\[PointGrey Generic\] check box** … Start/end a *pointgrey\_camera\_driver/camera.launch* script.  **\[PointGrey PointGray LadyBug 5\]** **check box**… Start/end a *pointgrey/ladybug.launch* script.
+-  **\[PointGrey PointGray LadyBug 5\] -\[config\]** … Display a *calibration\_path\_ladybug* dialog. Specify a CalibrationFile path to be selected at launching scripts.
+-  **\[USB Generic\] check box** … Start/end *runtime\_manager/uvc\_camera\_node* nodes.
+-  **\[IEEE1394\] check box** … &lt;Unimplemented&gt;
+-  **\[Baumer VLG-22\] check box** … Start/end a *vlg22c\_cam/baumer.launch* script.
+#### \[GNSS\]
+-  **\[Javad Delta 3(TTY1)\] check box** … Start/end a *javad\_navsat\_driver/gnss.sh* script.
+-  **\[Javad Delta 3(TTY1)\]-\[config\]** … Display a serial dialog. Specify parameters related to RS232C.
+-  **\[Serial GNSS\] check box** … Start/end a *nmea\_navsat/nmea\_navsat.launch* script.  **\[Serial GNSS\]-\[config\]** … Display a serial dialog. Specify parameters related to RS232C.
+#### \[IMU\]
+-  **\[Crossbow vg440\] check box** … &lt;Unimplemented&gt;
+#### \[LIDARs\]
+-  **\[Velodyne HDL-64e-S2\] check box** … Start/end a *velodyne\_pointcloud/velodyne\_hdl64e\_s2.launch* script.
+-  **\[Velodyne HDL-64e-S2\]-\[config\]** … Display a calibration\_path dialog. Specifya CalibrationFile path to be selected at launching scripts.
+-  **\[Velodyne HDL-64e-S3\] check box** … Start/end a *velodyne\_pointcloud/velodyne\_hdl64e\_s3.launch* script.
+-  **\[Velodyne HDL-64e-S3\]-\[config\]** … Display a calibration\_path dialog. Specify a CalibrationFile path to be selected at launching scripts.
+-  **\[Velodyne HDL-32e\] check box** … Start/end a *velodyne\_pointcloud/velodyne\_hdl32e.launch* script.
+-  **\[Velodyne HDL-32e\]-\[config\]** … Display a calibration\_path dialog. Specify a CalibrationFile path to be selected at launching scripts.
+-  **\[Velodyne VLP-16\] check box** … Start/end a *velodyne\_pointcloud/velodyne\_vlp16.launch* scripts.
+-  **\[Velodyne VLP-16\]-\[config\]** … Display a calibration\_path dislog. Specify a CalibrationFile path to be selected at launching script.
+-  **\[Hokuyo TOP-URG\] check box** … Start/end a *hokuyo/top\_urg.launch* script.
+-  **\[Hokuyo 3D-URG\] check box** … Start/end a *hokuyo/hokuyo\_3d\_urg.launch* script.
+-  **\[SICK LMS511\] check box** … &lt;Unimplemented&gt;
+-  **\[IBEO 8L Single\] check box** … &lt;Unimplemented&gt;
+#### \[Points Filter\]**
 
 *A chapter image and the description to be updated (tmp) *
 
-  -   **\[Calibration Tool Kit\]** … Start/end *Calibration\_camera\_lidar/calibration\_toolkit* nodes
+-  **\[Calibration Tool Kit\]** … Start/end *Calibration\_camera\_lidar/calibration\_toolkit* nodes
 
-  -   **\[Calibration Publisher\]** … Start/end a *runtime\_manager calibration\_publisher.launch* script. Specify the full path of a YAML file to be selected at launching nodes by a launched calibration\_publiher dialog.
+-  **\[Calibration Publisher\]** … Start/end a *runtime\_manager calibration\_publisher.launch* script. Specify the full path of a YAML file to be selected at launching nodes by a launched calibration\_publiher dialog.
 
-  -   **\[Points Image\]** … Start/end a *runtime\_manager/points2image.launch* script.
+-  **\[Points Image\]** … Start/end a *runtime\_manager/points2image.launch* script.
 
-  -   **\[Virtual Scan Image\]** … Start/end a *runtime\_manager/vscan.launch* script.
+-  **\[Virtual Scan Image\]** … Start/end a *runtime\_manager/vscan.launch* script.
 
-  -   **\[Scan Image\]** … Start/end *scan2image/scan2image* nodes
+-  **\[Scan Image\]** … Start/end *scan2image/scan2image* nodes
 
-  -   **\[ROSBAG\]** … Display a ROSBAG Record dialog.
+-  **\[ROSBAG\]** … Display a ROSBAG Record dialog.
 
-  -   **\[RViz\]** … Start/end RViz.
+-  **\[RViz\]** … Start/end RViz.
 
-  -   **\[RQT\]** … Start/end RQT.
+-  **\[RQT\]** … Start/end RQT.
 
 ## Runtime Manager – Computing Tab
 
