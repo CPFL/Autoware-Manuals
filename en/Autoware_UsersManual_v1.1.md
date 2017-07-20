@@ -596,9 +596,9 @@ Runtime Manager is a Python script (scripts/runtime\_manager\_dalog.py) included
 
 Runtime Manager dialog composes of multiple tabs. Operating Runtime Manager dialog enables processes of starting/ending ROS nodes used in Autoware, and publishing topics for parameters of the launched ROS. The buttons to start/end ROS nodes are classified into functionalities and placed in different tabs. Each Tab window can be switched by pressing each Tab on the top of the Runtime Manager dialog.
 
-IMAGE PLACEHOLDER
-
 ## Runtime Manager – Quick Start Tab
+
+IMAGE PLACEHOLDER
 
 Figure Runtime Manager - Quick Start Tab
 
@@ -635,15 +635,15 @@ Figure Runtime Manager - Quick Start Tab
 IMAGE PLACEHOLDER
 
 
- \[Baselink to Localizer\]
+ **\[Baselink to Localizer\]**
 
 -   **\[TF\]** … Pressing \[TF\], a topic of Vehicle control position (base\_link → Velodyne position(velodyne)is published.
 
 -   **\[x\], \[y\], \[z\], \[yaw\], \[pitch\], \[roll\]** … Enter the relative position of velodyne to base\_link.
 
-\[Vehicle Model\]
+**\[Vehicle Model\]**
 
-**\[Vehicle Model\]** … Start/end a script
+-  **\[Vehicle Model\]** … Start/end a script
 *model\_publisher/vehicle\_model.launch* with the argument, which is the full path of URDF(Unified Robot Description Format)file(a vehicle model displayed on RViz)specified in the text box. Alternatively, a URDF file can be selected from a file selection dialog displayed by pressing \[Ref\]. If a URDF file is not specified in the \[Vehicle Model\] text box, *Autoware/ros/src/.config/model/default.urdf* is used.
 
 -   **\[ROSBAG\]** … Display a ROSBAG Record dialog.
@@ -666,11 +666,11 @@ Figure Runtime Manager - Map Tab
 
 -   **\[TF\]** … Start/end the launch file specified in full path in the text box. If launch file is not specified, the launch file *\~/.autoware/data/tf/tf.launch* is started/ended. Alternatively, a launch file can be selected by file selection dialog displayed by pressing *Ref*.
 
-\[Map Tools\]
+**\[Map Tools\]**
 
 -   **\[PCD Filter\]** …Start/end map\_tools/pcd\_filter nodes with an argument, which is the full path of 3-D map (PCD files) specified in the text box. Alternatively, a 3-D map can be selected by file selection dialog displayed by pressing *Ref*.
 
--   **\[PCD Binarizer\] …**Start/end map\_tools/pcd\_binalizer nodes with an argument, which is the full path of ASCII format PCD file specified in the text box. Alternatively, a PCD file can be selected by file selection dialog displayed by pressing *Ref*.
+-   **\[PCD Binarizer\]** …Start/end map\_tools/pcd\_binalizer nodes with an argument, which is the full path of ASCII format PCD file specified in the text box. Alternatively, a PCD file can be selected by file selection dialog displayed by pressing *Ref*.
 
 -   **\[ROSBAG\]** … Display a ROSBAG Record dialog.
 
@@ -683,375 +683,373 @@ Figure Runtime Manager - Map Tab
 IMAGE PLACEHOLDER
 
 
-\[Drivers\]
+**\[Drivers\]**
 
-- \[CAN\]
+- **\[CAN\]**
 
--   **\[can\_converter\] check box** … Start/end *kvaser/can\_converter* nodes.
+  -   **\[can\_converter\] check box** … Start/end *kvaser/can\_converter* nodes.
 
--   **\[can\_draw\] check box** … Start/end *kvaser/can\_draw* nodes.
+  -   **\[can\_draw\] check box** … Start/end *kvaser/can\_draw* nodes.
 
--   **\[can\_listener\] check box** … Start/end *kvaser/can\_listener* nodes.
+  -   **\[can\_listener\] check box** … Start/end *kvaser/can\_listener* nodes.
 
--   **\[can\_listener\]-\[config\]** … Display a *can\_listener* dialog. Specify channels to be selected at launching nodes.
+  -   **\[can\_listener\]-\[config\]** … Display a *can\_listener* dialog. Specify channels to be selected at launching nodes.
 
--  \[Cameras\]
+-  **\[Cameras\]**
 
--   **\[PointGrey Grasshoper 3 (USB1)\] check box** … Start/end a *pointgrey/grasshopper3.launch* script.
+  -   **\[PointGrey Grasshoper 3 (USB1)\] check box** … Start/end a *pointgrey/grasshopper3.launch* script.
 
--   **\[PointGrey Grasshoper 3 (USB1)\] - \[config\]** … Display a *calibration\_path\_grasshopper3* dialog. Specify a CalibrationFile path to be selected at launching scripts.
+  -   **\[PointGrey Grasshoper 3 (USB1)\] - \[config\]** … Display a *calibration\_path\_grasshopper3* dialog. Specify a CalibrationFile path to be selected at launching scripts.
 
--   **\[PointGrey Generic\] check box** … Start/end a *pointgrey\_camera\_driver/camera.launch* script.  **\[PointGrey PointGray LadyBug 5\]** **check box**… Start/end a *pointgrey/ladybug.launch* script.
+  -   **\[PointGrey Generic\] check box** … Start/end a *pointgrey\_camera\_driver/camera.launch* script.  **\[PointGrey PointGray LadyBug 5\]** **check box**… Start/end a *pointgrey/ladybug.launch* script.
 
--   **\[PointGrey PointGray LadyBug 5\] -\[config\]** … Display a *calibration\_path\_ladybug* dialog. Specify a CalibrationFile path to be selected at launching scripts.
+  -   **\[PointGrey PointGray LadyBug 5\] -\[config\]** … Display a *calibration\_path\_ladybug* dialog. Specify a CalibrationFile path to be selected at launching scripts.
 
--   **\[USB Generic\] check box** … Start/end *runtime\_manager/uvc\_camera\_node* nodes.
+  -   **\[USB Generic\] check box** … Start/end *runtime\_manager/uvc\_camera\_node* nodes.
 
--   **\[IEEE1394\] check box** … &lt;Unimplemented&gt;
+  -   **\[IEEE1394\] check box** … &lt;Unimplemented&gt;
 
--   **\[Baumer VLG-22\] check box** … Start/end a *vlg22c\_cam/baumer.launch* script.
+  -   **\[Baumer VLG-22\] check box** … Start/end a *vlg22c\_cam/baumer.launch* script.
 
--  \[GNSS\]
+-  **\[GNSS\]**
 
--   **\[Javad Delta 3(TTY1)\] check box** … Start/end a *javad\_navsat\_driver/gnss.sh* script.
+  -   **\[Javad Delta 3(TTY1)\] check box** … Start/end a *javad\_navsat\_driver/gnss.sh* script.
 
--   **\[Javad Delta 3(TTY1)\]-\[config\]** … Display a serial dialog. Specify parameters related to RS232C.
+  -   **\[Javad Delta 3(TTY1)\]-\[config\]** … Display a serial dialog. Specify parameters related to RS232C.
 
--   **\[Serial GNSS\] check box** … Start/end a *nmea\_navsat/nmea\_navsat.launch* script.  **\[Serial GNSS\]-\[config\]** … Display a serial dialog. Specify parameters related to RS232C.
+  -   **\[Serial GNSS\] check box** … Start/end a *nmea\_navsat/nmea\_navsat.launch* script.  **\[Serial GNSS\]-\[config\]** … Display a serial dialog. Specify parameters related to RS232C.
 
-- \[IMU\]
+- **\[IMU\]**
 
--   **\[Crossbow vg440\] check box** … &lt;Unimplemented&gt;
+  -   **\[Crossbow vg440\] check box** … &lt;Unimplemented&gt;
 
--  \[LIDARs\]
+-  **\[LIDARs\]**
 
--   **\[Velodyne HDL-64e-S2\] check box** … Start/end a *velodyne\_pointcloud/velodyne\_hdl64e\_s2.launch* script.
+  -   **\[Velodyne HDL-64e-S2\] check box** … Start/end a *velodyne\_pointcloud/velodyne\_hdl64e\_s2.launch* script.
 
--   **\[Velodyne HDL-64e-S2\]-\[config\]** … Display a calibration\_path dialog. Specifya CalibrationFile path to be selected at launching scripts.
+  -   **\[Velodyne HDL-64e-S2\]-\[config\]** … Display a calibration\_path dialog. Specifya CalibrationFile path to be selected at launching scripts.
 
--   **\[Velodyne HDL-64e-S3\] check box** … Start/end a *velodyne\_pointcloud/velodyne\_hdl64e\_s3.launch* script.
+  -   **\[Velodyne HDL-64e-S3\] check box** … Start/end a *velodyne\_pointcloud/velodyne\_hdl64e\_s3.launch* script.
 
--   **\[Velodyne HDL-64e-S3\]-\[config\]** … Display a calibration\_path dialog. Specify a CalibrationFile path to be selected at launching scripts.
+  -   **\[Velodyne HDL-64e-S3\]-\[config\]** … Display a calibration\_path dialog. Specify a CalibrationFile path to be selected at launching scripts.
 
--   **\[Velodyne HDL-32e\] check box** … Start/end a *velodyne\_pointcloud/velodyne\_hdl32e.launch* script.
+  -   **\[Velodyne HDL-32e\] check box** … Start/end a *velodyne\_pointcloud/velodyne\_hdl32e.launch* script.
 
--   **\[Velodyne HDL-32e\]-\[config\]** … Display a calibration\_path dialog. Specify a CalibrationFile path to be selected at launching scripts.
+  -   **\[Velodyne HDL-32e\]-\[config\]** … Display a calibration\_path dialog. Specify a CalibrationFile path to be selected at launching scripts.
 
--   **\[Velodyne VLP-16\] check box** … Start/end a *velodyne\_pointcloud/velodyne\_vlp16.launch* scripts.
+  -   **\[Velodyne VLP-16\] check box** … Start/end a *velodyne\_pointcloud/velodyne\_vlp16.launch* scripts.
 
--   **\[Velodyne VLP-16\]-\[config\]** … Display a calibration\_path dislog. Specify a CalibrationFile path to be selected at launching script.
+  -   **\[Velodyne VLP-16\]-\[config\]** … Display a calibration\_path dislog. Specify a CalibrationFile path to be selected at launching script.
 
--   **\[Hokuyo TOP-URG\] check box** … Start/end a *hokuyo/top\_urg.launch* script.
+  -   **\[Hokuyo TOP-URG\] check box** … Start/end a *hokuyo/top\_urg.launch* script.
 
--   **\[Hokuyo 3D-URG\] check box** … Start/end a *hokuyo/hokuyo\_3d\_urg.launch* script.
+  -   **\[Hokuyo 3D-URG\] check box** … Start/end a *hokuyo/hokuyo\_3d\_urg.launch* script.
 
--   **\[SICK LMS511\] check box** … &lt;Unimplemented&gt;
+  -   **\[SICK LMS511\] check box** … &lt;Unimplemented&gt;
 
--   **\[IBEO 8L Single\] check box** … &lt;Unimplemented&gt;
+  -   **\[IBEO 8L Single\] check box** … &lt;Unimplemented&gt;
 
--  \[Points Filter\]
+-  **\[Points Filter\]**
 
-**A chapter image and the description to be updated (tmp) **
+*A chapter image and the description to be updated (tmp) *
 
--   **\[Calibration Tool Kit\]** … Start/end *Calibration\_camera\_lidar/calibration\_toolkit* nodes
+  -   **\[Calibration Tool Kit\]** … Start/end *Calibration\_camera\_lidar/calibration\_toolkit* nodes
 
--   **\[Calibration Publisher\]** … Start/end a *runtime\_manager calibration\_publisher.launch* script. Specify the full path of a YAML file to be selected at launching nodes by a launched calibration\_publiher dialog.
+  -   **\[Calibration Publisher\]** … Start/end a *runtime\_manager calibration\_publisher.launch* script. Specify the full path of a YAML file to be selected at launching nodes by a launched calibration\_publiher dialog.
 
--   **\[Points Image\]** … Start/end a *runtime\_manager/points2image.launch* script.
+  -   **\[Points Image\]** … Start/end a *runtime\_manager/points2image.launch* script.
 
--   **\[Virtual Scan Image\]** … Start/end a *runtime\_manager/vscan.launch* script.
+  -   **\[Virtual Scan Image\]** … Start/end a *runtime\_manager/vscan.launch* script.
 
--   **\[Scan Image\]** … Start/end *scan2image/scan2image* nodes
+  -   **\[Scan Image\]** … Start/end *scan2image/scan2image* nodes
 
--   **\[ROSBAG\]** … Display a ROSBAG Record dialog.
+  -   **\[ROSBAG\]** … Display a ROSBAG Record dialog.
 
--   **\[RViz\]** … Start/end RViz.
+  -   **\[RViz\]** … Start/end RViz.
 
--   **\[RQT\]** … Start/end RQT.
+  -   **\[RQT\]** … Start/end RQT.
 
 ## Runtime Manager – Computing Tab
 
 IMAGE PLACEHOLDER
 
-\[Localication\]
+**\[Localication\]**
 
 -  \[gnss\_lozalizer\]
 
--   **\[fix2tfpose\] check box** … Start/end *gnss\_localizer/fix2tfpose* nodes
+  -   **\[fix2tfpose\] check box** … Start/end *gnss\_localizer/fix2tfpose* nodes
 
--   **\[nmea2tfpose\] check box** … Start/end a *gnss\_localizer/nmea2tfpose.launch* script.
+  -   **\[nmea2tfpose\] check box** … Start/end a *gnss\_localizer/nmea2tfpose.launch* script.
 
--  \[ndt\_lozalizer\]
+-  **\[ndt\_lozalizer\]**
 
--   **\[ndt\_mapping\] check box** … Start/end a *ndt\_localizer/ndt\_mapping.launch* script. Clicking \[app\], *ndt\_mapping* dialog is displayed.
+  -   **\[ndt\_mapping\] check box** … Start/end a *ndt\_localizer/ndt\_mapping.launch* script. Clicking \[app\], *ndt\_mapping* dialog is displayed.
 
--   **\[ndt\_matching\] check box** … Start/end a *ndt\_localizer/ndt\_matching.launch* script. Clicking \[app\], *ndt* dialog is displayed.
+  -   **\[ndt\_matching\] check box** … Start/end a *ndt\_localizer/ndt\_matching.launch* script. Clicking \[app\], *ndt* dialog is displayed.
 
--  \[vel\_pose\_mux\]
+-  **\[vel\_pose\_mux\]**
 
--   **\[vel\_pose\_mux\] check box** … Start/end a *vel\_pose\_mux/vel\_pose\_mux.launch* script. Clicking \[app\], a *vel\_pose\_mux* dialog is displayed.
+  -   **\[vel\_pose\_mux\] check box** … Start/end a *vel\_pose\_mux/vel\_pose\_mux.launch* script. Clicking \[app\], a *vel\_pose\_mux* dialog is displayed.
 
-\[Detection\]
+**\[Detection\]**
 
--  \[cv\_detector\]
+-  **\[cv\_detector\]**
 
--   **\[dpm\_ocv\] check box** … Start/end a *cv\_tracker/dpm\_ocv.launch* script. A *dpm\_ocv* dialog is displayed. After specifying parameters, launch the script by pressing \[Detection Start\]. Clicking \[app\], a dialog is displayed. Selecting a turning parameter class (Car or Pedestrian), either a *car\_dpm* or a *pedestrian\_dpm* dialog is displayed. Setting parameters, a topic of either */config/car\_dpm* or */config/pedestrian\_dpm* is published.
+  -   **\[dpm\_ocv\] check box** … Start/end a *cv\_tracker/dpm\_ocv.launch* script. A *dpm\_ocv* dialog is displayed. After specifying parameters, launch the script by pressing \[Detection Start\]. Clicking \[app\], a dialog is displayed. Selecting a turning parameter class (Car or Pedestrian), either a *car\_dpm* or a *pedestrian\_dpm* dialog is displayed. Setting parameters, a topic of either */config/car\_dpm* or */config/pedestrian\_dpm* is published.
 
--   **\[dpm\_ttic\] check box** … Start/end a *cv\_tracker/dpm\_ttic.launch* script. A *dpm\_ttic* is displayed. After specifying parameters, launch the script by pressing \[Detection Start\]. Clicking \[app\], a dialog is displayed.
+  -   **\[dpm\_ttic\] check box** … Start/end a *cv\_tracker/dpm\_ttic.launch* script. A *dpm\_ttic* is displayed. After specifying parameters, launch the script by pressing \[Detection Start\]. Clicking \[app\], a dialog is displayed.
 
--   **\[rcnn\_node\] check box** … Start/end a *cv\_tracker/rcnn.launch* script. Clicking \[app\], a dialog is displayed.
+  -   **\[rcnn\_node\] check box** … Start/end a *cv\_tracker/rcnn.launch* script. Clicking \[app\], a dialog is displayed.
 
--   **\[range\_fusion\] check box** … Start/end a cv\_tracker/ranging.launch script. A car\_fusion dialog is displayed at launching the script. Clicking \[app\], a dialog is displayed.
+  -   **\[range\_fusion\] check box** … Start/end a cv\_tracker/ranging.launch script. A car\_fusion dialog is displayed at launching the script. Clicking \[app\], a dialog is displayed.
 
--   **\[klt\_track\] check box** … Start/end a *cv\_tracker/klt\_tracking.launch* script. Clicking \[app\], a dialog is displayed.
+  -   **\[klt\_track\] check box** … Start/end a *cv\_tracker/klt\_tracking.launch* script. Clicking \[app\], a dialog is displayed.
 
--   **\[kf\_track\] check box** … Start/end a *cv\_tracker/kf\_tracking.launch* script. A dialog is displayed at launching the script. Clicking \[app\], a dialog is displayed.
+  -   **\[kf\_track\] check box** … Start/end a *cv\_tracker/kf\_tracking.launch* script. A dialog is displayed at launching the script. Clicking \[app\], a dialog is displayed.
 
--   **\[obj\_reproj\] check box** … Start/end a *cv\_tracker/reprojection.launch* script. An *obj\_reproj* dialog is displayed. Clicking \[app\], a dialog is displayed.
+  -   **\[obj\_reproj\] check box** … Start/end a *cv\_tracker/reprojection.launch* script. An *obj\_reproj* dialog is displayed. Clicking \[app\], a dialog is displayed.
 
--  \[lidar\_detector\]
+-  **\[lidar\_detector\]**
 
--   **\[euclidean\_cluster\] check box** … Start/end a *lidar\_tracker/euclidean\_clustering.launch* scritp. Clicking \[app\], a dialog is displayed.
+  -   **\[euclidean\_cluster\] check box** … Start/end a *lidar\_tracker/euclidean\_clustering.launch* scritp. Clicking \[app\], a dialog is displayed.
 
--   **\[obj\_fusion\] check box** … Start/end a *lidar\_tracker/obj\_fusion.launch* script. An obj\_fusion dialog is displayed at launching the script. Clicking \[app\], a dialog is displayed.
+  -   **\[obj\_fusion\] check box** … Start/end a *lidar\_tracker/obj\_fusion.launch* script. An obj\_fusion dialog is displayed at launching the script. Clicking \[app\], a dialog is displayed.
 
--  \[road\_wizard\]
+-  **\[road\_wizard\]**
 
--   **\[feat\_proj\] check box** … Start/end a *road\_wizard/feat\_proj.launch* script. Clicking \[app\], a dialog is displayed.
+  -   **\[feat\_proj\] check box** … Start/end a *road\_wizard/feat\_proj.launch* script. Clicking \[app\], a dialog is displayed.
 
--   **\[region\_tlr\] check box** … Start/end a *road\_wizard/traffic\_light\_recognition.launch* script. Clicking \[app\], a dialog is displayed.
+  -   **\[region\_tlr\] check box** … Start/end a *road\_wizard/traffic\_light\_recognition.launch* script. Clicking \[app\], a dialog is displayed.
 
--  \[viewers\]
+-  **\[viewers\]**
 
--   **\[image\_viewer\] check box** … Start/end a *viewers/viewers.launch* script. *image\_viewer* is specified as a script parameter *viewer\_type*. Clicking \[app\], a dialog is displayed.
+  -   **\[image\_viewer\] check box** … Start/end a *viewers/viewers.launch* script. *image\_viewer* is specified as a script parameter *viewer\_type*. Clicking \[app\], a dialog is displayed.
 
--   **\[image\_d\_viewer\] check box** …Start/end a *viewers/viewers.launch* script. *image\_viewer* is specified as a script parameter *viewer\_type*. Clicking \[app\], a dialog is displayed.
+  -   **\[image\_d\_viewer\] check box** …Start/end a *viewers/viewers.launch* script. *image\_viewer* is specified as a script parameter *viewer\_type*. Clicking \[app\], a dialog is displayed.
 
--   **\[points\_image\_viewer\] check box** …Start/end a *viewers/viewers.launch* script. *points\_image\_viewer* is specified as a script parameter *viewer\_type*. Clicking \[app\], a dialog is displayed.
+  -   **\[points\_image\_viewer\] check box** …Start/end a *viewers/viewers.launch* script. *points\_image\_viewer* is specified as a script parameter *viewer\_type*. Clicking \[app\], a dialog is displayed.
 
--   **\[points\_image\_d\_viewer\] check box** …Start/end a *viewers/viewers.launch* script. *points\_image\_d\_viewer* is specified as a script parameter *viewer\_type*. Clicking \[app\], a dialog is displayed.
+  -  **\[points\_image\_d\_viewer\] check box** …Start/end a *viewers/viewers.launch* script. *points\_image\_d\_viewer* is specified as a script parameter *viewer\_type*. Clicking \[app\], a dialog is displayed.
 
--   **\[vscan\_image\_viewer\] check box** …Start/end a *viewers/viewers.launch* script. *vscan\_image\_viewer* is specified as a script parameter *viewer\_type*. Clicking \[app\], a dialog is displayed.
+  -  **\[vscan\_image\_viewer\] check box** …Start/end a *viewers/viewers.launch* script. *vscan\_image\_viewer* is specified as a script parameter *viewer\_type*. Clicking \[app\], a dialog is displayed.
 
--   **\[vscan\_image\_d\_viewer\] check box** …Start/end a *viewers/viewers.launch* script. *vscan\_image\_d\_viewer* is specified as a script parameter *viewer\_type*. Clicking \[app\], a dialog is displayed.
+  -  **\[vscan\_image\_d\_viewer\] check box** …Start/end a *viewers/viewers.launch* script. *vscan\_image\_d\_viewer* is specified as a script parameter *viewer\_type*. Clicking \[app\], a dialog is displayed.
 
--   **\[traffic\_light\_viewer\] check box** …Start/end a *viewers/viewers.launch* script. *traffic\_light\_viewer* is specified as a script parameter *viewer\_type*. Clicking \[app\], a dialog is displayed.
+  -  **\[traffic\_light\_viewer\] check box** …Start/end a *viewers/viewers.launch* script. *traffic\_light\_viewer* is specified as a script parameter *viewer\_type*. Clicking \[app\], a dialog is displayed.
 
-\[Semantics\]
+**\[Semantics\]**
 
--   **\[laserscan2costmap\] check box** … Start/end an *object\_map/laserscan2costmap.launch* script. Clicking \[app\], a dialog is displayed.
+  -  **\[laserscan2costmap\] check box** … Start/end an *object\_map/laserscan2costmap.launch* script. Clicking \[app\], a dialog is displayed.
 
--   **\[points2costmap\] check box** … Start/end an *object\_map/points2costmap.launch* script. Clicking \[app\], a dialog is displayed.
+  -  **\[points2costmap\] check box** … Start/end an *object\_map/points2costmap.launch* script. Clicking \[app\], a dialog is displayed.
 
-\[Mission Planning\]
+**\[Mission Planning\]**
 
--  \[lane\_planner\]
+-  **\[lane\_planner\]**
 
--   **\[lane\_navi\] check box** … Start/end a *lane\_planner/lane\_navi.launch* script. Clicking \[app\], a dialog is displayed.
+  -  **\[lane\_navi\] check box** … Start/end a *lane\_planner/lane\_navi.launch* script. Clicking \[app\], a dialog is displayed.
 
--   **\[lane\_rule\] check box** … Start/end a *lane\_planner/lane\_rule* script. Clicking \[app\], a dialog is displayed.
+  -  **\[lane\_rule\] check box** … Start/end a *lane\_planner/lane\_rule* script. Clicking \[app\], a dialog is displayed.
 
--   **\[lane\_stop\] check box** … Start/end a *lane\_planner/lane\_stop* script. Clicking \[app\], a dialog is displayed.
+  -  **\[lane\_stop\] check box** … Start/end a *lane\_planner/lane\_stop* script. Clicking \[app\], a dialog is displayed.
 
--   **\[lane\_select\] check box** … Start/end a *lane\_planner/lane\_script*. Clicking \[app\], a dialog is displayed.
+  -  **\[lane\_select\] check box** … Start/end a *lane\_planner/lane\_script*. Clicking \[app\], a dialog is displayed.
 
--  \[freespace\_planner\]
+-  **\[freespace\_planner\]**
 
--   **\[astar\_navi\] check box** … Start/end a *freespace\_planner/astar\_navi* script. Clicking \[app\], a dialog is displayed.
+  -  **\[astar\_navi\] check box** … Start/end a *freespace\_planner/astar\_navi* script. Clicking \[app\], a dialog is displayed.
 
-\[Motion Planning\]
+**\[Motion Planning\]**
 
--  \[driving\_planner\]
+-  **\[driving\_planner\]**
 
--   **\[velocity\_set\] check box** … Start/end a *driving\_planner/velocity\_set.launch* script. Clicking \[app\], a dialog is displayed.
+  -  **\[velocity\_set\] check box** … Start/end a *driving\_planner/velocity\_set.launch* script. Clicking \[app\], a dialog is displayed.
 
--   **\[path\_select\] check box** … Start/end a *driving\_planner/path\_select* script. Clicking \[app\], a dialog is displayed.
+  -  **\[path\_select\] check box** … Start/end a *driving\_planner/path\_select* script. Clicking \[app\], a dialog is displayed.
 
--   **\[lattice\_trajectory\_gen\] check box** … Start/end a *driving\_planner/lattice\_trajectory\_gen.launch* script. Clicking \[app\], a dialog is displayed.
+  -  **\[lattice\_trajectory\_gen\] check box** … Start/end a *driving\_planner/lattice\_trajectory\_gen.launch* script. Clicking \[app\], a dialog is displayed.
 
--   **\[lattice\_twist\_convert\] check box** … Start/end a *driving\_planner/lattice\_twist\_convert* nodes. Clicking \[app\], a dialog is displayed.
+  -  **\[lattice\_twist\_convert\] check box** … Start/end a *driving\_planner/lattice\_twist\_convert* nodes. Clicking \[app\], a dialog is displayed.
 
--  \[waypoint\_marker\]
+-  **\[waypoint\_marker\]**
 
--   **\[waypoint\_loader\] check box** … Start/end a *waypoint\_maker/waypoint\_loader.launch* script. Clicking \[app\], a dialog is displayed.
+  -  **\[waypoint\_loader\] check box** … Start/end a *waypoint\_maker/waypoint\_loader.launch* script. Clicking \[app\], a dialog is displayed.
 
--   **\[waypoint\_saver\] check box** … Start/end a *waypoint\_maker/waypoint\_saver.launch* script. Clicking \[app\], a dialog is displayed.
+  -  **\[waypoint\_saver\] check box** … Start/end a *waypoint\_maker/waypoint\_saver.launch* script. Clicking \[app\], a dialog is displayed.
 
--   **\[waypoint\_clicker\] check box** … Start/end a *waypoint\_maker/waypoint\_clicker* nodes. Clicking \[app\], a dialog is displayed.
+  -  **\[waypoint\_clicker\] check box** … Start/end a *waypoint\_maker/waypoint\_clicker* nodes. Clicking \[app\], a dialog is displayed.
 
--  \[waypoint\_follower\]
+-  **\[waypoint\_follower\]**
 
--   **\[pure\_pursuit\] check box** … Start/end a *waypoint\_follower/pure\_pursuit.launch* script. Clicking \[app\], a dialog is displayed.
+  -  **\[pure\_pursuit\] check box** … Start/end a *waypoint\_follower/pure\_pursuit.launch* script. Clicking \[app\], a dialog is displayed.
 
--   **\[twist\_filter\] check box** … Start/end a *waypoint\_follower/twist\_filter.launch* script. Clicking \[app\], a dialog is displayed.
+  -  **\[twist\_filter\] check box** … Start/end a *waypoint\_follower/twist\_filter.launch* script. Clicking \[app\], a dialog is displayed.
 
--   **\[wf\_simulator\] check box** … Start/end a *waypoint\_follower/wf\_simulator.launch* script. Clicking \[app\], a dialog is displayed.
+  -  **\[wf\_simulator\] check box** … Start/end a *waypoint\_follower/wf\_simulator.launch* script. Clicking \[app\], a dialog is displayed.
 
--   **\[ROSBAG\]** … Dislpay ROSBAG Record Dialog.
+  -  **\[ROSBAG\]** … Dislpay ROSBAG Record Dialog.
 
--   **\[RViz\]** … Start/end RViz.
+  -  **\[RViz\]** … Start/end RViz.
 
--   **\[RQT\]** … Start/end RQT.
+  -  **\[RQT\]** … Start/end RQT.
   
 
-Runtime Manager – Interface Tab
+## Runtime Manager – Interface Tab
 
 IMAGE PLACEHOLDER
 
--   **\[Android Tablet\]** … Start/end *runtime\_manager/tablet\_socket.launch* for communicating with Tablets.
+  -  **\[Android Tablet\]** … Start/end *runtime\_manager/tablet\_socket.launch* for communicating with Tablets.
 
--   **\[Oculus Rift\]** … &lt;Unimplemented&gt;
+  -  **\[Oculus Rift\]** … &lt;Unimplemented&gt;
 
--   **\[Vehicle Gateway\]** … Start/end *runtime\_manager/vehicle\_socket.launch* for communicating with ZMP Robocar.
+  -  **\[Vehicle Gateway\]** … Start/end *runtime\_manager/vehicle\_socket.launch* for communicating with ZMP Robocar.
 
--   **\[Sound\] check box** … Start/end a *sound\_player/sound\_player.py*.
+  -  **\[Sound\] check box** … Start/end a *sound\_player/sound\_player.py*.
 
--   **\[Auto Pilot\]** … Publish a topic (*/mode\_cmd*) according the button status.
+  -  **\[Auto Pilot\]** … Publish a topic (*/mode\_cmd*) according the button status.
 
--   **\[Lamp\]** … Publish a topic (*/lamp\_cmd*) according to the button status.
+  -  **\[Lamp\]** … Publish a topic (*/lamp\_cmd*) according to the button status.
 
--   **\[Indicator\]** … Publish a topic (*/indicator\_cmd*) according to the button status.
+  -  **\[Indicator\]** … Publish a topic (*/indicator\_cmd*) according to the button status.
 
--   **\[D\] toggle switch** … Publish a topic (*/gear\_cmd*) of buttons turning ON.
+  -  **\[D\] toggle switch** … Publish a topic (*/gear\_cmd*) of buttons turning ON.
 
--   **\[R\] toggle switch** … Publish a topic (*/gear\_cmd)* of buttons turning ON.
+  -  **\[R\] toggle switch** … Publish a topic (*/gear\_cmd)* of buttons turning ON.
 
--   **\[B\] toggle switch** … Publish a topic (*/gear\_cmd*) of buttons turning ON.
+  -  **\[B\] toggle switch** … Publish a topic (*/gear\_cmd*) of buttons turning ON.
 
--   **\[N\] toggle switch** … Publish a topic (*/gear\_cmd*) of buttons turning ON.
+  -  **\[N\] toggle switch** … Publish a topic (*/gear\_cmd*) of buttons turning ON.
 
--   **\[Accel\] slider** … Publish a topic (*/accel\_cmd*) of the slider status.
+  -  **\[Accel\] slider** … Publish a topic (*/accel\_cmd*) of the slider status.
 
--   **\[Brake\] slider** … Publish a topic (*/brake\_cmd*) of the slider status.
+  -  **\[Brake\] slider** … Publish a topic (*/brake\_cmd*) of the slider status.
 
--   **\[Steer\] slider** … Publish a topic (*/steer\_cmd*) of the slider status.
+  -  **\[Steer\] slider** … Publish a topic (*/steer\_cmd*) of the slider status.
 
--   **\[Torque\] slider** …&lt;Unimplemented&gt;
+  -  **\[Torque\] slider** …&lt;Unimplemented&gt;
 
--   **\[Veloc\] slider** … Publish a topic (*/twist\_cmd*) of the slider status.
+  -  **\[Veloc\] slider** … Publish a topic (*/twist\_cmd*) of the slider status.
 
--   **\[Angle\] slider** … Publish a topic (*/twist\_cmd*) of the slider status.
+  -  **\[Angle\] slider** … Publish a topic (*/twist\_cmd*) of the slider status.
 
--   **\[ROSBAG\]** … Display a ROSBAG Record dialog.
+  -  **\[ROSBAG\]** … Display a ROSBAG Record dialog.
 
--   **\[RViz\]** … Start/end RViz.
+  -  **\[RViz\]** … Start/end RViz.
 
--   **\[RQT\]** … Start/end RQT.
+  -  **\[RQT\]** … Start/end RQT.
 
 ## Runtime Manager – Database Tab
 
 IMAGE PLACEHOLDER
 
-\[CAN\]
+**\[CAN\]**
 
--   **\[can\_uploder\] check box** … Start/end *obj\_db/can\_uploader* nodes. Clicking \[app\], an *other* dialog is displayed.
+-  **\[can\_uploder\] check box** … Start/end *obj\_db/can\_uploader* nodes. Clicking \[app\], an *other* dialog is displayed.
 
-\[Map\]
+**\[Map\]**
 
--   **\[map\_downloader\] check box** … Start/end the *map\_file/map\_downloader.launch* scripts. Clicking \[app\], a map\_downloader dialog is displayed.
+-  **\[map\_downloader\] check box** … Start/end the *map\_file/map\_downloader.launch* scripts. Clicking \[app\], a map\_downloader dialog is displayed.
 
-\[Position\]
+**\[Position\]**
 
--   **\[pos\_downloader\] check box** … Start/end *pos\_db/pos\_downloader* nodes. Clicking \[app\], a *pos\_db* dialog is displayed.
+-  **\[pos\_downloader\] check box** … Start/end *pos\_db/pos\_downloader* nodes. Clicking \[app\], a *pos\_db* dialog is displayed.
 
--   **\[pos\_uploder\] check box** … Start/end *pos\_db/pos\_uploader* nodes. Clicking \[app\]*,* a *pos\_db* dialog is displayed.
+-  **\[pos\_uploder\] check box** … Start/end *pos\_db/pos\_uploader* nodes. Clicking \[app\]*,* a *pos\_db* dialog is displayed.
 
-\[Sensors\]
+**\[Sensors\]**
 
--   **\[image\_upload\] check box** … ＜Unimplemented＞
+-  **\[image\_upload\] check box** … ＜Unimplemented＞
 
--   **\[pointcloud\_uplod\] check box** …＜Unimplemented＞
+-  **\[pointcloud\_uplod\] check box** …＜Unimplemented＞
 
--   **\[Query\]** … ＜Unimplemented＞
+-  **\[Query\]** … ＜Unimplemented＞
 
--   **\[ROSBAG\]**… Display a ROSBAG Record dialog to recode a ROSBAG.
+-  **\[ROSBAG\]**… Display a ROSBAG Record dialog to recode a ROSBAG.
 
--   **\[RViz\]** … Start/end RViz.
+-  **\[RViz\]** … Start/end RViz.
 
--   **\[RQT\]** … Start/end RQT.
+-  **\[RQT\]** … Start/end RQT.
 
 ## Runtime Manager – Simulation Tab
 
 IMAGE PLACEHOLDER
 
-
 \* A capture and the description to be updated (tmp), /use\_sim\_time
 
--   **\[ROSBAG\] text box** … Start a ROSBAG with an argument specified full path of a bag file in the text box by pressing \[Play\]. Alternatively, a bag file can be specified by the file selection dialog displayed by pressing \[Ref\].
+-  **\[ROSBAG\] text box** … Start a ROSBAG with an argument specified full path of a bag file in the text box by pressing \[Play\]. Alternatively, a bag file can be specified by the file selection dialog displayed by pressing \[Ref\].
 
--   **\[Rate\]**… Specify a numerical value for the ROSBAG play command with –r option. If it is not specified, -r option is not used.
+-  **\[Rate\]**… Specify a numerical value for the ROSBAG play command with –r option. If it is not specified, -r option is not used.
 
--   **\[State Time(s)\]** … Specify a numerical value for the ROSBAG play command with –start option. If it is not specified, -start option is not used.
+-  **\[State Time(s)\]** … Specify a numerical value for the ROSBAG play command with –start option. If it is not specified, -start option is not used.
 
--   **\[Repeat\] check box** … If this is ON, --loop option is specified at launching the ROSBAG play command.
+-  **\[Repeat\] check box** … If this is ON, --loop option is specified at launching the ROSBAG play command.
 
--   **\[Play\]** … Start the ROSBAG play command with a bag specified in the ROSBAG text box.
+-  **\[Play\]** … Start the ROSBAG play command with a bag specified in the ROSBAG text box.
 
--   **\[Stop\]** … End the running ROSBAG play command.
+-  **\[Stop\]** … End the running ROSBAG play command.
 
--   **\[Pause\]** … Suspend the running ROSBAG play command.
+-  **\[Pause\]** … Suspend the running ROSBAG play command.
 
--   **\[ROSBAG\]** … Display a ROSBAG Record dialog to record a ROSBAG.
+-  **\[ROSBAG\]** … Display a ROSBAG Record dialog to record a ROSBAG.
 
--   **\[RViz\]** … Start/end RViz.
+-  **\[RViz\]** … Start/end RViz.
 
--   **\[RQT\]** … Start/end RQT.
+-  **\[RQT\]** … Start/end RQT.
  
-
 ## Runtime Manager – Status Tab
 
 IMAGE PLACEHOLDER
 
--   Top window … Display the execution results of the running *top* command.
+-  Top window … Display the execution results of the running *top* command.
 
--   Left-bottom window … Display the periodic execution time published by related node.
+-  Left-bottom window … Display the periodic execution time published by related node.
 
--   Right-bottom window … Display launched nodes, standard outputs and standard error outputs of scripts. Some nodes displaying progress bars can not show information.
+-  Right-bottom window … Display launched nodes, standard outputs and standard error outputs of scripts. Some nodes displaying progress bars can not show information.
 
--   Bottom window … Display CPU (core) load and memory usage.
+-  Bottom window … Display CPU (core) load and memory usage.
 
--   **\[System Monitor\]** … Start/end the gnome-system-monitor command.
+-  **\[System Monitor\]** … Start/end the gnome-system-monitor command.
 
--   **\[ROSBAG\]** … Display a ROSBAG Record dialog to record a ROSBAG.
+-  **\[ROSBAG\]** … Display a ROSBAG Record dialog to record a ROSBAG.
 
--   **\[RViz\]** … Start/end RViz.
+-  **\[RViz\]** … Start/end RViz.
 
--   **\[RQT\]** … Start/end RQT.
+-  **\[RQT\]** … Start/end RQT.
   
 
 ## Runtime Manager - Topics Tab
 
 IMAGE PLACEHOLDER
 
--   Left window … Display the list of topics. Launch a rostopic info &lt;target topic&gt; command and display the result of the command on the right bottom window by clicking links. If the Echo check box is ON, rostopic echo &lt;target topic&gt; is launched and the results are displayed on the right-top window.
+-  Left window … Display the list of topics. Launch a rostopic info &lt;target topic&gt; command and display the result of the command on the right bottom window by clicking links. If the Echo check box is ON, rostopic echo &lt;target topic&gt; is launched and the results are displayed on the right-top window.
 
--   **\[Refresh\]** … Update the list of topics displayed on the left window using the obtained topic list by running *rostopic list* command.
+-  **\[Refresh\]** … Update the list of topics displayed on the left window using the obtained topic list by running *rostopic list* command.
 
--   **\[ROSBAG\]** … Display a ROSBAG Record dialog to record a ROSBAG.
+-  **\[ROSBAG\]** … Display a ROSBAG Record dialog to record a ROSBAG.
 
--   **\[RViz\]** … Start/end RViz.
+-  **\[RViz\]** … Start/end RViz.
 
--   **\[RQT\]** … Start/end RQT. 
+-  **\[RQT\]** … Start/end RQT. 
 
 ## ROSBAG Record Dialog
 
 IMAGE PLACEHOLDER
 
--   **Text box** … Specify the full path of a bag file for the ROSBAG record command. Alternatively, a bag file can be selected by the file selection dialog displayed by pressing \[Ref\].
+-  **Text box** … Specify the full path of a bag file for the ROSBAG record command. Alternatively, a bag file can be selected by the file selection dialog displayed by pressing \[Ref\].
 
--   **\[split\] check box** … If the check box is ON and a numerical values is set in the size text box, --split and –size=&lt;target size&gt; options for launching ROSBAG record command by pressing \[Start\] are specified.
+-  **\[split\] check box** … If the check box is ON and a numerical values is set in the size text box, --split and –size=&lt;target size&gt; options for launching ROSBAG record command by pressing \[Start\] are specified.
 
--   **\[size\] text box** … If *split* check box is ON, specify split file size in megabytes.
+-  **\[size\] text box** … If *split* check box is ON, specify split file size in megabytes.
 
--   **\[Start\]** … Start the ROSBAG record command with a bag file specified in the top text box.
+-  **\[Start\]** … Start the ROSBAG record command with a bag file specified in the top text box.
 
--   **\[Stop\]** … End the running ROSBAG record command.
+-  **\[Stop\]** … End the running ROSBAG record command.
 
--   **\[All\]** check box… If check box is ON, -a option is specified for launching the ROSBAG record command.
+-  **\[All\]** check box… If check box is ON, -a option is specified for launching the ROSBAG record command.
 
--   **(Other check boxes)** … Specify topics whom check boxes are ON for launching the ROSBAG record command. Only if all check box is OFF, they are enable.
+-  **(Other check boxes)** … Specify topics whom check boxes are ON for launching the ROSBAG record command. Only if all check box is OFF, they are enable.
 
--   **\[Refresh\]** … Starting the rostopic list command and searching running topics, update the other check boxes.
+-  **\[Refresh\]** … Starting the rostopic list command and searching running topics, update the other check boxes.
 
 ## RViz
 
@@ -1061,88 +1059,85 @@ IMAGE PLACEHOLDER
 
 ## AutowareRider
 
-
 This is an android application which has a UI similar to Knight Rider.
 
 The running window is as follows:
 
 IMAGE PLACEHOLDER
 
--   **\[Navi\]** … Start AutowareRoute.apk.
+-  **\[Navi\]** … Start AutowareRoute.apk.
 
--   **\[MAP\]** … &lt;Unimplemented&gt;
+-  **\[MAP\]** … &lt;Unimplemented&gt;
 
--   **\[S1\]** … Start check.launch by ROS PC.
+-  **\[S1\]** … Start check.launch by ROS PC.
 
--   **\[S2\]** … Start set.launch by ROS PC.
+-  **\[S2\]** … Start set.launch by ROS PC.
 
--   **\[B\]** … Send gear B information to ROS PC.
+-  **\[B\]** … Send gear B information to ROS PC.
 
--   **\[N\]** …Send gear N information to ROS PC.
+-  **\[N\]** …Send gear N information to ROS PC.
 
--   **\[D\]** …Send gear D information to ROS PC.
+-  **\[D\]** …Send gear D information to ROS PC.
 
--   **\[R\]** …Send gear R information to ROS PC.
+-  **\[R\]** …Send gear R information to ROS PC.
 
--   **\[AUTO CRUISE\]** … &lt;Unimplemented&gt;
+-  **\[AUTO CRUISE\]** … &lt;Unimplemented&gt;
 
--   **\[NORMAL CRUISE\]** … &lt;Unimplemented&gt;
+-  **\[NORMAL CRUISE\]** … &lt;Unimplemented&gt;
 
--   **\[PURSUIT\]** … &lt;Unimplemented&gt;(End the application)
+-  **\[PURSUIT\]** … &lt;Unimplemented&gt;(End the application)
 
 The following items can be selected on the right-top menu.
 
 **\[設定\] (configuration)**
 
-IMAGE PLACEHOLDER
-
-\[ROS PC\]
-
--   **IPアドレス** … ROS PC IPv4 address
-
--   **命令受信ポート番号** … tablet\_receiver port number (default: 5666)
-
--   **情報送信ポート番号** … tablet\_sender port number (default: 5777)
-
-\[データ収集\] (data collection)
-
--   **テーブル名** … Data transfer destination table name
-
- \[SSH\]
-
--   **ホスト名** …SSH destination hostname
-
--   **ポート番号** …SSH destination port number (default: 22)
-
--   **ユーザ名** … SSH login username
-
--   **パスワード** … SSH login password
-
-\[ポートフォワーディング\] (port forwarding)
-
--   **ローカルポート番号** … port number of local machine source (default: 5558)
-
--   **リモートホスト名** … remote machine host name (default: 127.0.0.1)
-
--   **リモートポート番号** … remote machine destination port number (default: 5555)
+**\[データ収集\] (data collection)**
 
 IMAGE PLACEHOLDER
+
+**\[ROS PC\]**
+
+-  **IPアドレス** … ROS PC IPv4 address
+
+-  **命令受信ポート番号** … tablet\_receiver port number (default: 5666)
+
+-  **情報送信ポート番号** … tablet\_sender port number (default: 5777)
+
+**\[データ収集\] (data collection)**
+
+-  **テーブル名** … Data transfer destination table name
+
+**\[SSH\]**
+
+-  **ホスト名** …SSH destination hostname
+
+-  **ポート番号** …SSH destination port number (default: 22)
+
+-  **ユーザ名** … SSH login username
+
+-  **パスワード** … SSH login password
+
+**\[ポートフォワーディング\] (port forwarding)**
+
+-  **ローカルポート番号** … port number of local machine source (default: 5558)
+
+-  **リモートホスト名** … remote machine host name (default: 127.0.0.1)
+
+-  **リモートポート番号** … remote machine destination port number (default: 5555)
 
 \[データ収集\] (data collection) window is as follows:
 
-Figure AutowareRider data collecion window
+IMAGE PLACEHOLDER
 
--   **\[CanGather\]** … Start CanGather.apk.
+-  **\[CanGather\]** … Start CanGather.apk.
 
--   **\[CarLink (Bluetooth)\]** … Start CarLink\_CAN-BT\_LS.apk.
+-  **\[CarLink (Bluetooth)\]** … Start CarLink\_CAN-BT\_LS.apk.
 
--   **\[CarLink (USB)\]** … Start CarLink\_CANusbAccessory\_LS.apk.
+-  **\[CarLink (USB)\]** … Start CarLink\_CANusbAccessory\_LS.apk.
 
 ## AutowareRoute
 
 AutowareRoute is an Android application implemented by MapFan SDK for path planning.
-
-IMAGE PLACEHOLDER
 
 The start window is as follows:
 
@@ -1150,19 +1145,21 @@ IMAGE PLACEHOLDER
 
 Pressing and holding the map, the following dialog is displayed.
 
+IMAGE PLACEHOLDER
+
 Figure AutowareRoute window
 
--   **\[出発地に設定\]** … Specify the departure point by pressing and holding a point.
+-  **\[出発地に設定\]** … Specify the departure point by pressing and holding a point.
 
--   **\[立寄地に設定\]** … Specify the way-stop point by pressing and holding a point.
+-  **\[立寄地に設定\]** … Specify the way-stop point by pressing and holding a point.
 
--   **\[目的地に設定\]** … Specify the destination point by pressing and holding a point.
+-  **\[目的地に設定\]** … Specify the destination point by pressing and holding a point.
 
--   **\[ルート消去\]** … Delete path data generated by path planning.
+-  **\[ルート消去\]** … Delete path data generated by path planning.
 
--   **\[ルート探索実行\]** … Generate path data considering points of departure, way-stop and destination.
+-  **\[ルート探索実行\]** … Generate path data considering points of departure, way-stop and destination.
 
--   **\[終了\]** … (no description (tmp))
+-  **\[終了\]** … (no description (tmp))
 
 # Chapter 5 - System Setup
 
