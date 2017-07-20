@@ -742,7 +742,7 @@ IMAGE PLACEHOLDER
 
 IMAGE PLACEHOLDER
 
-###\[Localication\]
+### \[Localication\]
 
 #### \[gnss\_lozalizer\]
 
@@ -911,21 +911,21 @@ IMAGE PLACEHOLDER
 
 IMAGE PLACEHOLDER
 
-**\[CAN\]**
+### \[CAN\]
 
 -  **\[can\_uploder\] check box** … Start/end *obj\_db/can\_uploader* nodes. Clicking \[app\], an *other* dialog is displayed.
 
-**\[Map\]**
+### \[Map\]
 
 -  **\[map\_downloader\] check box** … Start/end the *map\_file/map\_downloader.launch* scripts. Clicking \[app\], a map\_downloader dialog is displayed.
 
-**\[Position\]**
+### \[Position\]
 
 -  **\[pos\_downloader\] check box** … Start/end *pos\_db/pos\_downloader* nodes. Clicking \[app\], a *pos\_db* dialog is displayed.
 
 -  **\[pos\_uploder\] check box** … Start/end *pos\_db/pos\_uploader* nodes. Clicking \[app\]*,* a *pos\_db* dialog is displayed.
 
-**\[Sensors\]**
+### \[Sensors\]
 
 -  **\[image\_upload\] check box** … ＜Unimplemented＞
 
