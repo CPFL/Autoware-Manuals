@@ -717,7 +717,8 @@ IMAGE PLACEHOLDER
 -  **\[Hokuyo 3D-URG\] check box** … Start/end a *hokuyo/hokuyo\_3d\_urg.launch* script.
 -  **\[SICK LMS511\] check box** … &lt;Unimplemented&gt;
 -  **\[IBEO 8L Single\] check box** … &lt;Unimplemented&gt;
-#### \[Points Filter\]**
+
+#### \[Points Filter\]
 
 *A chapter image and the description to be updated (tmp) *
 
@@ -741,170 +742,170 @@ IMAGE PLACEHOLDER
 
 IMAGE PLACEHOLDER
 
-**\[Localication\]**
+###\[Localication\]
 
--  \[gnss\_lozalizer\]
+#### \[gnss\_lozalizer\]
 
-  -   **\[fix2tfpose\] check box** … Start/end *gnss\_localizer/fix2tfpose* nodes
+-   **\[fix2tfpose\] check box** … Start/end *gnss\_localizer/fix2tfpose* nodes
 
-  -   **\[nmea2tfpose\] check box** … Start/end a *gnss\_localizer/nmea2tfpose.launch* script.
+-   **\[nmea2tfpose\] check box** … Start/end a *gnss\_localizer/nmea2tfpose.launch* script.
 
--  **\[ndt\_lozalizer\]**
+#### \[ndt\_lozalizer\]
 
-  -   **\[ndt\_mapping\] check box** … Start/end a *ndt\_localizer/ndt\_mapping.launch* script. Clicking \[app\], *ndt\_mapping* dialog is displayed.
+-   **\[ndt\_mapping\] check box** … Start/end a *ndt\_localizer/ndt\_mapping.launch* script. Clicking \[app\], *ndt\_mapping* dialog is displayed.
 
-  -   **\[ndt\_matching\] check box** … Start/end a *ndt\_localizer/ndt\_matching.launch* script. Clicking \[app\], *ndt* dialog is displayed.
+-   **\[ndt\_matching\] check box** … Start/end a *ndt\_localizer/ndt\_matching.launch* script. Clicking \[app\], *ndt* dialog is displayed.
 
--  **\[vel\_pose\_mux\]**
+#### \[vel\_pose\_mux\]
 
-  -   **\[vel\_pose\_mux\] check box** … Start/end a *vel\_pose\_mux/vel\_pose\_mux.launch* script. Clicking \[app\], a *vel\_pose\_mux* dialog is displayed.
+-   **\[vel\_pose\_mux\] check box** … Start/end a *vel\_pose\_mux/vel\_pose\_mux.launch* script. Clicking \[app\], a *vel\_pose\_mux* dialog is displayed.
 
-**\[Detection\]**
+### \[Detection\]
 
--  **\[cv\_detector\]**
+#### \[cv\_detector\]
 
-  -   **\[dpm\_ocv\] check box** … Start/end a *cv\_tracker/dpm\_ocv.launch* script. A *dpm\_ocv* dialog is displayed. After specifying parameters, launch the script by pressing \[Detection Start\]. Clicking \[app\], a dialog is displayed. Selecting a turning parameter class (Car or Pedestrian), either a *car\_dpm* or a *pedestrian\_dpm* dialog is displayed. Setting parameters, a topic of either */config/car\_dpm* or */config/pedestrian\_dpm* is published.
+-   **\[dpm\_ocv\] check box** … Start/end a *cv\_tracker/dpm\_ocv.launch* script. A *dpm\_ocv* dialog is displayed. After specifying parameters, launch the script by pressing \[Detection Start\]. Clicking \[app\], a dialog is displayed. Selecting a turning parameter class (Car or Pedestrian), either a *car\_dpm* or a *pedestrian\_dpm* dialog is displayed. Setting parameters, a topic of either */config/car\_dpm* or */config/pedestrian\_dpm* is published.
 
-  -   **\[dpm\_ttic\] check box** … Start/end a *cv\_tracker/dpm\_ttic.launch* script. A *dpm\_ttic* is displayed. After specifying parameters, launch the script by pressing \[Detection Start\]. Clicking \[app\], a dialog is displayed.
+-   **\[dpm\_ttic\] check box** … Start/end a *cv\_tracker/dpm\_ttic.launch* script. A *dpm\_ttic* is displayed. After specifying parameters, launch the script by pressing \[Detection Start\]. Clicking \[app\], a dialog is displayed.
 
-  -   **\[rcnn\_node\] check box** … Start/end a *cv\_tracker/rcnn.launch* script. Clicking \[app\], a dialog is displayed.
+-   **\[rcnn\_node\] check box** … Start/end a *cv\_tracker/rcnn.launch* script. Clicking \[app\], a dialog is displayed.
 
-  -   **\[range\_fusion\] check box** … Start/end a cv\_tracker/ranging.launch script. A car\_fusion dialog is displayed at launching the script. Clicking \[app\], a dialog is displayed.
+-   **\[range\_fusion\] check box** … Start/end a cv\_tracker/ranging.launch script. A car\_fusion dialog is displayed at launching the script. Clicking \[app\], a dialog is displayed.
 
-  -   **\[klt\_track\] check box** … Start/end a *cv\_tracker/klt\_tracking.launch* script. Clicking \[app\], a dialog is displayed.
+-   **\[klt\_track\] check box** … Start/end a *cv\_tracker/klt\_tracking.launch* script. Clicking \[app\], a dialog is displayed.
 
-  -   **\[kf\_track\] check box** … Start/end a *cv\_tracker/kf\_tracking.launch* script. A dialog is displayed at launching the script. Clicking \[app\], a dialog is displayed.
+-   **\[kf\_track\] check box** … Start/end a *cv\_tracker/kf\_tracking.launch* script. A dialog is displayed at launching the script. Clicking \[app\], a dialog is displayed.
 
-  -   **\[obj\_reproj\] check box** … Start/end a *cv\_tracker/reprojection.launch* script. An *obj\_reproj* dialog is displayed. Clicking \[app\], a dialog is displayed.
+-   **\[obj\_reproj\] check box** … Start/end a *cv\_tracker/reprojection.launch* script. An *obj\_reproj* dialog is displayed. Clicking \[app\], a dialog is displayed.
 
--  **\[lidar\_detector\]**
+#### \[lidar\_detector\]
 
-  -   **\[euclidean\_cluster\] check box** … Start/end a *lidar\_tracker/euclidean\_clustering.launch* scritp. Clicking \[app\], a dialog is displayed.
+-  **\[euclidean\_cluster\] check box** … Start/end a *lidar\_tracker/euclidean\_clustering.launch* scritp. Clicking \[app\], a dialog is displayed.
 
-  -   **\[obj\_fusion\] check box** … Start/end a *lidar\_tracker/obj\_fusion.launch* script. An obj\_fusion dialog is displayed at launching the script. Clicking \[app\], a dialog is displayed.
+-  **\[obj\_fusion\] check box** … Start/end a *lidar\_tracker/obj\_fusion.launch* script. An obj\_fusion dialog is displayed at launching the script. Clicking \[app\], a dialog is displayed.
 
--  **\[road\_wizard\]**
+#### \[road\_wizard\]
 
-  -   **\[feat\_proj\] check box** … Start/end a *road\_wizard/feat\_proj.launch* script. Clicking \[app\], a dialog is displayed.
+-  **\[feat\_proj\] check box** … Start/end a *road\_wizard/feat\_proj.launch* script. Clicking \[app\], a dialog is displayed.
 
-  -   **\[region\_tlr\] check box** … Start/end a *road\_wizard/traffic\_light\_recognition.launch* script. Clicking \[app\], a dialog is displayed.
+-  **\[region\_tlr\] check box** … Start/end a *road\_wizard/traffic\_light\_recognition.launch* script. Clicking \[app\], a dialog is displayed.
 
--  **\[viewers\]**
+#### \[viewers\]
 
-  -   **\[image\_viewer\] check box** … Start/end a *viewers/viewers.launch* script. *image\_viewer* is specified as a script parameter *viewer\_type*. Clicking \[app\], a dialog is displayed.
+-   **\[image\_viewer\] check box** … Start/end a *viewers/viewers.launch* script. *image\_viewer* is specified as a script parameter *viewer\_type*. Clicking \[app\], a dialog is displayed.
 
-  -   **\[image\_d\_viewer\] check box** …Start/end a *viewers/viewers.launch* script. *image\_viewer* is specified as a script parameter *viewer\_type*. Clicking \[app\], a dialog is displayed.
+-   **\[image\_d\_viewer\] check box** …Start/end a *viewers/viewers.launch* script. *image\_viewer* is specified as a script parameter *viewer\_type*. Clicking \[app\], a dialog is displayed.
 
-  -   **\[points\_image\_viewer\] check box** …Start/end a *viewers/viewers.launch* script. *points\_image\_viewer* is specified as a script parameter *viewer\_type*. Clicking \[app\], a dialog is displayed.
+-   **\[points\_image\_viewer\] check box** …Start/end a *viewers/viewers.launch* script. *points\_image\_viewer* is specified as a script parameter *viewer\_type*. Clicking \[app\], a dialog is displayed.
 
-  -  **\[points\_image\_d\_viewer\] check box** …Start/end a *viewers/viewers.launch* script. *points\_image\_d\_viewer* is specified as a script parameter *viewer\_type*. Clicking \[app\], a dialog is displayed.
+-  **\[points\_image\_d\_viewer\] check box** …Start/end a *viewers/viewers.launch* script. *points\_image\_d\_viewer* is specified as a script parameter *viewer\_type*. Clicking \[app\], a dialog is displayed.
 
-  -  **\[vscan\_image\_viewer\] check box** …Start/end a *viewers/viewers.launch* script. *vscan\_image\_viewer* is specified as a script parameter *viewer\_type*. Clicking \[app\], a dialog is displayed.
+-  **\[vscan\_image\_viewer\] check box** …Start/end a *viewers/viewers.launch* script. *vscan\_image\_viewer* is specified as a script parameter *viewer\_type*. Clicking \[app\], a dialog is displayed.
 
-  -  **\[vscan\_image\_d\_viewer\] check box** …Start/end a *viewers/viewers.launch* script. *vscan\_image\_d\_viewer* is specified as a script parameter *viewer\_type*. Clicking \[app\], a dialog is displayed.
+-  **\[vscan\_image\_d\_viewer\] check box** …Start/end a *viewers/viewers.launch* script. *vscan\_image\_d\_viewer* is specified as a script parameter *viewer\_type*. Clicking \[app\], a dialog is displayed.
 
-  -  **\[traffic\_light\_viewer\] check box** …Start/end a *viewers/viewers.launch* script. *traffic\_light\_viewer* is specified as a script parameter *viewer\_type*. Clicking \[app\], a dialog is displayed.
+-  **\[traffic\_light\_viewer\] check box** …Start/end a *viewers/viewers.launch* script. *traffic\_light\_viewer* is specified as a script parameter *viewer\_type*. Clicking \[app\], a dialog is displayed.
 
-**\[Semantics\]**
+### \[Semantics\]
 
-  -  **\[laserscan2costmap\] check box** … Start/end an *object\_map/laserscan2costmap.launch* script. Clicking \[app\], a dialog is displayed.
+-  **\[laserscan2costmap\] check box** … Start/end an *object\_map/laserscan2costmap.launch* script. Clicking \[app\], a dialog is displayed.
 
-  -  **\[points2costmap\] check box** … Start/end an *object\_map/points2costmap.launch* script. Clicking \[app\], a dialog is displayed.
+-  **\[points2costmap\] check box** … Start/end an *object\_map/points2costmap.launch* script. Clicking \[app\], a dialog is displayed.
 
-**\[Mission Planning\]**
+### \[Mission Planning\]
 
--  **\[lane\_planner\]**
+#### \[lane\_planner\]
 
-  -  **\[lane\_navi\] check box** … Start/end a *lane\_planner/lane\_navi.launch* script. Clicking \[app\], a dialog is displayed.
+-  **\[lane\_navi\] check box** … Start/end a *lane\_planner/lane\_navi.launch* script. Clicking \[app\], a dialog is displayed.
 
-  -  **\[lane\_rule\] check box** … Start/end a *lane\_planner/lane\_rule* script. Clicking \[app\], a dialog is displayed.
+-  **\[lane\_rule\] check box** … Start/end a *lane\_planner/lane\_rule* script. Clicking \[app\], a dialog is displayed.
 
-  -  **\[lane\_stop\] check box** … Start/end a *lane\_planner/lane\_stop* script. Clicking \[app\], a dialog is displayed.
+-  **\[lane\_stop\] check box** … Start/end a *lane\_planner/lane\_stop* script. Clicking \[app\], a dialog is displayed.
 
-  -  **\[lane\_select\] check box** … Start/end a *lane\_planner/lane\_script*. Clicking \[app\], a dialog is displayed.
+-  **\[lane\_select\] check box** … Start/end a *lane\_planner/lane\_script*. Clicking \[app\], a dialog is displayed.
 
--  **\[freespace\_planner\]**
+#### \[freespace\_planner\]
 
-  -  **\[astar\_navi\] check box** … Start/end a *freespace\_planner/astar\_navi* script. Clicking \[app\], a dialog is displayed.
+-  **\[astar\_navi\] check box** … Start/end a *freespace\_planner/astar\_navi* script. Clicking \[app\], a dialog is displayed.
 
-**\[Motion Planning\]**
+### \[Motion Planning\]
 
--  **\[driving\_planner\]**
+#### \[driving\_planner\]
 
-  -  **\[velocity\_set\] check box** … Start/end a *driving\_planner/velocity\_set.launch* script. Clicking \[app\], a dialog is displayed.
+-  **\[velocity\_set\] check box** … Start/end a *driving\_planner/velocity\_set.launch* script. Clicking \[app\], a dialog is displayed.
 
-  -  **\[path\_select\] check box** … Start/end a *driving\_planner/path\_select* script. Clicking \[app\], a dialog is displayed.
+-  **\[path\_select\] check box** … Start/end a *driving\_planner/path\_select* script. Clicking \[app\], a dialog is displayed.
 
-  -  **\[lattice\_trajectory\_gen\] check box** … Start/end a *driving\_planner/lattice\_trajectory\_gen.launch* script. Clicking \[app\], a dialog is displayed.
+-  **\[lattice\_trajectory\_gen\] check box** … Start/end a *driving\_planner/lattice\_trajectory\_gen.launch* script. Clicking \[app\], a dialog is displayed.
 
-  -  **\[lattice\_twist\_convert\] check box** … Start/end a *driving\_planner/lattice\_twist\_convert* nodes. Clicking \[app\], a dialog is displayed.
+-  **\[lattice\_twist\_convert\] check box** … Start/end a *driving\_planner/lattice\_twist\_convert* nodes. Clicking \[app\], a dialog is displayed.
 
--  **\[waypoint\_marker\]**
+#### \[waypoint\_marker\]
 
-  -  **\[waypoint\_loader\] check box** … Start/end a *waypoint\_maker/waypoint\_loader.launch* script. Clicking \[app\], a dialog is displayed.
+-  **\[waypoint\_loader\] check box** … Start/end a *waypoint\_maker/waypoint\_loader.launch* script. Clicking \[app\], a dialog is displayed.
 
-  -  **\[waypoint\_saver\] check box** … Start/end a *waypoint\_maker/waypoint\_saver.launch* script. Clicking \[app\], a dialog is displayed.
+-  **\[waypoint\_saver\] check box** … Start/end a *waypoint\_maker/waypoint\_saver.launch* script. Clicking \[app\], a dialog is displayed.
 
-  -  **\[waypoint\_clicker\] check box** … Start/end a *waypoint\_maker/waypoint\_clicker* nodes. Clicking \[app\], a dialog is displayed.
+-  **\[waypoint\_clicker\] check box** … Start/end a *waypoint\_maker/waypoint\_clicker* nodes. Clicking \[app\], a dialog is displayed.
 
--  **\[waypoint\_follower\]**
+#### \[waypoint\_follower\]
 
-  -  **\[pure\_pursuit\] check box** … Start/end a *waypoint\_follower/pure\_pursuit.launch* script. Clicking \[app\], a dialog is displayed.
+-  **\[pure\_pursuit\] check box** … Start/end a *waypoint\_follower/pure\_pursuit.launch* script. Clicking \[app\], a dialog is displayed.
 
-  -  **\[twist\_filter\] check box** … Start/end a *waypoint\_follower/twist\_filter.launch* script. Clicking \[app\], a dialog is displayed.
+-  **\[twist\_filter\] check box** … Start/end a *waypoint\_follower/twist\_filter.launch* script. Clicking \[app\], a dialog is displayed.
 
-  -  **\[wf\_simulator\] check box** … Start/end a *waypoint\_follower/wf\_simulator.launch* script. Clicking \[app\], a dialog is displayed.
+-  **\[wf\_simulator\] check box** … Start/end a *waypoint\_follower/wf\_simulator.launch* script. Clicking \[app\], a dialog is displayed.
 
-  -  **\[ROSBAG\]** … Dislpay ROSBAG Record Dialog.
+-  **\[ROSBAG\]** … Dislpay ROSBAG Record Dialog.
 
-  -  **\[RViz\]** … Start/end RViz.
+-  **\[RViz\]** … Start/end RViz.
 
-  -  **\[RQT\]** … Start/end RQT.
+-  **\[RQT\]** … Start/end RQT.
   
 
 ## Runtime Manager – Interface Tab
 
 IMAGE PLACEHOLDER
 
-  -  **\[Android Tablet\]** … Start/end *runtime\_manager/tablet\_socket.launch* for communicating with Tablets.
+-  **\[Android Tablet\]** … Start/end *runtime\_manager/tablet\_socket.launch* for communicating with Tablets.
 
-  -  **\[Oculus Rift\]** … &lt;Unimplemented&gt;
+-  **\[Oculus Rift\]** … &lt;Unimplemented&gt;
 
-  -  **\[Vehicle Gateway\]** … Start/end *runtime\_manager/vehicle\_socket.launch* for communicating with ZMP Robocar.
+-  **\[Vehicle Gateway\]** … Start/end *runtime\_manager/vehicle\_socket.launch* for communicating with ZMP Robocar.
 
-  -  **\[Sound\] check box** … Start/end a *sound\_player/sound\_player.py*.
+-  **\[Sound\] check box** … Start/end a *sound\_player/sound\_player.py*.
 
-  -  **\[Auto Pilot\]** … Publish a topic (*/mode\_cmd*) according the button status.
+-  **\[Auto Pilot\]** … Publish a topic (*/mode\_cmd*) according the button status.
 
-  -  **\[Lamp\]** … Publish a topic (*/lamp\_cmd*) according to the button status.
+-  **\[Lamp\]** … Publish a topic (*/lamp\_cmd*) according to the button status.
 
-  -  **\[Indicator\]** … Publish a topic (*/indicator\_cmd*) according to the button status.
+-  **\[Indicator\]** … Publish a topic (*/indicator\_cmd*) according to the button status.
 
-  -  **\[D\] toggle switch** … Publish a topic (*/gear\_cmd*) of buttons turning ON.
+-  **\[D\] toggle switch** … Publish a topic (*/gear\_cmd*) of buttons turning ON.
 
-  -  **\[R\] toggle switch** … Publish a topic (*/gear\_cmd)* of buttons turning ON.
+-  **\[R\] toggle switch** … Publish a topic (*/gear\_cmd)* of buttons turning ON.
 
-  -  **\[B\] toggle switch** … Publish a topic (*/gear\_cmd*) of buttons turning ON.
+-  **\[B\] toggle switch** … Publish a topic (*/gear\_cmd*) of buttons turning ON.
 
-  -  **\[N\] toggle switch** … Publish a topic (*/gear\_cmd*) of buttons turning ON.
+-  **\[N\] toggle switch** … Publish a topic (*/gear\_cmd*) of buttons turning ON.
 
-  -  **\[Accel\] slider** … Publish a topic (*/accel\_cmd*) of the slider status.
+-  **\[Accel\] slider** … Publish a topic (*/accel\_cmd*) of the slider status.
 
-  -  **\[Brake\] slider** … Publish a topic (*/brake\_cmd*) of the slider status.
+-  **\[Brake\] slider** … Publish a topic (*/brake\_cmd*) of the slider status.
 
-  -  **\[Steer\] slider** … Publish a topic (*/steer\_cmd*) of the slider status.
+-  **\[Steer\] slider** … Publish a topic (*/steer\_cmd*) of the slider status.
 
-  -  **\[Torque\] slider** …&lt;Unimplemented&gt;
+-  **\[Torque\] slider** …&lt;Unimplemented&gt;
 
-  -  **\[Veloc\] slider** … Publish a topic (*/twist\_cmd*) of the slider status.
+-  **\[Veloc\] slider** … Publish a topic (*/twist\_cmd*) of the slider status.
 
-  -  **\[Angle\] slider** … Publish a topic (*/twist\_cmd*) of the slider status.
+-  **\[Angle\] slider** … Publish a topic (*/twist\_cmd*) of the slider status.
 
-  -  **\[ROSBAG\]** … Display a ROSBAG Record dialog.
+-  **\[ROSBAG\]** … Display a ROSBAG Record dialog.
 
-  -  **\[RViz\]** … Start/end RViz.
+-  **\[RViz\]** … Start/end RViz.
 
-  -  **\[RQT\]** … Start/end RQT.
+-  **\[RQT\]** … Start/end RQT.
 
 ## Runtime Manager – Database Tab
 
@@ -1063,7 +1064,7 @@ The following items can be selected on the right-top menu.
 
 IMAGE PLACEHOLDER
 
-**\[ROS PC\]**
+### \[ROS PC\]
 
 -  **IPアドレス** … ROS PC IPv4 address
 
@@ -1071,11 +1072,11 @@ IMAGE PLACEHOLDER
 
 -  **情報送信ポート番号** … tablet\_sender port number (default: 5777)
 
-**\[データ収集\] (data collection)**
+### \[データ収集\] (data collection)
 
 -  **テーブル名** … Data transfer destination table name
 
-**\[SSH\]**
+### \[SSH\]
 
 -  **ホスト名** …SSH destination hostname
 
@@ -1085,7 +1086,7 @@ IMAGE PLACEHOLDER
 
 -  **パスワード** … SSH login password
 
-**\[ポートフォワーディング\] (port forwarding)**
+### \[ポートフォワーディング\] (port forwarding)
 
 -  **ローカルポート番号** … port number of local machine source (default: 5558)
 
