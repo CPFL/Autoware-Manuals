@@ -1006,187 +1006,130 @@ Install OS (Linux), ROS, Autoware, etc., into PC as the following procedural ste
 The Linux distributions supported by Autoware at Sep. 2016 are as follows:
 
 Ubuntu 14.04 LTS x86\_64 (Recommended)
-
 Ubuntu 15.04 x86\_64
 
 Refer the below URLs about install media and installation steps.
 
-Ubuntu Japanese Team
+Ubuntu Japanese Team [*https://www.ubuntulinux.jp/*](https://www.ubuntulinux.jp/)
 
-[*https://www.ubuntulinux.jp/*](https://www.ubuntulinux.jp/)
-
-Ubuntu
-
-[*http://www.ubuntu.com/*](http://www.ubuntu.com/)
+Ubuntu [*http://www.ubuntu.com/*](http://www.ubuntu.com/)
 
 ### ROS
 
 If you use Ubuntu14.04, install ROS and the required packages by the following steps:
 
-\$ sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu trusty main" &gt; \\
-
+```
+$ sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu trusty main" &gt; \
 /etc/apt/sources.list.d/ros-latest.list'
-
-\$ wget http://packages.ros.org/ros.key -O - | sudo apt-key add -
-
-\$ sudo apt-get update
-
-\$ sudo apt-get install ros-indigo-desktop-full ros-indigo-nmea-msgs \\
-
+$ wget http://packages.ros.org/ros.key -O - | sudo apt-key add -
+$ sudo apt-get update
+$ sudo apt-get install ros-indigo-desktop-full ros-indigo-nmea-msgs \
 ros-indigo-nmea-navsat-driver ros-indigo-sound-play
 ros-indigo-jdk-visualization
-
 \$ sudo apt-get install libnlopt-dev freeglut3-dev qtbase5-dev
-libqt5opengl5-dev \\
-
+libqt5opengl5-dev \
 libssh2-1-dev libarmadillo-dev libpcap-dev gksu
+```
 
 Add below path to \~/.bashrc etc.
 
-\[ -f /opt/ros/indigo/setup.bash \] && . /opt/ros/indigo/setup.bash
+`[ -f /opt/ros/indigo/setup.bash ] && . /opt/ros/indigo/setup.bash`
 
-If you use Ubuntu15.04, install ROS and the required packages as the
-following steps:
+If you use Ubuntu15.04, install ROS and the required packages as the following steps:
 
-\$ sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu
-\$(lsb\_release -sc) main" &gt; \\
-
+```
+$ sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu
+$(lsb\_release -sc) main" &gt; \
 /etc/apt/sources.list.d/ros-latest.list'
-
-\$ sudo apt-key adv --keyserver hkp://pool.sks-keyservers.net:80 \\
-
+$ sudo apt-key adv --keyserver hkp://pool.sks-keyservers.net:80 \
 --recv-key 0xB01FA116
-
-\$ sudo apt-get install ros-jade-desktop-full ros-jade-nmea-msgs \\
-
+$ sudo apt-get install ros-jade-desktop-full ros-jade-nmea-msgs \
 ros-jade-nmea-navsat-driver ros-jade-sound-play
-
-\$ sudo apt-get install libnlopt-dev freeglut3-dev qt5-default
-libqt5opengl5-dev \\
-
+$ sudo apt-get install libnlopt-dev freeglut3-dev qt5-default
+libqt5opengl5-dev \
 libssh2-1-dev libarmadillo-dev libpcap-dev gksu
-
+```
 Add below path to \~/.bashrc etc.
 
-\[ -f /opt/ros/jade/setup.bash \] && . /opt/ros/jade/setup.bash
+`[ -f /opt/ros/jade/setup.bash ] && . /opt/ros/jade/setup.bash`
 
 ### OpenCV
 
 1.  Install the following packages:
-
-\$ sudo apt-get -y install libopencv-dev build-essential cmake git \\
-
-libgtk2.0-dev pkg-config python-dev python-numpy libdc1394-22 \\
-
-libdc1394-22-dev libjpeg-dev libpng12-dev libtiff4-dev libjasper-dev \\
-
-libavcodec-dev libavformat-dev libswscale-dev libxine-dev \\
-
-libgstreamer0.10-dev libgstreamer-plugins-base0.10-dev libv4l-dev \\
-
-libtbb-dev libqt4-dev libfaac-dev libmp3lame-dev libopencore-amrnb-dev
-\\
-
-libopencore-amrwb-dev libtheora-dev libvorbis-dev libxvidcore-dev \\
-
+```
+$ sudo apt-get -y install libopencv-dev build-essential cmake git \
+libgtk2.0-dev pkg-config python-dev python-numpy libdc1394-22 \
+libdc1394-22-dev libjpeg-dev libpng12-dev libtiff4-dev libjasper-dev \
+libavcodec-dev libavformat-dev libswscale-dev libxine-dev \
+libgstreamer0.10-dev libgstreamer-plugins-base0.10-dev libv4l-dev \
+libtbb-dev libqt4-dev libfaac-dev libmp3lame-dev libopencore-amrnb-dev \
+libopencore-amrwb-dev libtheora-dev libvorbis-dev libxvidcore-dev \
 x264 v4l-utils unzip
-
-1.  Get OpenCV source code of the version 2.4.11 or later, install it as
-    follows:
-
-\$ wget https://github.com/Itseez/opencv/archive/2.4.11.zip
-
-\$ unzip 2.4.11.zip
-
-\$ cd opencv-2.4.11/
-
-\$ mkdir build && cd build/
-
-\$ cmake -D CMAKE\_BUILD\_TYPE=RELEASE \\
-
--D CMAKE\_INSTALL\_PREFIX=/usr/local \\
-
--D WITH\_TBB=ON -D BUILD\_NEW\_PYTHON\_SUPPORT=ON \\
-
--D WITH\_V4L=ON -D INSTALL\_C\_EXAMPLES=ON \\
-
--D INSTALL\_PYTHON\_EXAMPLES=ON -D BUILD\_EXAMPLES=ON \\
-
--D WITH\_OPENGL=ON -D WITH\_VTK=ON -D CUDA\_GENERATION=Auto ..
-
-\$ make -j4
-
+```
+2.  Get OpenCV source code of the version 2.4.11 or later, install it as follows:
+```
+$ wget https://github.com/Itseez/opencv/archive/2.4.11.zip
+$ unzip 2.4.11.zip
+$ cd opencv-2.4.11/
+$ mkdir build && cd build/
+$ cmake -D CMAKE_BUILD_TYPE=RELEASE \
+-D CMAKE_INSTALL_PREFIX=/usr/local \
+-D WITH_TBB=ON -D BUILD_NEW_PYTHON_SUPPORT=ON \
+-D WITH_V4L=ON -D INSTALL_C_EXAMPLES=ON \
+-D INSTALL_PYTHON_EXAMPLES=ON -D BUILD_EXAMPLES=ON \
+-D WITH_OPENGL=ON -D WITH_VTK=ON -D CUDA_GENERATION=Auto ..
+$ make -j4
 unzip opencv-2.4.11.zip
-
-\$ cd opencv-2.4.11
-
-\$ cmake .
-
-\$ make
-
-\$ sudo make install
-
-\$ sudo ldconfig
-
+$ cd opencv-2.4.11
+$ cmake .
+$ make
+$ sudo make install
+$ sudo ldconfig
+```
 ### CUDA(if necessary)
 
-If you use GPU on NVIDIA graphic board for conducting calculations, CUDA is required. Refer the website
-[*http://docs.nvidia.com/cuda/cuda-getting-started-guide-for-linux/*](http://docs.nvidia.com/cuda/cuda-getting-started-guide-for-linux/)
-and install as follows:
+If you use GPU on NVIDIA graphic board for conducting calculations, CUDA is required. Refer the website [*http://docs.nvidia.com/cuda/cuda-getting-started-guide-for-linux/*](http://docs.nvidia.com/cuda/cuda-getting-started-guide-for-linux/) and install as follows:
 
 1.  Check environment
 
-\$ lspci | grep -i nvidia
-
+`$ lspci | grep -i nvidia`
 (ensure the NVIDIA board information is output)
 
-\$ uname -m
-
+`$ uname -m`
 (ensure x86\_64 is used)
 
-\$ gcc --version
-
+`$ gcc --version`
 (ensure gcc installation is completed)
 
 Install CUDA
 
-Download CUDA from *<http://developer.nvidia.com/cuda-downloads>.*
-
-(hereinafter, installing cuda-repo-ubuntu1404\_7.0-28\_amd64.deb is assumed)
-
-\$ sudo dpkg -i cuda-repo-ubuntu1404\_7.0-28\_amd64.deb
-
-\$ sudo apt-get update
-
-\$ sudo apt-get install cuda
-
+Download CUDA from *<http://developer.nvidia.com/cuda-downloads>.* (hereinafter, installing cuda-repo-ubuntu1404\_7.0-28\_amd64.deb is assumed)
+```
+$ sudo dpkg -i cuda-repo-ubuntu1404_7.0-28_amd64.deb
+$ sudo apt-get update
+$ sudo apt-get install cuda
+```
 Restart OS
 
-\$ lsmod | grep nouveau
-
+`$ lsmod | grep nouveau`
 (ensure nouveau driver is not loaded)
 
 Check CUDA
 
-\$ cat /proc/driver/nvidia/version
-
+`$ cat /proc/driver/nvidia/version`
 (kernel module and gcc version are displayed)
-
-\$ cuda-install-samples-7.0.sh \~
-
-\$ cd \~/NVIDIA\_CUDA-7.0\_Samples/1\_Utilities/deviceQuery/
-
-\$ make
-
-\$ ./deviceQuery
-
+```
+$ cuda-install-samples-7.0.sh \~
+$ cd \~/NVIDIA_CUDA-7.0_Samples/1_Utilities/deviceQuery/
+$ make
+$ ./deviceQuery
+```
 If necessary, add below path to .bashrc etc.
-
+```
 export PATH=”/usr/local/cuda:\$PATH”
-
-export LD\_LIBRARY\_PATH=”/usr/local/cuda/lib:\$LD\_LIBRARY\_PATH”
-
-### FlyCapture(if necessary)
+export LD_LIBRARY_PATH=”/usr/local/cuda/lib:\$LD_LIBRARY_PATH”
+```
+### FlyCapture (if necessary)
 
 If you use PointGray cameras, install FlyCapture SDK as follows:
 
@@ -1194,139 +1137,100 @@ If you use PointGray cameras, install FlyCapture SDK as follows:
 
 2.  Install packages
 
-\$ sudo apt-get install libglademm-2.4-1c2a libgtkglextmm-x11-1.2-dev
-libserial-dev
+`$ sudo apt-get install libglademm-2.4-1c2a libgtkglextmm-x11-1.2-dev libserial-dev`
 
-1.  Extract the archives of the downloaded file
+3.  Extract the archives of the downloaded file
 
-\$ tar xvfz flycapture2-2.6.3.4-amd64-pkg.tgz
+`$ tar xvfz flycapture2-2.6.3.4-amd64-pkg.tgz`
 
-1.  Launch installer
-
-\$ cd flycapture2-2.6.3.4-amd64/
-
-\$ sudo sh install\_flycapture.sh
-
+4.  Launch installer
+```
+$ cd flycapture2-2.6.3.4-amd64/
+$ sudo sh install_flycapture.sh
+```
 Enter y after the below texts are displayed.
-
+```
 This is a script to assist with installation of the FlyCapture2 SDK.
-
 Would you like to continue and install all the FlyCapture2 SDK packages?
-
-(y/n)\$ y
-
+(y/n)$ y
+```
 Enter y after the below texts are displayed.
-
+```
 ...
-
-Preparing to unpack updatorgui-2.6.3.4\_amd64.deb ...
-
+Preparing to unpack updatorgui-2.6.3.4_amd64.deb ...
 Unpacking updatorgui (2.6.3.4) ...
-
 updatorgui (2.6.3.4) を設定しています ...
-
 Processing triggers for man-db (2.6.7.1-1ubuntu1) ...
-
 Would you like to add a udev entry to allow access to IEEE-1394 and USB hardware?
-
 If this is not ran then your cameras may be only accessible by running flycap as sudo.
-
-(y/n)\$ y
+(y/n)$ y
+```
 
 ### Autoware
 
 Get Autoware by following steps. Then build and install it.
 
 If you get the latest autoware form github
-
-\$ git clone https://github.com/CPFL/Autoware.git
-
-\$ cd Autoware/ros/src
-
-\$ catkin\_init\_workspace
-
-\$ cd ../
-
-\$ ./catkin\_make\_release
-
-\$ source devel/setup.bash
+```
+$ git clone https://github.com/CPFL/Autoware.git
+$ cd Autoware/ros/src
+$ catkin_init_workspace
+$ cd ../
+$ ./catkin_make_release
+$ source devel/setup.bash
+```
 
 If you use archives\
-\$ wget http://www.pdsl.jp/app/download/10394444574/Autoware-beta.zip
-
-\$ unzip Autoware-beta.zip
-
-\$ cd Autoware-beta/ros/src
-
-\$ catkin\_init\_workspace
-
-\$ cd ../
-
-\$ ./catkin\_make\_release
-
-\$ source devel/setup.bash
-
+```
+$ wget http://www.pdsl.jp/app/download/10394444574/Autoware-beta.zip
+$ unzip Autoware-beta.zip
+$ cd Autoware-beta/ros/src
+$ catkin_init_workspace
+$ cd ../
+$ ./catkin_make_release
+$ source devel/setup.bash
+```
 ### AutowareRider (if necessary)
 
-AutowareRider is an Android application, which has similar UI as Knight Rider, for operating Autoware running on ROS PC from tablet devices.
-
-Get APK from below URLs and install them.
+AutowareRider is an Android application, which has similar UI as Knight Rider, for operating Autoware running on ROS PC from tablet devices.  Get APK from below URLs and install them.
 
 Main
 
--   AutowareRider.apk
-
-[*https://github.com/CPFL/Autoware/blob/master/ui/tablet/AutowareRider/AutowareRider.apk*](https://github.com/CPFL/Autoware/blob/master/ui/tablet/AutowareRider/AutowareRider.apk)
+-   AutowareRider.apk [*https://github.com/CPFL/Autoware/blob/master/ui/tablet/AutowareRider/AutowareRider.apk*](https://github.com/CPFL/Autoware/blob/master/ui/tablet/AutowareRider/AutowareRider.apk)
 
 Path data planning apllication
 
--   AutowareRoute.apk
-
-[*https://github.com/CPFL/Autoware/blob/master/ui/tablet/AutowareRoute/AutowareRoute.apk*](https://github.com/CPFL/Autoware/blob/master/ui/tablet/AutowareRoute/AutowareRoute.apk)
+-   AutowareRoute.apk [*https://github.com/CPFL/Autoware/blob/master/ui/tablet/AutowareRoute/AutowareRoute.apk*](https://github.com/CPFL/Autoware/blob/master/ui/tablet/AutowareRoute/AutowareRoute.apk)
 
 CAN data collection application
 
--   CanDataSender.apk\
-    > [*https://github.com/CPFL/Autoware/blob/master/vehicle/android/CanDataSender/bin/CanDataSender.apk*](https://github.com/CPFL/Autoware/blob/master/vehicle/android/CanDataSender/bin/CanDataSender.apk)
+-   CanDataSender.apk [*https://github.com/CPFL/Autoware/blob/master/vehicle/android/CanDataSender/bin/CanDataSender.apk*](https://github.com/CPFL/Autoware/blob/master/vehicle/android/CanDataSender/bin/CanDataSender.apk)
+   
 
--   
-
-### canlib(if necessary)
+### canlib (if necessary)
 
 Get linuxcan.tar.gz from *Kvaser LINUX Driver and SDK* in the kvaser website ([*http://www.kvaser.com/downloads/*](http://www.kvaser.com/downloads/)) and install it as the following steps:
+```
+$ tar xzf linuxcan.tar.gz
+$ cd linuxcan
+$ make
+$ sudo make install
+```
+### SSH Public Key Generation (if necessary)
 
-\$ tar xzf linuxcan.tar.gz
-
-\$ cd linuxcan
-
-\$ make
-
-\$ sudo make install
-
-### SSH Public Key Generation(if necessary)
-
-When pos\_db access database via SSH, it uses SSH key without pass phrase.
-
-Therefore, generating the SSH key of the database server and registering it to the server are required.
+When pos\_db access database via SSH, it uses SSH key without pass phrase.  Therefore, generating the SSH key of the database server and registering it to the server are required.
 
 1.  Generating SSH Key
 
 Run the following commands.
-
-\$ ssh-keygen -t rsa
-
+`$ ssh-keygen -t rsa`
 (Press Enter key without strings.)
-
 If you use DSA, specify -t dsa.
 
-Registering the SSH key to the database server
+Registering the SSH key to the database server.  Copy the generated SSH key to the server as follows:
 
-Copy the generated SSH key to the server as follows:
-
-\$ ssh-copy-id -i \~/.ssh/id\_rsa.pub posup@db3.ertl.jp
-
+`$ ssh-copy-id -i ~/.ssh/id_rsa.pub posup@db3.ertl.jp`
 (”posup” indicates user name and ”db3.ertl.jp” denotes database server name.)
-
 Enter passwords if necessary.
 
 > Chapter
