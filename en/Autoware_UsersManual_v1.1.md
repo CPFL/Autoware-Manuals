@@ -1274,17 +1274,13 @@ Sensor fusion | A method to achieve high recognition function by integrating mul
 Vector map | GIS (Global Information System) data representing geometric information of the roads in vector
 Message passing | Inter-process communication that a sender transmits data to one or more receivers
 
-> Chapter
->
-> 7
+# Chapter 7 - Related Documents
 
-3.  []{#_Toc464047002 .anchor}Related Documents
-
-Autoware
+### Autoware
 
 <http://www.pdsl.jp/fot/autoware/>
 
-AutowareRider
+### AutowareRider
 
 -   Main
 
@@ -1303,7 +1299,7 @@ AutowareRoute.apk
 CanDataSender.apk\
 [*https://github.com/CPFL/Autoware/blob/master/vehicle/android/CanDataSender/bin/CanDataSender.apk*](https://github.com/CPFL/Autoware/blob/master/vehicle/android/CanDataSender/bin/CanDataSender.apk)
 
-CUDA
+### CUDA
 
 [*http://www.nvidia.com/object/cuda\_home\_new.html*](http://www.nvidia.com/object/cuda_home_new.html)
 
@@ -1313,11 +1309,11 @@ CUDA
 
 [*http://developer.nvidia.com/cuda-downloads*](http://developer.nvidia.com/cuda-downloads)
 
-FlyCapture SDK
+### FlyCapture SDK
 
 [*http://www.ptgrey.com/flycapture-sdk*](http://www.ptgrey.com/flycapture-sdk)
 
-OpenCV
+### OpenCV
 
 [*http://opencv.org/*](http://opencv.org/)
 
@@ -1325,29 +1321,29 @@ OpenCV
 
 *http://sourceforge.net/projects/opencvlibrary/*
 
-Qt
+### Qt
 
 [*http://www.qt.io/*](http://www.qt.io/)
 
 [*http://qt-users.jp/*](http://qt-users.jp/)
 
-ROS
+### ROS
 
 [*http://www.ros.org/*](http://www.ros.org/)
 
-Ubuntu Japanese Team
+### Ubuntu Japanese Team
 
 [*https://www.ubuntulinux.jp/*](https://www.ubuntulinux.jp/)
 
-Ubuntu
+### Ubuntu
 
 [*http://www.ubuntu.com/*](http://www.ubuntu.com/)
 
-Velodyne Drivers
+### Velodyne Drivers
 
 [*https://github.com/ros-drivers/velodyne*](https://github.com/ros-drivers/velodyne)
 
-Demo Files
+### Demo Files
 
 -   Script for generating demo launch file
 
@@ -1360,6 +1356,5 @@ Demo Files
 -   ROSBAG data
 
 [*http://db3.ertl.jp/autoware/sample\_data/sample\_moriyama\_150324.tar.gz*](http://db3.ertl.jp/autoware/sample_data/sample_moriyama_150324.tar.gz)
-
 Note: this ROSBAG data doesn’t include image information for object
 detection.
