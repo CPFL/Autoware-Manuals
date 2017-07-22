@@ -1282,22 +1282,9 @@ Message passing | Inter-process communication that a sender transmits data to on
 
 ### AutowareRider
 
--   Main
-
-AutowareRider.apk
-
-[*https://github.com/CPFL/Autoware/blob/master/ui/tablet/AutowareRider/AutowareRider.apk*](https://github.com/CPFL/Autoware/blob/master/ui/tablet/AutowareRider/AutowareRider.apk)
-
--   Path data planning application
-
-AutowareRoute.apk
-
-[*https://github.com/CPFL/Autoware/blob/master/ui/tablet/AutowareRoute/AutowareRoute.apk*](https://github.com/CPFL/Autoware/blob/master/ui/tablet/AutowareRoute/AutowareRoute.apk)
-
--   CAN data collection appllication
-
-CanDataSender.apk\
-[*https://github.com/CPFL/Autoware/blob/master/vehicle/android/CanDataSender/bin/CanDataSender.apk*](https://github.com/CPFL/Autoware/blob/master/vehicle/android/CanDataSender/bin/CanDataSender.apk)
+-   Main:  AutowareRider.apk [*https://github.com/CPFL/Autoware/blob/master/ui/tablet/AutowareRider/AutowareRider.apk*](https://github.com/CPFL/Autoware/blob/master/ui/tablet/AutowareRider/AutowareRider.apk)
+-   Path data planning application:  AutowareRoute.apk [*https://github.com/CPFL/Autoware/blob/master/ui/tablet/AutowareRoute/AutowareRoute.apk*](https://github.com/CPFL/Autoware/blob/master/ui/tablet/AutowareRoute/AutowareRoute.apk)
+-   CAN data collection appllication:  CanDataSender.apk  [*https://github.com/CPFL/Autoware/blob/master/vehicle/android/CanDataSender/bin/CanDataSender.apk*](https://github.com/CPFL/Autoware/blob/master/vehicle/android/CanDataSender/bin/CanDataSender.apk)
 
 ### CUDA
 
@@ -1345,16 +1332,7 @@ CanDataSender.apk\
 
 ### Demo Files
 
--   Script for generating demo launch file
-
-[*http://db3.ertl.jp/autoware/sample\_data/my\_launch.sh*](http://db3.ertl.jp/autoware/sample_data/my_launch.sh)
-
--   Data for demo (Moriyama map, Calibration, Path data)
-
-[*http://db3.ertl.jp/autoware/sample\_data/sample\_moriyama\_data.tar.gz*](http://db3.ertl.jp/autoware/sample_data/sample_moriyama_data.tar.gz)
-
--   ROSBAG data
-
-[*http://db3.ertl.jp/autoware/sample\_data/sample\_moriyama\_150324.tar.gz*](http://db3.ertl.jp/autoware/sample_data/sample_moriyama_150324.tar.gz)
-Note: this ROSBAG data doesn’t include image information for object
+-   Script for generating demo launch file:  [*http://db3.ertl.jp/autoware/sample\_data/my\_launch.sh*](http://db3.ertl.jp/autoware/sample_data/my_launch.sh)
+-   Data for demo (Moriyama map, Calibration, Path data):  [*http://db3.ertl.jp/autoware/sample\_data/sample\_moriyama\_data.tar.gz*](http://db3.ertl.jp/autoware/sample_data/sample_moriyama_data.tar.gz)
+-   ROSBAG data:  [*http://db3.ertl.jp/autoware/sample\_data/sample\_moriyama\_150324.tar.gz*](http://db3.ertl.jp/autoware/sample_data/sample_moriyama_150324.tar.gz)  Note: this ROSBAG data doesn’t include image information for object
 detection.
