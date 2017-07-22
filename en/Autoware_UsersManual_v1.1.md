@@ -265,12 +265,12 @@ Download the demo data from the following sites, and put them in \~/.autoware/da
 2. Extraction
 
 Extract the downloaded data to \~/.autoware/ by the following command:
-`tar xfz sample\_moriyama\_data.tar.gz -C ~/.autoware/`
+`$ tar xfz sample\_moriyama\_data.tar.gz -C ~/.autoware/`
 
 3. Launch script
 
 Run the following script to generate lacunh files for playing demo by Qutick Start tab.
-`sh my_launch.sh`
+`$ sh my_launch.sh`
 
 4. Launch files to be generated
 
@@ -1232,105 +1232,47 @@ Registering the SSH key to the database server.  Copy the generated SSH key to t
 (”posup” indicates user name and ”db3.ertl.jp” denotes database server name.)
 Enter passwords if necessary.
 
-> Chapter
->
-> 6
+# Chapter 6 - Terminology
 
-3.  []{#_Toc464047001 .anchor}Terminology
-
-  ----------------- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  **Term**          **Description**
-
-  3-D map           *3-Dimension Map*:
-                    
-                    This type maps is different from 2-D maps that are used in car navigation systems, and include various information, such as three-dimensional objects built around the roads, while 2-D map is used for the car navigation systems. PCD (point cloud data) type of 3-D map is used in Autoware.
-
-  Autoware          \[Autoware\] This is an open source software running on ROS for autonomous driving.
-
-  AutowareRider     \[Autoware\] This is an Android application for operating Autoware running on ROS PC by tablet terminal. This application has similar UI (user interface) as Knight Rider, which is a TV series.
-
-  AutowareRoute     \[Autoware\] This is an Android application implemented with MapFan SDK for planning path data.
-
-  CAN               *Controller Area Network*:
-                    
-                    This is a standard for data transfer between interconnected devices. This standard has been proposed by BOSCH Ltd. in Germany as an inter-vehicle network, and standardized as ISO11898 and ISO 11519. Currently, CAN is the inter-vehicle network standard.
-
-  Catkin            \[ROS\] The original building system
-
-  CUDA              *Compute Unified Device Architecture*:
-                    
-                    A parallel computing platform and programming model with GPU provided by NVIDIA corporation.
-
-  DMI               *Distance Measuring Instrument*
-
-  DPM               *Deformable Part Model*: an object detection method
-
-  FlyCapture SDK    A SDK to Control Point Grey Camera
-
-  FOT               *Field Operational Tests*:
-                    
-                    A statistical verification by observing traffic environment, driver’s operations, and vehicle behavior under real driving environment
-
-  GNSS              *Global Navigation Satellite System*
-
-  IMU               *Inertial Measurement Unit*: Devices measuring the angular velocity and acceleration
-
-  KF                *Kalman Filter*: This is an estimation method for future states of the target objects using observed values.
-
-  LIDAR             *Laser Imaging Detection and Ranging/Laser Scanner/Laser Rader*:
-                    
-                    This device emits laser pulse and measures the scattered light of them. The distance between the LIDAR and the objects can be calculated by the measured results.
-
-  Message           \[ROS\] Data structure used in communication among nodes
-
-  NDT               *Normal Distributions Transform*: A localization method
-
-  Node              \[ROS\] A process to operate single function
-
-  Odometry          A position estimation method using calculated the rotation angle velocity of the wheel.
-
-  OpenCV            *Open source Computer Vision library*
-
-  Point Cloud       A data set of points in 3-D space
-                    
-                    These points are represented in Cartesian coordinate space (x, y, z).
-
-  Publish           \[ROS\] Sending a Message (called broadcasting or publication)
-
-  Qt                Application user interface framework
-
-  ROS               ROS is a software framework for robot software development. This framework provides hardware abstraction, low-level device control, well-used functions, inter-process communication, package management tool and etc.
-
-  ROS PC            Computers installed ROS and Autoware
-
-  ROSBAG            \[ROS\] A data logging tool
-                    
-                    The extension is *bag*.
-
-  RQT               \[ROS\] A software development tool base on Qt
-
-  RViz              \[ROS\] Visualization tool for data and software status
-
-  SLAM              Simultaneous Localization and Mapping
-
-  Subscribe         \[ROS\] Receiving Message (called subscription)
-
-  TF                \[ROS\] A coordinate transformation library
-
-  Topic             \[ROS\] A path with a name for sending/receiving Message
-                    
-                    Sending Message is called *Publish* and receiving Message is called *Subscribe*.
-
-  way point         A set of coordinate pairs
-
-  Calibration       A processing to calculate camera parameters for adjusting the points projected on camera images to the positions in 3-D space
-
-  Sensor fusion     A method to achieve high recognition function by integrating multiple sensor information for calculating more accurate position, posture, etc.
-
-  Vector map        GIS (Global Information System) data representing geometric information of the roads in vector
-
-  Message passing   Inter-process communication that a sender transmits data to one or more receivers
-  ----------------- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+**Term** | **Description**
+-------- | ---------------
+3-D map | *3-Dimension Map*:  This type maps is different from 2-D maps that are used in car navigation systems, and include various information, such as three-dimensional objects built around the roads, while 2-D map is used for the car navigation systems. PCD (point cloud data) type of 3-D map is used in Autoware.
+Autoware | \[Autoware\] This is an open source software running on ROS for autonomous driving.
+AutowareRider | \[Autoware\] This is an Android application for operating Autoware running on ROS PC by tablet terminal. This application has similar UI (user interface) as Knight Rider, which is a TV series.
+AutowareRoute | \[Autoware\] This is an Android application implemented with MapFan SDK for planning path data.
+CAN | *Controller Area Network*:  This is a standard for data transfer between interconnected devices. This standard has been proposed by BOSCH Ltd. in Germany as an inter-vehicle network, and standardized as ISO11898 and ISO 11519. Currently, CAN is the inter-vehicle network standard.
+Catkin | \[ROS\] The original building system
+CUDA | *Compute Unified Device Architecture*:  A parallel computing platform and programming model with GPU provided by NVIDIA corporation.
+DMI | *Distance Measuring Instrument*
+DPM | *Deformable Part Model*: an object detection method
+FlyCapture SDK | A SDK to Control Point Grey Camera
+FOT | *Field Operational Tests*:  A statistical verification by observing traffic environment, driver’s operations, and vehicle behavior under real driving environment
+GNSS | *Global Navigation Satellite System*
+IMU | *Inertial Measurement Unit*: Devices measuring the angular velocity and acceleration
+KF | *Kalman Filter*: This is an estimation method for future states of the target objects using observed values.
+LIDAR | *Laser Imaging Detection and Ranging/Laser Scanner/Laser Rader*:  This device emits laser pulse and measures the scattered light of them. The distance between the LIDAR and the objects can be calculated by the measured results.
+Message | \[ROS\] Data structure used in communication among nodes
+NDT | *Normal Distributions Transform*: A localization method
+Node | \[ROS\] A process to operate single function
+Odometry | A position estimation method using calculated the rotation angle velocity of the wheel.
+OpenCV | *Open source Computer Vision library*
+Point Cloud | A data set of points in 3-D space.  These points are represented in Cartesian coordinate space (x, y, z).
+Publish | \[ROS\] Sending a Message (called broadcasting or publication)
+Qt | Application user interface framework
+ROS | ROS is a software framework for robot software development. This framework provides hardware abstraction, low-level device control, well-used functions, inter-process communication, package management tool and etc.
+ROS PC | Computers installed ROS and Autoware
+ROSBAG | \[ROS\] A data logging tool.  The extension is *bag*.
+RQT | \[ROS\] A software development tool base on Qt
+RViz | \[ROS\] Visualization tool for data and software status
+SLAM | Simultaneous Localization and Mapping
+Subscribe | \[ROS\] Receiving Message (called subscription)
+TF | \[ROS\] A coordinate transformation library
+Topic | \[ROS\] A path with a name for sending/receiving Message.  Sending Message is called *Publish* and receiving Message is called *Subscribe*.
+Way point | A set of coordinate pairs
+Calibration | A processing to calculate camera parameters for adjusting the points projected on camera images to the positions in 3-D space
+Sensor fusion | A method to achieve high recognition function by integrating multiple sensor information for calculating more accurate position, posture, etc.
+Vector map | GIS (Global Information System) data representing geometric information of the roads in vector
+Message passing | Inter-process communication that a sender transmits data to one or more receivers
 
 > Chapter
 >
