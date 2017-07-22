@@ -1005,10 +1005,11 @@ Install OS (Linux), ROS, Autoware, etc., into PC as the following procedural ste
 
 The Linux distributions supported by Autoware at Sep. 2016 are as follows:
 
-Ubuntu 14.04 LTS x86\_64 (Recommended)
+Ubuntu 14.04 LTS x86\_64 (Recommended),
+
 Ubuntu 15.04 x86\_64
 
-Refer the below URLs about install media and installation steps.
+Refer to the below URLs about install media and installation steps.
 
 Ubuntu Japanese Team [*https://www.ubuntulinux.jp/*](https://www.ubuntulinux.jp/)
 
@@ -1016,18 +1017,16 @@ Ubuntu [*http://www.ubuntu.com/*](http://www.ubuntu.com/)
 
 ### ROS
 
-If you use Ubuntu14.04, install ROS and the required packages by the following steps:
+If you use Ubuntu 14.04, install ROS and the required packages by the following steps:
 
 ```
-$ sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu trusty main" &gt; \
+$ sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu trusty main" > \
 /etc/apt/sources.list.d/ros-latest.list'
 $ wget http://packages.ros.org/ros.key -O - | sudo apt-key add -
 $ sudo apt-get update
 $ sudo apt-get install ros-indigo-desktop-full ros-indigo-nmea-msgs \
-ros-indigo-nmea-navsat-driver ros-indigo-sound-play
-ros-indigo-jdk-visualization
-\$ sudo apt-get install libnlopt-dev freeglut3-dev qtbase5-dev
-libqt5opengl5-dev \
+ros-indigo-nmea-navsat-driver ros-indigo-sound-play ros-indigo-jdk-visualization
+$ sudo apt-get install libnlopt-dev freeglut3-dev qtbase5-dev libqt5opengl5-dev \
 libssh2-1-dev libarmadillo-dev libpcap-dev gksu
 ```
 
@@ -1035,18 +1034,16 @@ Add below path to \~/.bashrc etc.
 
 `[ -f /opt/ros/indigo/setup.bash ] && . /opt/ros/indigo/setup.bash`
 
-If you use Ubuntu15.04, install ROS and the required packages as the following steps:
+If you use Ubuntu 15.04, install ROS and the required packages as the following steps:
 
 ```
-$ sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu
-$(lsb\_release -sc) main" &gt; \
+$ sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > \
 /etc/apt/sources.list.d/ros-latest.list'
 $ sudo apt-key adv --keyserver hkp://pool.sks-keyservers.net:80 \
 --recv-key 0xB01FA116
 $ sudo apt-get install ros-jade-desktop-full ros-jade-nmea-msgs \
 ros-jade-nmea-navsat-driver ros-jade-sound-play
-$ sudo apt-get install libnlopt-dev freeglut3-dev qt5-default
-libqt5opengl5-dev \
+$ sudo apt-get install libnlopt-dev freeglut3-dev qt5-default libqt5opengl5-dev \
 libssh2-1-dev libarmadillo-dev libpcap-dev gksu
 ```
 Add below path to \~/.bashrc etc.
@@ -1056,7 +1053,7 @@ Add below path to \~/.bashrc etc.
 ### OpenCV
 
 1.  Install the following packages:
-```
+```shell
 $ sudo apt-get -y install libopencv-dev build-essential cmake git \
 libgtk2.0-dev pkg-config python-dev python-numpy libdc1394-22 \
 libdc1394-22-dev libjpeg-dev libpng12-dev libtiff4-dev libjasper-dev \
@@ -1092,10 +1089,14 @@ If you use GPU on NVIDIA graphic board for conducting calculations, CUDA is requ
 
 1.  Check environment
 
-`$ lspci | grep -i nvidia`
+```shell
+$ lspci | grep -i nvidia
+```
 (ensure the NVIDIA board information is output)
 
-`$ uname -m`
+```
+$ uname -m
+```
 (ensure x86\_64 is used)
 
 `$ gcc --version`
@@ -1120,7 +1121,7 @@ Check CUDA
 (kernel module and gcc version are displayed)
 ```
 $ cuda-install-samples-7.0.sh \~
-$ cd \~/NVIDIA_CUDA-7.0_Samples/1_Utilities/deviceQuery/
+$ cd ~/NVIDIA_CUDA-7.0_Samples/1_Utilities/deviceQuery/
 $ make
 $ ./deviceQuery
 ```
@@ -1180,7 +1181,7 @@ $ ./catkin_make_release
 $ source devel/setup.bash
 ```
 
-If you use archives\
+If you use archives:
 ```
 $ wget http://www.pdsl.jp/app/download/10394444574/Autoware-beta.zip
 $ unzip Autoware-beta.zip
@@ -1196,14 +1197,12 @@ AutowareRider is an Android application, which has similar UI as Knight Rider, f
 
 Main
 
--   AutowareRider.apk [*https://github.com/CPFL/Autoware/blob/master/ui/tablet/AutowareRider/AutowareRider.apk*](https://github.com/CPFL/Autoware/blob/master/ui/tablet/AutowareRider/AutowareRider.apk)
+-   AutowareRider.apk [*https://github.com/CPFL/Autoware/blob/master/ui/tablet/AutowareRider/AutowareRider.apk*](https://github.com/CPFL/Autoware/blob/master/ui/tablet/AutowareRider/AutowareRider.apk).  
 
 Path data planning apllication
-
--   AutowareRoute.apk [*https://github.com/CPFL/Autoware/blob/master/ui/tablet/AutowareRoute/AutowareRoute.apk*](https://github.com/CPFL/Autoware/blob/master/ui/tablet/AutowareRoute/AutowareRoute.apk)
+-   AutowareRoute.apk [*https://github.com/CPFL/Autoware/blob/master/ui/tablet/AutowareRoute/AutowareRoute.apk*](https://github.com/CPFL/Autoware/blob/master/ui/tablet/AutowareRoute/AutowareRoute.apk).  
 
 CAN data collection application
-
 -   CanDataSender.apk [*https://github.com/CPFL/Autoware/blob/master/vehicle/android/CanDataSender/bin/CanDataSender.apk*](https://github.com/CPFL/Autoware/blob/master/vehicle/android/CanDataSender/bin/CanDataSender.apk)
    
 
