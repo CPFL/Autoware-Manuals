@@ -98,43 +98,28 @@ Recently, the wide range potential of robotics has been focused by not only robo
 
 To solve the problem, the demand of making common platforms has been increased, and some platforms have been published. Within a common platform, developers can combine various software published by other developers, and speed up development by reusing them. Therefore, it is expected that developers can more focus on fields of interest.
 
-ROS (Robot Operating System) is a framework^1^ for robotic software development. It was developed by [Willow Garage](https://en.wikipedia.org/wiki/Willow_Garage) in U.S. OSFR (Open Source Robotics Foundation) has currently maintained it. The open sourced ROS has mainly been used by communities in U.S. and Europe as well as communities in Japan.
+ROS (Robot Operating System) is a framework for robotic software development. It was developed by [Willow Garage](https://en.wikipedia.org/wiki/Willow_Garage) in U.S. OSFR (Open Source Robotics Foundation) has currently maintained it. The open sourced ROS has mainly been used by communities in U.S. and Europe as well as communities in Japan.
 
 Note that ROS has “OS” in its name, however, it is not “OS” like Windows or Linux. It is a middleware that runs on UNIX based OS.
 
 ### ROS Features
 
-1.  Library and tools
-
-ROS provides library and tools for robotic software development. The primary libraries and tools are listed as follows:
+1.  *Library and tools*.  ROS provides library and tools for robotic software development. The primary libraries and tools are listed as follows:
 
   - Original build system (Catkin)
-
   - Image processing library (OpenCV)
-
   - Data logging tool (ROSBAG)
-
   - Visualization tools for data and software state (RViz)
-
   - Coordinate transformation library (TF)
-
   - Qt based GUI development tool (RQT)
 
-
-2.  Inter-process communication
-
-ROS uses *message passing* with topics of publish/subscribe form for inter-module connection/cooperation frameworks. Here, message passing is an inter-process communication mechanism in which a sender can send data to one or more receivers. This feature enables us to design distribution systems. In ROS, processes called *node* are launched and each node is run independently. In communication between nodes, by following the publish/subscribe scheme, a node writes messages (publish) into a topic and another node reads the messages (subscribe) of the topic.
-
+2.  *Inter-process communication*.  ROS uses *message passing* with topics of publish/subscribe form for inter-module connection/cooperation frameworks. Here, message passing is an inter-process communication mechanism in which a sender can send data to one or more receivers. This feature enables us to design distribution systems. In ROS, processes called *node* are launched and each node is run independently. In communication between nodes, by following the publish/subscribe scheme, a node writes messages (publish) into a topic and another node reads the messages (subscribe) of the topic.
 
 3.  File components
 
-  - bag file (ROSBAG)
+  -  *bag file (ROSBAG)*.  In ROS, all the messages of topics are recorded and time-stamped into a .bag file called *ROSBAG*. This file can be used for replaying the messages on RViz as same timing as recording. In robotic development, it is difficult to synchronize and analyze the interactions with multiple sensors at the same time, but ROS enables efficient analysis and debugging robotic systems. In addition, since the recorded messages can be replayed repeatedly, this feature allows developers to debug their systems without actual sensors.
 
- In ROS, all the messages of topics are recorded and time-stamped into a .bag file called *ROSBAG*. This file can be used for replaying the messages on RViz as same timing as recording. In robotic development, it is difficult to synchronize and analyze the interactions with multiple sensors at the same time, but ROS enables efficient analysis and debugging robotic systems. In addition, since the recorded messages can be replayed repeatedly, this feature allows developers to debug their systems without actual sensors.
-
-  - Launch file
-
-A “Launch” file is used to start multiple nodes at the same time. The launch file contains the nodes to be started and their parameters written in XML format.
+  -  *Launch file*.  A “Launch” file is used to start multiple nodes at the same time. The launch file contains the nodes to be started and their parameters written in XML format.
 
 ## Autoware
 
@@ -249,13 +234,9 @@ Main functions of Autoware can easily be operated by Quick Start tab in Runtime 
 
 ### Demo Data
 
-Operations by Quick Start tab in Runtime Manager are described in this section.
+Operations by Quick Start tab in Runtime Manager are described in this section.  Here, it is assumed that the required data is put in \~/.autoware/data.
 
-Here, it is assumed that the required data is put in \~/.autoware/data.
-
-1. Download
-
-Download the demo data from the following sites, and put them in \~/.autoware/data
+1. *Download*.  Download the demo data from the following sites, and put them in \~/.autoware/data
 
   -  Script for generating launch files
 	[*http://db3.ertl.jp/autoware/sample\_data/my\_launch.sh*](http://db3.ertl.jp/autoware/sample_data/my_launch.sh)
@@ -265,22 +246,15 @@ Download the demo data from the following sites, and put them in \~/.autoware/da
 	[*http://db3.ertl.jp/autoware/sample\_data/sample\_moriyama\_150324.tar.gz*](http://db3.ertl.jp/autoware/sample_data/sample_moriyama_150324.tar.gz)
 	ROSBAG data does not contain video data for object detection.
 
-2. Extraction
-
-Extract the downloaded data to \~/.autoware/ by the following command:
+2. *Extraction*.  Extract the downloaded data to \~/.autoware/ by the following command:
 ```shell
 $ tar xfz sample\_moriyama\_data.tar.gz -C ~/.autoware/
 ```
-
-3. Launch script
-
-Run the following script to generate lacunh files for playing demo by Qutick Start tab.
+3. *Launch script*.  Run the following script to generate lacunh files for playing demo by Qutick Start tab.
 ```shell
 $ sh my_launch.sh
 ```
-
-4. Launch files to be generated
-
+4. *Launch files to be generated*.  
 	```shell
 	my_map.launch \# Load maps
 	my_sensing.launch \# Load drivers
@@ -290,19 +264,11 @@ $ sh my_launch.sh
 	my_motion_planning.launch \# Path following
 	```
 
-5. If you want to generate launch files to other directories
-
-	If you want to generate launch files in other directories, specify the path as an argument for launching the script.
-
-	Example:　if you put the data in `~/.autoware/data/quick_start/ROSBAG_sample/`
+5. *If you want to generate launch files to other directories*.  If you want to generate launch files in other directories, specify the path as an argument for launching the script.  Example:　if you put the data in `~/.autoware/data/quick_start/ROSBAG_sample/`
 
 ### Runtime Manager Launching
 
-1. Runtime Manager can be launched by double-clicking `Autoware/ros/run` in ROS PC. Alternatively, it can be launched by `./run` on a terminal.
-
-The run file contains shell scripts.
-Starting run, two terminals are launched.
-The one is for roscore, the other is for the output of runtime manager.
+1. Runtime Manager can be launched by double-clicking `Autoware/ros/run` in ROS PC. Alternatively, it can be launched by `./run` on a terminal.  The run file contains shell scripts.  Starting run, two terminals are launched.  The one is for roscore, the other is for the output of runtime manager.
 
 2. Enter login password and press \[OK\] on the displayed password dialog.
 
@@ -346,9 +312,7 @@ How to use a ROSBAG is described in this section.
 
 3. Specify the my\_localization.launch generated in the Demo Data section to the file selection dialog of \[Localization\] in the \[Quick Start\] tab, and press \[Localization\].
 
-4. Pressing \[Pause\] in the \[Simulation\] tab to resume the ROSBAG, a map is displayed. If NDT is run, the results are also displayed. If nothing is displayed, press \[Reset\] in the RViz, or remove and set checks of \[Points Map\] and \[Vector Map\] in the Display. Figure 12 shows the loaded map and the localized vehicle on RViz.
-
-Note: Localization is not stable until 23% (110/479 second) of the progress bar displayed in the Simulation tab, because the demo ROSBAG does not include maps.
+4. Pressing \[Pause\] in the \[Simulation\] tab to resume the ROSBAG, a map is displayed. If NDT is run, the results are also displayed. If nothing is displayed, press \[Reset\] in the RViz, or remove and set checks of \[Points Map\] and \[Vector Map\] in the Display. Figure 12 shows the loaded map and the localized vehicle on RViz.  Note: Localization is not stable until 23% (110/479 second) of the progress bar displayed in the Simulation tab, because the demo ROSBAG does not include maps.
 
 IMAGE PLACEHOLDER
 
