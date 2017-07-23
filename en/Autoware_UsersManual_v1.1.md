@@ -105,7 +105,6 @@ Note that ROS has “OS” in its name, however, it is not “OS” like Windows
 ### ROS Features
 
 1.  *Library and tools*.  ROS provides library and tools for robotic software development. The primary libraries and tools are listed as follows:
-
   - Original build system (Catkin)
   - Image processing library (OpenCV)
   - Data logging tool (ROSBAG)
@@ -116,9 +115,7 @@ Note that ROS has “OS” in its name, however, it is not “OS” like Windows
 2.  *Inter-process communication*.  ROS uses *message passing* with topics of publish/subscribe form for inter-module connection/cooperation frameworks. Here, message passing is an inter-process communication mechanism in which a sender can send data to one or more receivers. This feature enables us to design distribution systems. In ROS, processes called *node* are launched and each node is run independently. In communication between nodes, by following the publish/subscribe scheme, a node writes messages (publish) into a topic and another node reads the messages (subscribe) of the topic.
 
 3.  File components
-
   -  *bag file (ROSBAG)*.  In ROS, all the messages of topics are recorded and time-stamped into a .bag file called *ROSBAG*. This file can be used for replaying the messages on RViz as same timing as recording. In robotic development, it is difficult to synchronize and analyze the interactions with multiple sensors at the same time, but ROS enables efficient analysis and debugging robotic systems. In addition, since the recorded messages can be replayed repeatedly, this feature allows developers to debug their systems without actual sensors.
-
   -  *Launch file*.  A “Launch” file is used to start multiple nodes at the same time. The launch file contains the nodes to be started and their parameters written in XML format.
 
 ## Autoware
@@ -215,10 +212,13 @@ IMAGE PLACEHOLDER
 ros/src/util/
 ```
 	Runtime Manager, sample data, pseudo-drivers
+
 ```shell
 ui/tablet/
 ```
+
 	Smart phone applications
+
 ```shell
 vehicle/
 ```
@@ -256,12 +256,12 @@ $ sh my_launch.sh
 ```
 4. *Launch files to be generated*.  
 	```shell
-	my_map.launch \# Load maps
-	my_sensing.launch \# Load drivers
-	my_localization.launch \# Localization
-	my_detection.launch \# Object detection
-	my_mission_planning.launch \# Path planning
-	my_motion_planning.launch \# Path following
+	my_map.launch # Load maps
+	my_sensing.launch # Load drivers
+	my_localization.launch # Localization
+	my_detection.launch # Object detection
+	my_mission_planning.launch # Path planning
+	my_motion_planning.launch # Path following
 	```
 
 5. *If you want to generate launch files to other directories*.  If you want to generate launch files in other directories, specify the path as an argument for launching the script.  Example:　if you put the data in `~/.autoware/data/quick_start/ROSBAG_sample/`
