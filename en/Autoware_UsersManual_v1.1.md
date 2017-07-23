@@ -254,7 +254,10 @@ $ sh my_launch.sh
 	my_motion_planning.launch # Path following
 	```
 
-5. *If you want to generate launch files to other directories*.  If you want to generate launch files in other directories, specify the path as an argument for launching the script.  Example:　if you put the data in `~/.autoware/data/quick_start/ROSBAG_sample/`
+5. *If you want to generate launch files to other directories*.  If you want to generate launch files in other directories, specify the path as an argument for launching the script.  Example:　if you put the data in 
+``` shell
+~/.autoware/data/quick_start/ROSBAG_sample/
+```
 
 ### Runtime Manager Launching
 
