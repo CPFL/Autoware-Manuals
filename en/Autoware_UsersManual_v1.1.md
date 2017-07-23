@@ -209,20 +209,10 @@ IMAGE PLACEHOLDER
 
 ### Utilities and Others
 ```shell
-ros/src/util/
+ros/src/util/ # Runtime Manager, sample data, pseudo-drivers
+ui/tablet/ # Smart phone applications
+vehicle/ # Vehicle control, vehicle data acquisition
 ```
-	Runtime Manager, sample data, pseudo-drivers
-
-```shell
-ui/tablet/
-```
-
-	Smart phone applications
-
-```shell
-vehicle/
-```
-	Vehicle control, vehicle data acquisition
 
 # Chapter 3 - Operating Autoware
 
