@@ -1,10 +1,8 @@
-## Version 1.1
+# Nagoya University
 
-# Nagoya university
+# Autoware User’s Manual - Document Version 1.1
 
-# Autoware User’s Manual
-
-Autoware *ver.2016.Sep.12*
+## For Autoware *ver.2016.Sep.12*
 
 ## Table of contents
 
@@ -184,56 +182,61 @@ IMAGE PLACEHOLDER
 
 ### Perception/Recognition
 
+```shell
 ros/src/computing/perception/detection
-
+```
 The figure to be updated (tmp)
 
 IMAGE PLACEHOLDER
 
 ### Judgement/Operation/Localization
-
+```shell
 ros/src/computing/perception/localization
-
+```
 IMAGE PLACEHOLDER
 
 ### Path Planning
-
+```shell
 ros/src/computing/planning
-
+```
 The figure to be updated (tmp)
 
 IMAGE PLACEHOLDER
 
 ### Data Loading (3-D Map, Database, Files)
-
+```shell
 ros/src/data
-
+```
 IMAGE PLACEHOLDER
 
 ### Device Drivers and Sensor Fusion
-
+```shell
 ros/src/sensing/drivers & ros/src/sensing/fusion
+```
 The figure to be updated (tmp)
 
 IMAGE PLACEHOLDER
 
 ### Interface for Smart Phone Applications
-
+```shell
 ros/src/socket
-
+```
 The figure to be updated (tmp)
 
 IMAGE PLACEHOLDER
 
 ### Utilities and Others
-
+```shell
 ros/src/util/
+```
 	Runtime Manager, sample data, pseudo-drivers
-
+```shell
 ui/tablet/
+```
 	Smart phone applications
-
+```shell
 vehicle/
+```
 	Vehicle control, vehicle data acquisition
 
 # Chapter 3 - Operating Autoware
@@ -265,26 +268,27 @@ Download the demo data from the following sites, and put them in \~/.autoware/da
 2. Extraction
 
 Extract the downloaded data to \~/.autoware/ by the following command:
-`$ tar xfz sample\_moriyama\_data.tar.gz -C ~/.autoware/`
+```shell
+$ tar xfz sample\_moriyama\_data.tar.gz -C ~/.autoware/
+```
 
 3. Launch script
 
 Run the following script to generate lacunh files for playing demo by Qutick Start tab.
-`$ sh my_launch.sh`
+```shell
+$ sh my_launch.sh
+```
 
 4. Launch files to be generated
 
-	`my_map.launch` \# Load maps
-
-	`my_sensing.launch` \# Load drivers
-
-	`my_localization.launch` \# Localization
-
-	`my_detection.launch` \# Object detection
-
-	`my_mission_planning.launch` \# Path planning
-
-	`my_motion_planning.launch` \# Path following
+	```shell
+	my_map.launch \# Load maps
+	my_sensing.launch \# Load drivers
+	my_localization.launch \# Localization
+	my_detection.launch \# Object detection
+	my_mission_planning.launch \# Path planning
+	my_motion_planning.launch \# Path following
+	```
 
 5. If you want to generate launch files to other directories
 
@@ -334,7 +338,9 @@ How to use a ROSBAG is described in this section.
 
 1. Specify the following ROSBAG by the file selection dialog in \[Simulation\] tab, and press \[Play\]. Press \[Pause\] to suspend ROSBAG immediately.
 
-    `~/.autoware/sample_moriyama_150324.bag`
+    ```shell
+    ~/.autoware/sample_moriyama_150324.bag
+    ```
 
 2. Specify the my\_map.launch generated in the Demo Data section to the file selection dialog of \[Map\] in the \[Quick Start\] tab, and press Map.
 
@@ -447,8 +453,10 @@ AutowareRider provides the following functions.
 
 1.  Launch Runtime Manager on an ROS PC.
 2.  Press \[Active\] in \[Network Connection\] -&gt; \[Tablet UI\] on the Main Tab to launch the following nodes: 
-`tablet_receiver`
-`tablet_sender`
+```shell
+	tablet_receiver
+	tablet_sender
+```
 3.  Specify the following parameters in each \[app\] of \[Planning\] -&gt; \[Path\] in the \[Computing\] tab.
 
 \[lane\_navi\]
@@ -572,7 +580,7 @@ Refer the step ④ in CAN Data Collection Usage (tmp).
 
 1.  \[S1\] and \[S2\] of AutowareRider starts the following launch files, respectively (tmp).
 
-	```
+	```shell
 	check.launch
 	set.launch
 	```
@@ -592,7 +600,9 @@ Refer the step ④ in CAN Data Collection Usage (tmp).
 
 Runtime Manager is a Python script (scripts/runtime\_manager\_dalog.py) included in the runtime\_manager package. It can be launched by the following command:
 
-`rosrun runtime_manager runtime_manager_dialog.py`
+```shell
+	$ rosrun runtime_manager runtime_manager_dialog.py
+```
 
 Runtime Manager dialog composes of multiple tabs. Operating Runtime Manager dialog enables processes of starting/ending ROS nodes used in Autoware, and publishing topics for parameters of the launched ROS. The buttons to start/end ROS nodes are classified into functionalities and placed in different tabs. Each Tab window can be switched by pressing each Tab on the top of the Runtime Manager dialog.
 
@@ -696,7 +706,7 @@ IMAGE PLACEHOLDER
 
 #### \[Points Filter\]
 
-*A chapter image and the description to be updated (tmp) *
+*A chapter image and the description to be updated (tmp)*
 
 -  **\[Calibration Tool Kit\]** … Start/end *Calibration\_camera\_lidar/calibration\_toolkit* nodes
 -  **\[Calibration Publisher\]** … Start/end a *runtime\_manager calibration\_publisher.launch* script. Specify the full path of a YAML file to be selected at launching nodes by a launched calibration\_publiher dialog.
@@ -1005,8 +1015,7 @@ Install OS (Linux), ROS, Autoware, etc., into PC as the following procedural ste
 
 The Linux distributions supported by Autoware at Sep. 2016 are as follows:
 
-Ubuntu 14.04 LTS x86\_64 (Recommended),
-
+Ubuntu 14.04 LTS x86\_64 (Recommended),  
 Ubuntu 15.04 x86\_64
 
 Refer to the below URLs about install media and installation steps.
@@ -1019,7 +1028,7 @@ Ubuntu [*http://www.ubuntu.com/*](http://www.ubuntu.com/)
 
 If you use Ubuntu 14.04, install ROS and the required packages by the following steps:
 
-```
+```shell
 $ sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu trusty main" > \
 /etc/apt/sources.list.d/ros-latest.list'
 $ wget http://packages.ros.org/ros.key -O - | sudo apt-key add -
@@ -1032,11 +1041,13 @@ libssh2-1-dev libarmadillo-dev libpcap-dev gksu
 
 Add below path to \~/.bashrc etc.
 
-`[ -f /opt/ros/indigo/setup.bash ] && . /opt/ros/indigo/setup.bash`
+```shell
+[ -f /opt/ros/indigo/setup.bash ] && . /opt/ros/indigo/setup.bash
+```
 
 If you use Ubuntu 15.04, install ROS and the required packages as the following steps:
 
-```
+```shell
 $ sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > \
 /etc/apt/sources.list.d/ros-latest.list'
 $ sudo apt-key adv --keyserver hkp://pool.sks-keyservers.net:80 \
@@ -1048,7 +1059,9 @@ libssh2-1-dev libarmadillo-dev libpcap-dev gksu
 ```
 Add below path to \~/.bashrc etc.
 
-`[ -f /opt/ros/jade/setup.bash ] && . /opt/ros/jade/setup.bash`
+```shell
+[ -f /opt/ros/jade/setup.bash ] && . /opt/ros/jade/setup.bash
+```
 
 ### OpenCV
 
@@ -1064,7 +1077,7 @@ libopencore-amrwb-dev libtheora-dev libvorbis-dev libxvidcore-dev \
 x264 v4l-utils unzip
 ```
 2.  Get OpenCV source code of the version 2.4.11 or later, install it as follows:
-```
+```shell
 $ wget https://github.com/Itseez/opencv/archive/2.4.11.zip
 $ unzip 2.4.11.zip
 $ cd opencv-2.4.11/
@@ -1094,39 +1107,45 @@ $ lspci | grep -i nvidia
 ```
 (ensure the NVIDIA board information is output)
 
-```
+```shell
 $ uname -m
 ```
 (ensure x86\_64 is used)
 
-`$ gcc --version`
+```shell
+$ gcc --version
+```
 (ensure gcc installation is completed)
 
 Install CUDA
 
 Download CUDA from *<http://developer.nvidia.com/cuda-downloads>.* (hereinafter, installing cuda-repo-ubuntu1404\_7.0-28\_amd64.deb is assumed)
-```
+```shell
 $ sudo dpkg -i cuda-repo-ubuntu1404_7.0-28_amd64.deb
 $ sudo apt-get update
 $ sudo apt-get install cuda
 ```
 Restart OS
 
-`$ lsmod | grep nouveau`
+```shell
+$ lsmod | grep nouveau
+```
 (ensure nouveau driver is not loaded)
 
 Check CUDA
 
-`$ cat /proc/driver/nvidia/version`
-(kernel module and gcc version are displayed)
+```shell
+$ cat /proc/driver/nvidia/version
 ```
+(kernel module and gcc version are displayed)
+```shell
 $ cuda-install-samples-7.0.sh \~
 $ cd ~/NVIDIA_CUDA-7.0_Samples/1_Utilities/deviceQuery/
 $ make
 $ ./deviceQuery
 ```
 If necessary, add below path to .bashrc etc.
-```
+```shell
 export PATH=”/usr/local/cuda:\$PATH”
 export LD_LIBRARY_PATH=”/usr/local/cuda/lib:\$LD_LIBRARY_PATH”
 ```
@@ -1138,25 +1157,29 @@ If you use PointGray cameras, install FlyCapture SDK as follows:
 
 2.  Install packages
 
-`$ sudo apt-get install libglademm-2.4-1c2a libgtkglextmm-x11-1.2-dev libserial-dev`
+```shell
+$ sudo apt-get install libglademm-2.4-1c2a libgtkglextmm-x11-1.2-dev libserial-dev
+```
 
 3.  Extract the archives of the downloaded file
 
-`$ tar xvfz flycapture2-2.6.3.4-amd64-pkg.tgz`
+```shell
+$ tar xvfz flycapture2-2.6.3.4-amd64-pkg.tgz
+```
 
 4.  Launch installer
-```
+```shell
 $ cd flycapture2-2.6.3.4-amd64/
 $ sudo sh install_flycapture.sh
 ```
 Enter y after the below texts are displayed.
-```
+```shell
 This is a script to assist with installation of the FlyCapture2 SDK.
 Would you like to continue and install all the FlyCapture2 SDK packages?
 (y/n)$ y
 ```
 Enter y after the below texts are displayed.
-```
+```shell
 ...
 Preparing to unpack updatorgui-2.6.3.4_amd64.deb ...
 Unpacking updatorgui (2.6.3.4) ...
@@ -1172,7 +1195,7 @@ If this is not ran then your cameras may be only accessible by running flycap as
 Get Autoware by following steps. Then build and install it.
 
 If you get the latest autoware form github
-```
+```shell
 $ git clone https://github.com/CPFL/Autoware.git
 $ cd Autoware/ros/src
 $ catkin_init_workspace
@@ -1182,7 +1205,7 @@ $ source devel/setup.bash
 ```
 
 If you use archives:
-```
+```shell
 $ wget http://www.pdsl.jp/app/download/10394444574/Autoware-beta.zip
 $ unzip Autoware-beta.zip
 $ cd Autoware-beta/ros/src
@@ -1209,7 +1232,7 @@ CAN data collection application
 ### canlib (if necessary)
 
 Get linuxcan.tar.gz from *Kvaser LINUX Driver and SDK* in the kvaser website ([*http://www.kvaser.com/downloads/*](http://www.kvaser.com/downloads/)) and install it as the following steps:
-```
+```shell
 $ tar xzf linuxcan.tar.gz
 $ cd linuxcan
 $ make
@@ -1222,13 +1245,17 @@ When pos\_db access database via SSH, it uses SSH key without pass phrase.  Ther
 1.  Generating SSH Key
 
 Run the following commands.
-`$ ssh-keygen -t rsa`
+```shell
+$ ssh-keygen -t rsa
+```
 (Press Enter key without strings.)
 If you use DSA, specify -t dsa.
 
 Registering the SSH key to the database server.  Copy the generated SSH key to the server as follows:
 
-`$ ssh-copy-id -i ~/.ssh/id_rsa.pub posup@db3.ertl.jp`
+```shell
+$ ssh-copy-id -i ~/.ssh/id_rsa.pub posup@db3.ertl.jp
+```
 (”posup” indicates user name and ”db3.ertl.jp” denotes database server name.)
 Enter passwords if necessary.
 
