@@ -122,7 +122,7 @@ Note that ROS has “OS” in its name, however, it is not “OS” like Windows
 
 Autoware is open source software based on ROS. Autoware is pushed on Github for autonomous driving research and development. Most of autonomous driving system consist of *recognition*, *judgment*, and *operation*. Autoware provides necessary functions, such as 3-D map generation, localization, object recognition, and vehicle control, for autonomous driving.
 
-![Figure 1 - Autoware Overview](/imgs/fig1.png)
+![Figure 1 - Autoware Overview](https://github.com/khanhgithead/Autoware-Manuals/blob/markdown/en/imgs/fig1.png)
 
 Autoware uses LIDAR (Light Detection and Ranging) and on-vehicle cameras to localize the ego-car position. In addition, Autoware can detect surrounding objects, such as pedestrians, vehicles, traffic lights etc., by using LIDAR and GNSS (Global Navigation Satellite System).  The making judgments of driving/stopping at lanes or intersections are performed with an embedded multi-core CPU. Operations of controlling vehicle behaviors utilize conventional on-vehicle control mechanism, while support systems such as driving assistance and safety diagnosis support, use multi-core CPU.
 
