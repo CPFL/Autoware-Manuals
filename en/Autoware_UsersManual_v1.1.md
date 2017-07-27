@@ -6,12 +6,12 @@
 
 ## Table of contents
 
-1. [*About This Document*](https://github.com/khanhgithead/Autoware-Manuals/blob/markdown/en/Autoware_UsersManual_v1.1.md#chapter-1---about-this-document)
+1. [*About This Document*](#chapter-1---about-this-document)
 2. [*ROS and Autoware*](#chapter-2---ros-and-autoware)
-  - [*Robot middleware - ROS*](https://github.com/khanhgithead/Autoware-Manuals/blob/markdown/en/Autoware_UsersManual_v1.1.md#robot-middleware---ros)
-  - [*ROS Features*](https://github.com/khanhgithead/Autoware-Manuals/blob/markdown/en/Autoware_UsersManual_v1.1.md#ros-features)
+  - [*Robot middleware - ROS*](#robot-middleware---ros)
+  - [*ROS Features*](#ros-features)
   - [*Autoware*](https://github.com/khanhgithead/Autoware-Manuals/blob/markdown/en/Autoware_UsersManual_v1.1.md#autoware)
-  - [*3-D Map Generation and Sharing*](https://github.com/khanhgithead/Autoware-Manuals/blob/markdown/en/Autoware_UsersManual_v1.1.md#3-d-map-generation-and-sharing)
+  - [*3-D Map Generation and Sharing*](#3-d-map-generation-and-sharing)
   - [*Localization(NDT：Normal Distributions Transform)*](#localization-ndtnormal-distributions-transform)
   - [*Object Detection*](#object-detection)
   - [*Route Generation*](#path-generation)
@@ -25,7 +25,7 @@
   - [*Device Drivers and Sensor Fusion*](#device-drivers-and-sensor-fusion)
   - [*Interface for Smart Phone Applications*](#interface-for-smart-phone-applications)
   - [*Utilities and Others*](#utilities-and-others)
-3. [*Operating Autoware*](#_Toc464046951)
+3. [*Operating Autoware*](#chapter-3---operating-autoware)
   - [*Preparations*](#preparations)
   - [*Demo Data*](#demo-data)
   - [*Runtime Manager Launching*](#runtime-manager-launching)
@@ -48,7 +48,7 @@
   - [*CAN Collection Application Usage Data*](#can-collection-application-usage-data)
   - [*Send CAN Data to a ROS PC*](#send-can-data-to-a-ros-pc)
   - [*Start Launch File*](#start-launch-file)
-4. [*Autoware User Interface Details*](#_Toc464046974)
+4. [*Autoware User Interface Details*](#chapter-4---autoware-user-interface-details)
   - [*Runtime Manager*](#runtime-manager)
   - [*Runtime Manager – Quick Start Tab*](#runtime-manager-quick-start-tab)
   - [*Runtime Manager – Setup Tab*](#runtime-manager-setup-tab)
@@ -64,7 +64,7 @@
   - [*RViz* **エラー! ブックマークが定義されていません。**](#_Toc464046987)
   - [*AutowareRider*](#autowarerider-1)
   - [*AutowareRoute*](#autowareroute-1)
-5. [*System Setup*](#_Toc464046990)
+5. [*System Setup*](#chapter-5---system-setup)
   - [*Installation*](#installation)
   - [*OS*](#os)
   - [*ROS*](#ros)
@@ -75,8 +75,8 @@
   - [*AutowareRider(if necessary)*](#autowarerider-if-necessary)
   - [*canlib(if necessary)*](#canlibif-necessary)
   - [*SSH Public Key Generation(if necessary)*](#ssh-public-key-generationif-necessary)
-6. [*Terminology*](#_Toc464047001)
-7. [*Related Documents*](#_Toc464047002)
+6. [*Terminology*](#chapter-6---terminology)
+7. [*Related Documents*](#chapter-7---related-documents)
 
 
 # Chapter 1 - About This Document
@@ -154,13 +154,13 @@ The generated path includes appropriate speed information. Autonomous driving sy
 
 A user interface called “Runtime Manager” of Autoware enables developers to operate functions, such as localization, object detection, and path following, easily. In addition, RViz can integrate and visualize localization on 3-D map, object detection, path planning, and path following. Furthermore, a tablet user interface, “AutowareRider”, of Autoware enables navigation, path planning, transition to autonomous driving mode and etc., on tables, easily. Moreover, Autoware can visualize 3-D map used in autonomous driving system and project it on on-vehicle displays and Oculus devices.
 
-![Figure 2 - User Interface](https://github.com/khanhgithead/Autoware-Manuals/blob/markdown/en/imgs/fig2.png)
+![Figure 2 - User Interface](/en/imgs/fig2.png)
 
 ## Platform structure for Autoware 
 
 Autoware is an application using ROS and ROS only works on Unix-based platforms. Figure 3 illustrates the overall system structure for Autoware.
 
-![Figure 3 - Platform Stucture for Autoware](https://github.com/khanhgithead/Autoware-Manuals/blob/markdown/en/imgs/fig3.png)
+![Figure 3 - Platform Stucture for Autoware](/en/imgs/fig3.png)
 
 ### Perception/Recognition
 
@@ -169,13 +169,13 @@ ros/src/computing/perception/detection
 ```
 The figure to be updated (tmp)
 
-![Figure 4 - Perception and Recognition](https://github.com/khanhgithead/Autoware-Manuals/blob/markdown/en/imgs/fig4.png)
+![Figure 4 - Perception and Recognition](/en/imgs/fig4.png)
 
 ### Judgement/Operation/Localization
 ```shell
 ros/src/computing/perception/localization
 ```
-![Figure 5 - Judgement, Operation, and Localization](https://github.com/khanhgithead/Autoware-Manuals/blob/markdown/en/imgs/fig5.png)
+![Figure 5 - Judgement, Operation, and Localization](/en/imgs/fig5.png)
 
 ### Path Planning
 ```shell
@@ -183,13 +183,13 @@ ros/src/computing/planning
 ```
 The figure to be updated (tmp)
 
-![Figure 6 - Path Planning](https://github.com/khanhgithead/Autoware-Manuals/blob/markdown/en/imgs/fig6.png)
+![Figure 6 - Path Planning](/en/imgs/fig6.png)
 
 ### Data Loading (3-D Map, Database, Files)
 ```shell
 ros/src/data
 ```
-![Figure 7 - Data Loading](https://github.com/khanhgithead/Autoware-Manuals/blob/markdown/en/imgs/fig7.png)
+![Figure 7 - Data Loading](/en/imgs/fig7.png)
 
 ### Device Drivers and Sensor Fusion
 ```shell
@@ -197,7 +197,7 @@ ros/src/sensing/drivers & ros/src/sensing/fusion
 ```
 The figure to be updated (tmp)
 
-![Figure 8 - Device Drivers and Sensor Fusion](https://github.com/khanhgithead/Autoware-Manuals/blob/markdown/en/imgs/fig8.png)
+![Figure 8 - Device Drivers and Sensor Fusion](/en/imgs/fig8.png)
 
 ### Interface for Smart Phone Applications
 ```shell
@@ -205,7 +205,7 @@ ros/src/socket
 ```
 The figure to be updated (tmp)
 
-![Figure 9 - Interface for Smart Phone Applications](https://github.com/khanhgithead/Autoware-Manuals/blob/markdown/en/imgs/fig9.png)
+![Figure 9 - Interface for Smart Phone Applications](/en/imgs/fig9.png)
 
 ### Utilities and Others
 ```shell
@@ -265,7 +265,7 @@ $ sh my_launch.sh
 
 2. Enter login password and press \[OK\] on the displayed password dialog.
 
-![Figure 10 - Password Dialog for Administrative Privileges](https://github.com/khanhgithead/Autoware-Manuals/blob/markdown/en/imgs/fig10.png)
+![Figure 10 - Password Dialog for Administrative Privileges](/en/imgs/fig10.png)
 
 ### RViz Configuration
 
@@ -307,13 +307,13 @@ How to use a ROSBAG is described in this section.
 
 4. Pressing \[Pause\] in the \[Simulation\] tab to resume the ROSBAG, a map is displayed. If NDT is run, the results are also displayed. If nothing is displayed, press \[Reset\] in the RViz, or remove and set checks of \[Points Map\] and \[Vector Map\] in the Display. Figure 12 shows the loaded map and the localized vehicle on RViz.  Note: Localization is not stable until 23% (110/479 second) of the progress bar displayed in the Simulation tab, because the demo ROSBAG does not include maps.
 
-![Figure 11 - Localization](https://github.com/khanhgithead/Autoware-Manuals/blob/markdown/en/imgs/fig11.png)
+![Figure 11 - Localization](/en/imgs/fig11.png)
 
 5. If the results of localization do not follow the GNSS arrow, press \[2D Pose Estimate\] in the top of RViz, move the mouse cursor and click the GNSS arrow.
 
 6. Selecting \[ThirdPersonFollower(RViz)\] in the \[TopDownOrtho(RViz)\] on the right pane in RViz, Figure 12 view can be obtained.
 
-![Figure 12 - Thirdperson Follower](https://github.com/khanhgithead/Autoware-Manuals/blob/markdown/en/imgs/fig12.png)
+![Figure 12 - Thirdperson Follower](/en/imgs/fig12.png)
 
 ### Object Detection
 
@@ -323,11 +323,11 @@ How to use a ROSBAG is described in this section.
 
 NOTE: the demo ROSBAG data does not contain video data for object detection.
 
-![Figure 13 - Object Detection](https://github.com/khanhgithead/Autoware-Manuals/blob/markdown/en/imgs/fig13.png)
+![Figure 13 - Object Detection](/en/imgs/fig13.png)
 
 ### Path Planning
 
-![Figure 14 - Path Planning](https://github.com/khanhgithead/Autoware-Manuals/blob/markdown/en/imgs/fig14.png)
+![Figure 14 - Path Planning](/en/imgs/fig14.png)
 
 1.  Specify the `my_mission_planning.lauch` generated in the Demo Data section to the file selection dialog of \[Mission Planning\] in the \[Quick Start\] tab and press \[Mission Planning\].
 
@@ -335,7 +335,7 @@ NOTE: the demo ROSBAG data does not contain video data for object detection.
 
 ### Path Following
 
-![Figure 15 - Path Following](https://github.com/khanhgithead/Autoware-Manuals/blob/markdown/en/imgs/fig15.png)
+![Figure 15 - Path Following](/en/imgs/fig15.png)
 
 1.  Specify the `my_motion_planning.launch` generated in the Demo data section to the file selection dialog of Motion Planning in the Quick Start tab, and press \[Motion Planning\].
 
@@ -353,7 +353,7 @@ Dynamic map is a method of sharing car and pedestrian information, which is reco
 	`/obj_car_pose` (other vehicles, /obj\_fusion in Publish)
 	`/obj_person_pose` (pedestrains, /obj\_fusion in Publish)
 
-![Figure 16 - pos_uploader App Dialog](https://github.com/khanhgithead/Autoware-Manuals/blob/markdown/en/imgs/fig16.png)
+![Figure 16 - pos_uploader App Dialog](/en/imgs/fig16.png)
 
 2. Click \[Position\] -&gt; \[pos\_uploader\] -&gt; \[app\] in the \[Database\] tab on the providing information side, enter information to access database server by SSH, and press \[OK\]. 
 	(Generating SSH key is described in the generating SSH public key section)
@@ -362,7 +362,7 @@ Dynamic map is a method of sharing car and pedestrian information, which is reco
 
 4.  Click \[Position\] -&gt; \[pos\_uploader\] -&gt; \[app\] in the \[Databse\] tab on the reviewing information side, enter information to access database server by SSH, and press \[OK\]. Checking \[show my pose\], the ego vehicle position is published.
 
-![Figure 17 - pos_downloader App Dialog](https://github.com/khanhgithead/Autoware-Manuals/blob/markdown/en/imgs/fig17.png)
+![Figure 17 - pos_downloader App Dialog](/en/imgs/fig17.png)
 
 5.  Check \[Position\] -&gt; \[pos\_downloader\] in the \[Database\] tab on “RViz” in the reviewing information side.
 
@@ -565,7 +565,7 @@ Runtime Manager dialog composes of multiple tabs. Operating Runtime Manager dial
 
 ## Runtime Manager – Quick Start Tab
 
-![Figure 18 - Runtime Manager - Quickstart Tab](https://github.com/khanhgithead/Autoware-Manuals/blob/markdown/en/imgs/fig18.png)
+![Figure 18 - Runtime Manager - Quickstart Tab](/en/imgs/fig18.png)
 
 -   **\[Map\]** … Start/end a launch script specified by full path in the \[Map\] text box. Alternatively, a script can be selected from the file selection dialog displayed by pressing the \[Ref\] button.
 -   **\[Sensing\]** … Start/end a launch script specified by full path in the \[Sensing\] text box. Alternatively, a script can be selected from the file selection dialog displayed by pressing the \[Ref\] button.
@@ -584,7 +584,7 @@ Runtime Manager dialog composes of multiple tabs. Operating Runtime Manager dial
 
 ## Runtime Manager – Setup Tab
 
-![Figure 19 - Runtime Manager - Setup Tab](https://github.com/khanhgithead/Autoware-Manuals/blob/markdown/en/imgs/fig19.png)
+![Figure 19 - Runtime Manager - Setup Tab](/en/imgs/fig19.png)
 
 ### \[Baselink to Localizer\]
 
@@ -601,7 +601,7 @@ Runtime Manager dialog composes of multiple tabs. Operating Runtime Manager dial
 
 ## Runtime Manager – Map Tab
 
-![Figure 20 Runtime Manager - Map Tab](https://github.com/khanhgithead/Autoware-Manuals/blob/markdown/en/imgs/fig20.png)
+![Figure 20 Runtime Manager - Map Tab](/en/imgs/fig20.png)
 
 Figure Runtime Manager - Map Tab
 
@@ -620,7 +620,7 @@ Figure Runtime Manager - Map Tab
 
 ## Runtime Manager – Sensing Tab
 
-![Figure 21 - Runtime Manager - Sensing Tab](https://github.com/khanhgithead/Autoware-Manuals/blob/markdown/en/imgs/fig21.png)
+![Figure 21 - Runtime Manager - Sensing Tab](/en/imgs/fig21.png)
 
 ### \[Drivers\]
 
@@ -672,7 +672,7 @@ Figure Runtime Manager - Map Tab
 
 ## Runtime Manager – Computing Tab
 
-![Figure 22 - Runtime Manager - Computing Tab](https://github.com/khanhgithead/Autoware-Manuals/blob/markdown/en/imgs/fig22.png)
+![Figure 22 - Runtime Manager - Computing Tab](/en/imgs/fig22.png)
 
 ### \[Localication\]
 
@@ -767,7 +767,7 @@ Figure Runtime Manager - Map Tab
 
 ## Runtime Manager – Interface Tab
 
-![Figure 23 - Runtime Manager - Interface Tab](https://github.com/khanhgithead/Autoware-Manuals/blob/markdown/en/imgs/fig23.png)
+![Figure 23 - Runtime Manager - Interface Tab](/en/imgs/fig23.png)
 
 -  **\[Android Tablet\]** … Start/end *runtime\_manager/tablet\_socket.launch* for communicating with Tablets.
 -  **\[Oculus Rift\]** … &lt;Unimplemented&gt;
@@ -792,7 +792,7 @@ Figure Runtime Manager - Map Tab
 
 ## Runtime Manager – Database Tab
 
-![Figure 24 - Runtime Manager - Database Tab](https://github.com/khanhgithead/Autoware-Manuals/blob/markdown/en/imgs/fig24.png)
+![Figure 24 - Runtime Manager - Database Tab](/en/imgs/fig24.png)
 
 ### \[CAN\]
 
@@ -818,7 +818,7 @@ Figure Runtime Manager - Map Tab
 
 ## Runtime Manager – Simulation Tab
 
-![Figure 25 - Runtime Manager - Simulation Tab](https://github.com/khanhgithead/Autoware-Manuals/blob/markdown/en/imgs/fig25.png)
+![Figure 25 - Runtime Manager - Simulation Tab](/en/imgs/fig25.png)
 
 \* A capture and the description to be updated (tmp), /use\_sim\_time
 
@@ -835,7 +835,7 @@ Figure Runtime Manager - Map Tab
  
 ## Runtime Manager – Status Tab
 
-![Figure 26 - Runtime Manager - Status Tab](https://github.com/khanhgithead/Autoware-Manuals/blob/markdown/en/imgs/fig26.png)
+![Figure 26 - Runtime Manager - Status Tab](/en/imgs/fig26.png)
 
 -  Top window … Display the execution results of the running *top* command.
 -  Left-bottom window … Display the periodic execution time published by related node.
@@ -849,7 +849,7 @@ Figure Runtime Manager - Map Tab
 
 ## Runtime Manager - Topics Tab
 
-![Figure 27 - Runtime Manager - Topics Tab](https://github.com/khanhgithead/Autoware-Manuals/blob/markdown/en/imgs/fig27.png)
+![Figure 27 - Runtime Manager - Topics Tab](/en/imgs/fig27.png)
 
 -  Left window … Display the list of topics. Launch a rostopic info &lt;target topic&gt; command and display the result of the command on the right bottom window by clicking links. If the Echo check box is ON, rostopic echo &lt;target topic&gt; is launched and the results are displayed on the right-top window.
 -  **\[Refresh\]** … Update the list of topics displayed on the left window using the obtained topic list by running *rostopic list* command.
@@ -859,7 +859,7 @@ Figure Runtime Manager - Map Tab
 
 ## ROSBAG Record Dialog
 
-![Figure 28 - ROSBAG Record Dialog](https://github.com/khanhgithead/Autoware-Manuals/blob/markdown/en/imgs/fig28.png)
+![Figure 28 - ROSBAG Record Dialog](/en/imgs/fig28.png)
 
 -  **Text box** … Specify the full path of a bag file for the ROSBAG record command. Alternatively, a bag file can be selected by the file selection dialog displayed by pressing \[Ref\].
 -  **\[split\] check box** … If the check box is ON and a numerical values is set in the size text box, --split and –size=&lt;target size&gt; options for launching ROSBAG record command by pressing \[Start\] are specified.
@@ -872,7 +872,7 @@ Figure Runtime Manager - Map Tab
 
 ## RViz
 
-![Figure 29 - RVIZ](https://github.com/khanhgithead/Autoware-Manuals/blob/markdown/en/imgs/fig29.png)
+![Figure 29 - RVIZ](/en/imgs/fig29.png)
 
 \* the description to be updated (tmp)
 
@@ -882,7 +882,7 @@ This is an android application which has a UI similar to Knight Rider.
 
 The running window is as follows:
 
-![Figure 30 - AutowareRider](https://github.com/khanhgithead/Autoware-Manuals/blob/markdown/en/imgs/fig30.png)
+![Figure 30 - AutowareRider](/en/imgs/fig30.png)
 
 -  **\[Navi\]** … Start AutowareRoute.apk.
 -  **\[MAP\]** … &lt;Unimplemented&gt;
@@ -902,7 +902,7 @@ The following items can be selected on the right-top menu.
 
 **\[データ収集\] (data collection)**
 
-![Figure 31 AutowareRider Configuration Window](https://github.com/khanhgithead/Autoware-Manuals/blob/markdown/en/imgs/fig31.png)
+![Figure 31 AutowareRider Configuration Window](/en/imgs/fig31.png)
 
 ### \[ROS PC\]
 
@@ -929,7 +929,7 @@ The following items can be selected on the right-top menu.
 
 \[データ収集\] (data collection) window is as follows:
 
-![Figure 32 - AutowareRider Data Collection Window](https://github.com/khanhgithead/Autoware-Manuals/blob/markdown/en/imgs/fig32.png)
+![Figure 32 - AutowareRider Data Collection Window](/en/imgs/fig32.png)
 
 -  **\[CanGather\]** … Start CanGather.apk.
 -  **\[CarLink (Bluetooth)\]** … Start CarLink\_CAN-BT\_LS.apk.
@@ -941,11 +941,11 @@ AutowareRoute is an Android application implemented by MapFan SDK for path plann
 
 The start window is as follows:
 
-![Figure 33 - Autoware Route](https://github.com/khanhgithead/Autoware-Manuals/blob/markdown/en/imgs/fig33.png)
+![Figure 33 - Autoware Route](/en/imgs/fig33.png)
 
 Pressing and holding the map, the following dialog is displayed.
 
-![Figure 34 - AutowareRoute Window](https://github.com/khanhgithead/Autoware-Manuals/blob/markdown/en/imgs/fig34.png)
+![Figure 34 - AutowareRoute Window](/en/imgs/fig34.png)
 
 Figure AutowareRoute window
 
