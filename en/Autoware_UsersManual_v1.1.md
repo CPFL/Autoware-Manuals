@@ -122,7 +122,7 @@ Note that ROS has “OS” in its name, however, it is not “OS” like Windows
 
 Autoware is open source software based on ROS. Autoware is pushed on Github for autonomous driving research and development. Most of autonomous driving system consist of *recognition*, *judgment*, and *operation*. Autoware provides necessary functions, such as 3-D map generation, localization, object recognition, and vehicle control, for autonomous driving.
 
-IMAGE PLACEHOLDER
+![Figure 1 - Autoware Overview](/imgs/fig1.png)
 
 Autoware uses LIDAR (Light Detection and Ranging) and on-vehicle cameras to localize the ego-car position. In addition, Autoware can detect surrounding objects, such as pedestrians, vehicles, traffic lights etc., by using LIDAR and GNSS (Global Navigation Satellite System).  The making judgments of driving/stopping at lanes or intersections are performed with an embedded multi-core CPU. Operations of controlling vehicle behaviors utilize conventional on-vehicle control mechanism, while support systems such as driving assistance and safety diagnosis support, use multi-core CPU.
 
@@ -154,13 +154,13 @@ The generated path includes appropriate speed information. Autonomous driving sy
 
 A user interface called “Runtime Manager” of Autoware enables developers to operate functions, such as localization, object detection, and path following, easily. In addition, RViz can integrate and visualize localization on 3-D map, object detection, path planning, and path following. Furthermore, a tablet user interface, “AutowareRider”, of Autoware enables navigation, path planning, transition to autonomous driving mode and etc., on tables, easily. Moreover, Autoware can visualize 3-D map used in autonomous driving system and project it on on-vehicle displays and Oculus devices.
 
-IMAGE PLACEHOLDER
+![Figure 2 - User Interface](/imgs/fig2.png)
 
 ## Platform structure for Autoware 
 
 Autoware is an application using ROS and ROS only works on Unix-based platforms. Figure 3 illustrates the overall system structure for Autoware.
 
-IMAGE PLACEHOLDER
+![Figure 3 - Platform Stucture for Autoware](/imgs/fig3.png)
 
 ### Perception/Recognition
 
@@ -169,13 +169,13 @@ ros/src/computing/perception/detection
 ```
 The figure to be updated (tmp)
 
-IMAGE PLACEHOLDER
+![Figure 4 - Perception and Recognition](/imgs/fig4.png)
 
 ### Judgement/Operation/Localization
 ```shell
 ros/src/computing/perception/localization
 ```
-IMAGE PLACEHOLDER
+![Figure 5 - Judgement, Operation, and Localization](/imgs/fig5.png)
 
 ### Path Planning
 ```shell
@@ -183,13 +183,13 @@ ros/src/computing/planning
 ```
 The figure to be updated (tmp)
 
-IMAGE PLACEHOLDER
+![Figure 6 - Path Planning](/imgs/fig6.png)
 
 ### Data Loading (3-D Map, Database, Files)
 ```shell
 ros/src/data
 ```
-IMAGE PLACEHOLDER
+![Figure 7 - Data Loading](/imgs/fig7.png)
 
 ### Device Drivers and Sensor Fusion
 ```shell
@@ -197,7 +197,7 @@ ros/src/sensing/drivers & ros/src/sensing/fusion
 ```
 The figure to be updated (tmp)
 
-IMAGE PLACEHOLDER
+![Figure 8 - Device Drivers and Sensor Fusion](/imgs/fig8.png)
 
 ### Interface for Smart Phone Applications
 ```shell
@@ -205,7 +205,7 @@ ros/src/socket
 ```
 The figure to be updated (tmp)
 
-IMAGE PLACEHOLDER
+![Figure 9 - Interface for Smart Phone Applications](/imgs/fig9.png)
 
 ### Utilities and Others
 ```shell
@@ -265,7 +265,7 @@ $ sh my_launch.sh
 
 2. Enter login password and press \[OK\] on the displayed password dialog.
 
-IMAGE PLACEHOLDER
+![Figure 10 - Password Dialog for Administrative Privileges](/imgs/fig10.png)
 
 ### RViz Configuration
 
@@ -307,13 +307,13 @@ How to use a ROSBAG is described in this section.
 
 4. Pressing \[Pause\] in the \[Simulation\] tab to resume the ROSBAG, a map is displayed. If NDT is run, the results are also displayed. If nothing is displayed, press \[Reset\] in the RViz, or remove and set checks of \[Points Map\] and \[Vector Map\] in the Display. Figure 12 shows the loaded map and the localized vehicle on RViz.  Note: Localization is not stable until 23% (110/479 second) of the progress bar displayed in the Simulation tab, because the demo ROSBAG does not include maps.
 
-IMAGE PLACEHOLDER
+![Figure 11 - Localization](/imgs/fig11.png)
 
 5. If the results of localization do not follow the GNSS arrow, press \[2D Pose Estimate\] in the top of RViz, move the mouse cursor and click the GNSS arrow.
 
 6. Selecting \[ThirdPersonFollower(RViz)\] in the \[TopDownOrtho(RViz)\] on the right pane in RViz, Figure 12 view can be obtained.
 
-IMAGE PLACEHOLDER
+![Figure 12 - Thirdperson Follower](/imgs/fig12.png)
 
 ### Object Detection
 
@@ -323,11 +323,11 @@ IMAGE PLACEHOLDER
 
 NOTE: the demo ROSBAG data does not contain video data for object detection.
 
-IMAGE PLACEHOLDER
+![Figure 13 - Object Detection](/imgs/fig13.png)
 
 ### Path Planning
 
-IMAGE PLACEHOLDER
+![Figure 14 - Path Planning](/imgs/fig14.png)
 
 1.  Specify the `my_mission_planning.lauch` generated in the Demo Data section to the file selection dialog of \[Mission Planning\] in the \[Quick Start\] tab and press \[Mission Planning\].
 
@@ -335,7 +335,7 @@ IMAGE PLACEHOLDER
 
 ### Path Following
 
-IMAGE PLACEHOLDER
+![Figure 15 - Path Following](/imgs/fig15.png)
 
 1.  Specify the `my_motion_planning.launch` generated in the Demo data section to the file selection dialog of Motion Planning in the Quick Start tab, and press \[Motion Planning\].
 
@@ -353,7 +353,7 @@ Dynamic map is a method of sharing car and pedestrian information, which is reco
 	`/obj_car_pose` (other vehicles, /obj\_fusion in Publish)
 	`/obj_person_pose` (pedestrains, /obj\_fusion in Publish)
 
-	IMAGE PLACEHOLDER
+![Figure 16 - pos_uploader App Dialog](/imgs/fig16.png)
 
 2. Click \[Position\] -&gt; \[pos\_uploader\] -&gt; \[app\] in the \[Database\] tab on the providing information side, enter information to access database server by SSH, and press \[OK\]. 
 	(Generating SSH key is described in the generating SSH public key section)
@@ -362,7 +362,7 @@ Dynamic map is a method of sharing car and pedestrian information, which is reco
 
 4.  Click \[Position\] -&gt; \[pos\_uploader\] -&gt; \[app\] in the \[Databse\] tab on the reviewing information side, enter information to access database server by SSH, and press \[OK\]. Checking \[show my pose\], the ego vehicle position is published.
 
-IMAGE PLACEHOLDER
+![Figure 17 - pos_downloader App Dialog](/imgs/fig17.png)
 
 5.  Check \[Position\] -&gt; \[pos\_downloader\] in the \[Database\] tab on “RViz” in the reviewing information side.
 
@@ -565,9 +565,7 @@ Runtime Manager dialog composes of multiple tabs. Operating Runtime Manager dial
 
 ## Runtime Manager – Quick Start Tab
 
-IMAGE PLACEHOLDER
-
-Figure Runtime Manager - Quick Start Tab
+![Figure 18 - Runtime Manager - Quickstart Tab](/imgs/fig18.png)
 
 -   **\[Map\]** … Start/end a launch script specified by full path in the \[Map\] text box. Alternatively, a script can be selected from the file selection dialog displayed by pressing the \[Ref\] button.
 -   **\[Sensing\]** … Start/end a launch script specified by full path in the \[Sensing\] text box. Alternatively, a script can be selected from the file selection dialog displayed by pressing the \[Ref\] button.
@@ -586,8 +584,7 @@ Figure Runtime Manager - Quick Start Tab
 
 ## Runtime Manager – Setup Tab
 
-IMAGE PLACEHOLDER
-
+![Figure 19 - Runtime Manager - Setup Tab](/imgs/fig19.png)
 
 ### \[Baselink to Localizer\]
 
@@ -604,7 +601,7 @@ IMAGE PLACEHOLDER
 
 ## Runtime Manager – Map Tab
 
-IMAGE PLACEHOLDER
+![Figure 20 Runtime Manager - Map Tab](/imgs/fig20.png)
 
 Figure Runtime Manager - Map Tab
 
@@ -623,8 +620,7 @@ Figure Runtime Manager - Map Tab
 
 ## Runtime Manager – Sensing Tab
 
-IMAGE PLACEHOLDER
-
+![Figure 21 - Runtime Manager - Sensing Tab](/imgs/fig21.png)
 
 ### \[Drivers\]
 
@@ -676,7 +672,7 @@ IMAGE PLACEHOLDER
 
 ## Runtime Manager – Computing Tab
 
-IMAGE PLACEHOLDER
+![Figure 22 - Runtime Manager - Computing Tab](/imgs/fig22.png)
 
 ### \[Localication\]
 
@@ -771,7 +767,7 @@ IMAGE PLACEHOLDER
 
 ## Runtime Manager – Interface Tab
 
-IMAGE PLACEHOLDER
+![Figure 23 - Runtime Manager - Interface Tab](/imgs/fig23.png)
 
 -  **\[Android Tablet\]** … Start/end *runtime\_manager/tablet\_socket.launch* for communicating with Tablets.
 -  **\[Oculus Rift\]** … &lt;Unimplemented&gt;
@@ -796,7 +792,7 @@ IMAGE PLACEHOLDER
 
 ## Runtime Manager – Database Tab
 
-IMAGE PLACEHOLDER
+![Figure 24 - Runtime Manager - Database Tab](/imgs/fig24.png)
 
 ### \[CAN\]
 
@@ -822,7 +818,7 @@ IMAGE PLACEHOLDER
 
 ## Runtime Manager – Simulation Tab
 
-IMAGE PLACEHOLDER
+![Figure 25 - Runtime Manager - Simulation Tab](/imgs/fig25.png)
 
 \* A capture and the description to be updated (tmp), /use\_sim\_time
 
@@ -839,7 +835,7 @@ IMAGE PLACEHOLDER
  
 ## Runtime Manager – Status Tab
 
-IMAGE PLACEHOLDER
+![Figure 26 - Runtime Manager - Status Tab](/imgs/fig26.png)
 
 -  Top window … Display the execution results of the running *top* command.
 -  Left-bottom window … Display the periodic execution time published by related node.
@@ -853,7 +849,7 @@ IMAGE PLACEHOLDER
 
 ## Runtime Manager - Topics Tab
 
-IMAGE PLACEHOLDER
+![Figure 27 - Runtime Manager - Topics Tab](/imgs/fig27.png)
 
 -  Left window … Display the list of topics. Launch a rostopic info &lt;target topic&gt; command and display the result of the command on the right bottom window by clicking links. If the Echo check box is ON, rostopic echo &lt;target topic&gt; is launched and the results are displayed on the right-top window.
 -  **\[Refresh\]** … Update the list of topics displayed on the left window using the obtained topic list by running *rostopic list* command.
@@ -863,7 +859,7 @@ IMAGE PLACEHOLDER
 
 ## ROSBAG Record Dialog
 
-IMAGE PLACEHOLDER
+![Figure 28 - ROSBAG Record Dialog](/imgs/fig28.png)
 
 -  **Text box** … Specify the full path of a bag file for the ROSBAG record command. Alternatively, a bag file can be selected by the file selection dialog displayed by pressing \[Ref\].
 -  **\[split\] check box** … If the check box is ON and a numerical values is set in the size text box, --split and –size=&lt;target size&gt; options for launching ROSBAG record command by pressing \[Start\] are specified.
@@ -876,7 +872,7 @@ IMAGE PLACEHOLDER
 
 ## RViz
 
-IMAGE PLACEHOLDER
+![Figure 29 - RVIZ](/imgs/fig29.png)
 
 \* the description to be updated (tmp)
 
@@ -886,7 +882,7 @@ This is an android application which has a UI similar to Knight Rider.
 
 The running window is as follows:
 
-IMAGE PLACEHOLDER
+![Figure 30 - AutowareRider](/imgs/fig30.png)
 
 -  **\[Navi\]** … Start AutowareRoute.apk.
 -  **\[MAP\]** … &lt;Unimplemented&gt;
@@ -906,7 +902,7 @@ The following items can be selected on the right-top menu.
 
 **\[データ収集\] (data collection)**
 
-IMAGE PLACEHOLDER
+![Figure 31 AutowareRider Configuration Window](/imgs/fig31.png)
 
 ### \[ROS PC\]
 
@@ -933,7 +929,7 @@ IMAGE PLACEHOLDER
 
 \[データ収集\] (data collection) window is as follows:
 
-IMAGE PLACEHOLDER
+![Figure 32 - AutowareRider Data Collection Window](/imgs/fig32.png)
 
 -  **\[CanGather\]** … Start CanGather.apk.
 -  **\[CarLink (Bluetooth)\]** … Start CarLink\_CAN-BT\_LS.apk.
@@ -945,11 +941,11 @@ AutowareRoute is an Android application implemented by MapFan SDK for path plann
 
 The start window is as follows:
 
-IMAGE PLACEHOLDER
+![Figure 33 - Autoware Route](/imgs/fig33.png)
 
 Pressing and holding the map, the following dialog is displayed.
 
-IMAGE PLACEHOLDER
+![Figure 34 - AutowareRoute Window](/imgs/fig34.png)
 
 Figure AutowareRoute window
 
